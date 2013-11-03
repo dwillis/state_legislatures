@@ -1,4 +1,4 @@
-[{"state":"Alabama","total_seats":140,"total_senate":35,"senate_dem":11,"senate_gop":23,"senate_other":"1","total_house":105,"house_dem":39,"house_gop":64,"house_other":2v,"legis_control":"Rep","gov_party":"Rep","state_control":"Rep"},
+[{"state":"Alabama","total_seats":140,"total_senate":35,"senate_dem":11,"senate_gop":23,"senate_other":"1","total_house":105,"house_dem":39,"house_gop":64,"house_other":"2v","legis_control":"Rep","gov_party":"Rep","state_control":"Rep"},
 {"state":"Alaska","total_seats":60,"total_senate":20,"senate_dem":7,"senate_gop":13,"senate_other":"0","total_house":40,"house_dem":15,"house_gop":25,"house_other":0,"legis_control":"Rep","gov_party":"Rep","state_control":"Rep"},
 {"state":"Arizona","total_seats":90,"total_senate":30,"senate_dem":13,"senate_gop":17,"senate_other":"0","total_house":60,"house_dem":24,"house_gop":36,"house_other":0,"legis_control":"Rep","gov_party":"Rep","state_control":"Rep"},
 {"state":"Arkansas","total_seats":135,"total_senate":35,"senate_dem":14,"senate_gop":21,"senate_other":"0","total_house":100,"house_dem":48,"house_gop":51,"house_other":1,"legis_control":"Rep","gov_party":"Dem","state_control":"Divided"},
