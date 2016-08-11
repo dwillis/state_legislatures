@@ -15,4 +15,7 @@ This repository contains summary data about state legislative bodies, beginning 
 
 ### Conversion Process
 
-Source PDF files were converted to CSV format using [Tabula](http://tabula.technology/).
+Source PDF files were converted to CSV format using [Tabula](http://tabula.technology/),
+ then manually adjusted and cleaned to reflect the original data.
+
+The Conversion Process Roadmap includes a feasibility investigation into using scripts to perform this conversion.
