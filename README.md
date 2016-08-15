@@ -33,7 +33,7 @@ ruby script/download_pdf.rb
 Convert PDF files to TXT:
 
 ```` sh
-ruby script/convert_pdf.rb
+ruby script/convert_pdf_to_txt.rb
 ````
 
 Convert TXT files to CSV:

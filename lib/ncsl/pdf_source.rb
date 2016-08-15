@@ -42,5 +42,14 @@ module Ncsl
         end
       end
     end
+
+    def txt_file_path
+      File.expand_path("../../../txt/control/#{year}.txt", __FILE__)
+    end
+
+    def convert_to_txt
+      puts "Converting to #{txt_file_path}"
+      system "pdftotext #{file_path} #{txt_file_path} -layout"
+    end
   end
 end
