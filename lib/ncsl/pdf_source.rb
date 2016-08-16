@@ -36,15 +36,15 @@ module Ncsl
     end
 
     def file_path
-      File.expand_path("../../../pdf/control/#{year}.pdf", __FILE__)
+      File.expand_path("../../../data/pdf/control/#{year}.pdf", __FILE__)
     end
 
     def txt_file_path
-      File.expand_path("../../../txt/control/#{year}.txt", __FILE__)
+      File.expand_path("../../../data/txt/control/#{year}.txt", __FILE__)
     end
 
     def csv_file_path
-      File.expand_path("../../../csv/control/#{year}.csv", __FILE__)
+      File.expand_path("../../../data/csv/control/#{year}.csv", __FILE__)
     end
 
     def download

@@ -47,3 +47,9 @@ Convert TXT files to JSON:
 ```` sh
 ruby script/convert_txt_to_json.rb
 ````
+
+Normalize CSV files:
+
+```` sh
+ruby script/normalize_csv.rb
+````
