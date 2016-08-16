@@ -14,7 +14,12 @@ module Ncsl
       {:year => 2015, :url => "http://www.ncsl.org/Portals/1/Documents/Elections/Legis_Control_2015_Feb4_11am.pdf"},
       {:year => 2016, :url => "http://www.ncsl.org/Portals/1/Documents/Elections/Legis_Control_2016_Apr20.pdf"}
     ]
-
+    ROW_HEADERS = [
+      "state", "total_seats",
+      "total_senate", "senate_dem", "senate_gop", "senate_other",
+      "total_house", "house_dem", "house_gop", "house_other",
+      "legis_control","gov_party", "state_control"
+    ] # order matters
     CELL_DELIMETER = "   "
     DOUBLE_CELL_DELIMETER = "                   "
 
@@ -94,6 +99,7 @@ module Ncsl
       puts "Converting to #{csv_file_path}"
       parse_next = true
       CSV.open(csv_file_path, "w") do |csv|
+        csv << ROW_HEADERS
         txt_lines.each do |line|
           cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
           parse_next = false if line.include?("Wyoming")

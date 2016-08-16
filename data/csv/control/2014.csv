@@ -1,3 +1,4 @@
+state,total_seats,total_senate,senate_dem,senate_gop,senate_other,total_house,house_dem,house_gop,house_other,legis_control,gov_party,state_control
 Alabama,140,35,11,23,1,105,37,66,"1, 1v",Rep,Rep,Rep
 Alaska,60,20,7,13,0,40,14,26,0,Rep,Rep,Rep
 Arizona,90,30,12,17,1v,60,24,36,0,Rep,Rep,Rep

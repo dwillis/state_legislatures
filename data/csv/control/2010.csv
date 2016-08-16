@@ -1,3 +1,4 @@
+state,total_seats,total_senate,senate_dem,senate_gop,senate_other,total_house,house_dem,house_gop,house_other,legis_control,gov_party,state_control
 Alabama,140,35,21,14,0,105,60,45,0,Dem,Rep,Divided
 Alaska,60,20,10,10,0,40,18,22,0,Split,Rep,Divided
 Arizona,90,30,12,18,0,60,25,35,0,Rep,Rep,Rep
