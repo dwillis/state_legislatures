@@ -96,12 +96,11 @@ module Ncsl
       CSV.open(csv_file_path, "w") do |csv|
         txt_lines.each do |line|
           cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
-
           parse_next = false if line.include?("Wyoming")
           if parse_next == true
             puts "... #{cells.first}"
-            binding.pry unless cells.count == 13 # raise CellCountError.new(line) unless cells.count == 13
-            #csv << line
+            raise CellCountError.new(line) unless cells.count == 13
+            csv << cells
           end
         end
       end
