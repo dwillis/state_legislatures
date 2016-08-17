@@ -6,26 +6,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "140",
+      "legislature_seats": 140,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "105",
+          "seats": 105,
           "composition": {
-            "dem": "33",
-            "rep": "72",
-            "vacant": null,
-            "other": "0"
+            "dem": 33,
+            "rep": 72,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "35",
+          "seats": 35,
           "composition": {
-            "dem": "8",
-            "rep": "26",
-            "vacant": null,
-            "other": "1"
+            "dem": 8,
+            "rep": 26,
+            "vacant": 0,
+            "other": 1
           }
         }
       ]
@@ -35,26 +35,26 @@
       "control": "Divided",
       "governor_party": "Ind",
       "legislature_control": "Rep",
-      "legislature_seats": "60",
+      "legislature_seats": 60,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "40",
+          "seats": 40,
           "composition": {
-            "dem": "16",
-            "rep": "23",
-            "vacant": null,
-            "other": "1"
+            "dem": 16,
+            "rep": 23,
+            "vacant": 0,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "20",
+          "seats": 20,
           "composition": {
-            "dem": "6",
-            "rep": "14",
-            "vacant": null,
-            "other": "0"
+            "dem": 6,
+            "rep": 14,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -64,26 +64,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "90",
+      "legislature_seats": 90,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "60",
+          "seats": 60,
           "composition": {
-            "dem": "24",
-            "rep": "36",
-            "vacant": null,
-            "other": "0"
+            "dem": 24,
+            "rep": 36,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "30",
+          "seats": 30,
           "composition": {
-            "dem": "12",
-            "rep": "18",
-            "vacant": null,
-            "other": "0"
+            "dem": 12,
+            "rep": 18,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -93,26 +93,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "135",
+      "legislature_seats": 135,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "100",
+          "seats": 100,
           "composition": {
-            "dem": "36",
-            "rep": "64",
-            "vacant": null,
-            "other": "0"
+            "dem": 36,
+            "rep": 64,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "35",
+          "seats": 35,
           "composition": {
-            "dem": "11",
-            "rep": "24",
-            "vacant": null,
-            "other": "0"
+            "dem": 11,
+            "rep": 24,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -122,26 +122,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "120",
+      "legislature_seats": 120,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "80",
+          "seats": 80,
           "composition": {
-            "dem": "52",
-            "rep": "28",
-            "vacant": null,
-            "other": "0"
+            "dem": 52,
+            "rep": 28,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "40",
+          "seats": 40,
           "composition": {
-            "dem": "26",
-            "rep": "14",
-            "vacant": null,
-            "other": "0"
+            "dem": 26,
+            "rep": 14,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -151,26 +151,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Split",
-      "legislature_seats": "100",
+      "legislature_seats": 100,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "65",
+          "seats": 65,
           "composition": {
-            "dem": "34",
-            "rep": "31",
-            "vacant": null,
-            "other": "0"
+            "dem": 34,
+            "rep": 31,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "35",
+          "seats": 35,
           "composition": {
-            "dem": "17",
-            "rep": "18",
-            "vacant": null,
-            "other": "0"
+            "dem": 17,
+            "rep": 18,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -180,26 +180,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "187",
+      "legislature_seats": 187,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "151",
+          "seats": 151,
           "composition": {
-            "dem": "86",
-            "rep": "64",
-            "vacant": null,
-            "other": "1v"
+            "dem": 86,
+            "rep": 64,
+            "vacant": 1,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "36",
+          "seats": 36,
           "composition": {
-            "dem": "21",
-            "rep": "15",
-            "vacant": null,
-            "other": "0"
+            "dem": 21,
+            "rep": 15,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -209,26 +209,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "62",
+      "legislature_seats": 62,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "41",
+          "seats": 41,
           "composition": {
-            "dem": "25",
-            "rep": "16",
-            "vacant": null,
-            "other": "0"
+            "dem": 25,
+            "rep": 16,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "21",
+          "seats": 21,
           "composition": {
-            "dem": "12",
-            "rep": "9",
-            "vacant": null,
-            "other": "0"
+            "dem": 12,
+            "rep": 9,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -238,26 +238,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "160",
+      "legislature_seats": 160,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "120",
+          "seats": 120,
           "composition": {
-            "dem": "39",
-            "rep": "81",
-            "vacant": null,
-            "other": "0"
+            "dem": 39,
+            "rep": 81,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "40",
+          "seats": 40,
           "composition": {
-            "dem": "14",
-            "rep": "26",
-            "vacant": null,
-            "other": "0"
+            "dem": 14,
+            "rep": 26,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -267,26 +267,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "236",
+      "legislature_seats": 236,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "180",
+          "seats": 180,
           "composition": {
-            "dem": "61",
-            "rep": "118",
-            "vacant": null,
-            "other": "1"
+            "dem": 61,
+            "rep": 118,
+            "vacant": 0,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "56",
+          "seats": 56,
           "composition": {
-            "dem": "17",
-            "rep": "39",
-            "vacant": null,
-            "other": "0"
+            "dem": 17,
+            "rep": 39,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -296,26 +296,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "76",
+      "legislature_seats": 76,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "51",
+          "seats": 51,
           "composition": {
-            "dem": "44",
-            "rep": "7",
-            "vacant": null,
-            "other": "0"
+            "dem": 44,
+            "rep": 7,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "25",
+          "seats": 25,
           "composition": {
-            "dem": "24",
-            "rep": "1",
-            "vacant": null,
-            "other": "0"
+            "dem": 24,
+            "rep": 1,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -325,26 +325,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "105",
+      "legislature_seats": 105,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "70",
+          "seats": 70,
           "composition": {
-            "dem": "14",
-            "rep": "56",
-            "vacant": null,
-            "other": "0"
+            "dem": 14,
+            "rep": 56,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "35",
+          "seats": 35,
           "composition": {
-            "dem": "7",
-            "rep": "28",
-            "vacant": null,
-            "other": "0"
+            "dem": 7,
+            "rep": 28,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -354,26 +354,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Dem",
-      "legislature_seats": "177",
+      "legislature_seats": 177,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "118",
+          "seats": 118,
           "composition": {
-            "dem": "71",
-            "rep": "47",
-            "vacant": null,
-            "other": "0"
+            "dem": 71,
+            "rep": 47,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "59",
+          "seats": 59,
           "composition": {
-            "dem": "39",
-            "rep": "20",
-            "vacant": null,
-            "other": "0"
+            "dem": 39,
+            "rep": 20,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -383,26 +383,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "150",
+      "legislature_seats": 150,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "100",
+          "seats": 100,
           "composition": {
-            "dem": "29",
-            "rep": "71",
-            "vacant": null,
-            "other": "0"
+            "dem": 29,
+            "rep": 71,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "50",
+          "seats": 50,
           "composition": {
-            "dem": "10",
-            "rep": "40",
-            "vacant": null,
-            "other": "0"
+            "dem": 10,
+            "rep": 40,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -412,26 +412,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Split",
-      "legislature_seats": "150",
+      "legislature_seats": 150,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "100",
+          "seats": 100,
           "composition": {
-            "dem": "43",
-            "rep": "57",
-            "vacant": null,
-            "other": "0"
+            "dem": 43,
+            "rep": 57,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "50",
+          "seats": 50,
           "composition": {
-            "dem": "26",
-            "rep": "24",
-            "vacant": null,
-            "other": "0"
+            "dem": 26,
+            "rep": 24,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -441,26 +441,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "165",
+      "legislature_seats": 165,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "125",
+          "seats": 125,
           "composition": {
-            "dem": "28",
-            "rep": "97",
-            "vacant": null,
-            "other": "0"
+            "dem": 28,
+            "rep": 97,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "40",
+          "seats": 40,
           "composition": {
-            "dem": "8",
-            "rep": "32",
-            "vacant": null,
-            "other": "0"
+            "dem": 8,
+            "rep": 32,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -470,26 +470,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Split",
-      "legislature_seats": "138",
+      "legislature_seats": 138,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "100",
+          "seats": 100,
           "composition": {
-            "dem": "53",
-            "rep": "47",
-            "vacant": null,
-            "other": "0"
+            "dem": 53,
+            "rep": 47,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "38",
+          "seats": 38,
           "composition": {
-            "dem": "11",
-            "rep": "27",
-            "vacant": null,
-            "other": "0"
+            "dem": 11,
+            "rep": 27,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -499,26 +499,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Rep",
-      "legislature_seats": "144",
+      "legislature_seats": 144,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "105",
+          "seats": 105,
           "composition": {
-            "dem": "42",
-            "rep": "61",
-            "vacant": null,
-            "other": "2"
+            "dem": 42,
+            "rep": 61,
+            "vacant": 0,
+            "other": 2
           }
         },
         {
           "name": "Senate",
-          "seats": "39",
+          "seats": 39,
           "composition": {
-            "dem": "14",
-            "rep": "25",
-            "vacant": null,
-            "other": "0"
+            "dem": 14,
+            "rep": 25,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -528,26 +528,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Split",
-      "legislature_seats": "186",
+      "legislature_seats": 186,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "151",
+          "seats": 151,
           "composition": {
-            "dem": "79",
-            "rep": "69",
-            "vacant": null,
-            "other": "3"
+            "dem": 79,
+            "rep": 69,
+            "vacant": 0,
+            "other": 3
           }
         },
         {
           "name": "Senate",
-          "seats": "35",
+          "seats": 35,
           "composition": {
-            "dem": "15",
-            "rep": "20",
-            "vacant": null,
-            "other": "0"
+            "dem": 15,
+            "rep": 20,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -557,26 +557,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Dem",
-      "legislature_seats": "188",
+      "legislature_seats": 188,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "141",
+          "seats": 141,
           "composition": {
-            "dem": "90",
-            "rep": "51",
-            "vacant": null,
-            "other": "0"
+            "dem": 90,
+            "rep": 51,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "47",
+          "seats": 47,
           "composition": {
-            "dem": "33",
-            "rep": "14",
-            "vacant": null,
-            "other": "0"
+            "dem": 33,
+            "rep": 14,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -586,26 +586,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Dem",
-      "legislature_seats": "200",
+      "legislature_seats": 200,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "160",
+          "seats": 160,
           "composition": {
-            "dem": "125",
-            "rep": "34",
-            "vacant": null,
-            "other": "1v"
+            "dem": 125,
+            "rep": 34,
+            "vacant": 1,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "40",
+          "seats": 40,
           "composition": {
-            "dem": "33",
-            "rep": "5",
-            "vacant": null,
-            "other": "2v"
+            "dem": 33,
+            "rep": 5,
+            "vacant": 2,
+            "other": 0
           }
         }
       ]
@@ -615,26 +615,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "148",
+      "legislature_seats": 148,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "110",
+          "seats": 110,
           "composition": {
-            "dem": "46",
-            "rep": "63",
-            "vacant": null,
-            "other": "1v"
+            "dem": 46,
+            "rep": 63,
+            "vacant": 1,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "38",
+          "seats": 38,
           "composition": {
-            "dem": "11",
-            "rep": "27",
-            "vacant": null,
-            "other": "0"
+            "dem": 11,
+            "rep": 27,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -644,26 +644,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Split",
-      "legislature_seats": "201",
+      "legislature_seats": 201,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "134",
+          "seats": 134,
           "composition": {
-            "dem": "61",
-            "rep": "73",
-            "vacant": null,
-            "other": "0"
+            "dem": 61,
+            "rep": 73,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "67",
+          "seats": 67,
           "composition": {
-            "dem": "39",
-            "rep": "28",
-            "vacant": null,
-            "other": "0"
+            "dem": 39,
+            "rep": 28,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -673,26 +673,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "174",
+      "legislature_seats": 174,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "122",
+          "seats": 122,
           "composition": {
-            "dem": "48",
-            "rep": "74",
-            "vacant": null,
-            "other": "0"
+            "dem": 48,
+            "rep": 74,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "52",
+          "seats": 52,
           "composition": {
-            "dem": "20",
-            "rep": "32",
-            "vacant": null,
-            "other": "0"
+            "dem": 20,
+            "rep": 32,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -702,26 +702,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Rep",
-      "legislature_seats": "197",
+      "legislature_seats": 197,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "163",
+          "seats": 163,
           "composition": {
-            "dem": "45",
-            "rep": "116",
-            "vacant": null,
-            "other": "1, 1v"
+            "dem": 45,
+            "rep": 116,
+            "vacant": 1,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "34",
+          "seats": 34,
           "composition": {
-            "dem": "8",
-            "rep": "24",
-            "vacant": null,
-            "other": "2v"
+            "dem": 8,
+            "rep": 24,
+            "vacant": 2,
+            "other": 0
           }
         }
       ]
@@ -731,26 +731,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Rep",
-      "legislature_seats": "150",
+      "legislature_seats": 150,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "100",
+          "seats": 100,
           "composition": {
-            "dem": "41",
-            "rep": "59",
-            "vacant": null,
-            "other": "0"
+            "dem": 41,
+            "rep": 59,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "50",
+          "seats": 50,
           "composition": {
-            "dem": "21",
-            "rep": "29",
-            "vacant": null,
-            "other": "0"
+            "dem": 21,
+            "rep": 29,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -760,16 +760,16 @@
       "control": "N/A",
       "governor_party": "Rep",
       "legislature_control": "N/A",
-      "legislature_seats": "49",
+      "legislature_seats": 49,
       "legislature_chambers": [
         {
           "name": "Unicameral",
-          "seats": "49",
+          "seats": 49,
           "composition": {
-            "dem": "0",
-            "rep": "0",
-            "vacant": null,
-            "other": "49"
+            "dem": 0,
+            "rep": 0,
+            "vacant": 0,
+            "other": 49
           }
         }
       ]
@@ -779,26 +779,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "63",
+      "legislature_seats": 63,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "42",
+          "seats": 42,
           "composition": {
-            "dem": "17",
-            "rep": "25",
-            "vacant": null,
-            "other": "0"
+            "dem": 17,
+            "rep": 25,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "21",
+          "seats": 21,
           "composition": {
-            "dem": "10",
-            "rep": "11",
-            "vacant": null,
-            "other": "0"
+            "dem": 10,
+            "rep": 11,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -808,26 +808,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Rep",
-      "legislature_seats": "424",
+      "legislature_seats": 424,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "400",
+          "seats": 400,
           "composition": {
-            "dem": "160",
-            "rep": "239",
-            "vacant": null,
-            "other": "1"
+            "dem": 160,
+            "rep": 239,
+            "vacant": 0,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "24",
+          "seats": 24,
           "composition": {
-            "dem": "10",
-            "rep": "14",
-            "vacant": null,
-            "other": "0"
+            "dem": 10,
+            "rep": 14,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -837,26 +837,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Dem",
-      "legislature_seats": "120",
+      "legislature_seats": 120,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "80",
+          "seats": 80,
           "composition": {
-            "dem": "52",
-            "rep": "28",
-            "vacant": null,
-            "other": "0"
+            "dem": 52,
+            "rep": 28,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "40",
+          "seats": 40,
           "composition": {
-            "dem": "24",
-            "rep": "16",
-            "vacant": null,
-            "other": "0"
+            "dem": 24,
+            "rep": 16,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -866,26 +866,26 @@
       "control": "Divided",
       "governor_party": "Rep",
       "legislature_control": "Split",
-      "legislature_seats": "112",
+      "legislature_seats": 112,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "70",
+          "seats": 70,
           "composition": {
-            "dem": "33",
-            "rep": "37",
-            "vacant": null,
-            "other": "0"
+            "dem": 33,
+            "rep": 37,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "42",
+          "seats": 42,
           "composition": {
-            "dem": "24",
-            "rep": "18",
-            "vacant": null,
-            "other": "0"
+            "dem": 24,
+            "rep": 18,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -895,26 +895,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "213",
+      "legislature_seats": 213,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "150",
+          "seats": 150,
           "composition": {
-            "dem": "106",
-            "rep": "42",
-            "vacant": null,
-            "other": "1,1v"
+            "dem": 106,
+            "rep": 42,
+            "vacant": 1,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "63",
+          "seats": 63,
           "composition": {
-            "dem": "32",
-            "rep": "31",
-            "vacant": null,
-            "other": "0"
+            "dem": 32,
+            "rep": 31,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -924,26 +924,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "170",
+      "legislature_seats": 170,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "120",
+          "seats": 120,
           "composition": {
-            "dem": "45",
-            "rep": "74",
-            "vacant": null,
-            "other": "1"
+            "dem": 45,
+            "rep": 74,
+            "vacant": 0,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "50",
+          "seats": 50,
           "composition": {
-            "dem": "16",
-            "rep": "34",
-            "vacant": null,
-            "other": "0"
+            "dem": 16,
+            "rep": 34,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -953,26 +953,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "141",
+      "legislature_seats": 141,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "94",
+          "seats": 94,
           "composition": {
-            "dem": "23",
-            "rep": "71",
-            "vacant": null,
-            "other": "0"
+            "dem": 23,
+            "rep": 71,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "47",
+          "seats": 47,
           "composition": {
-            "dem": "15",
-            "rep": "32",
-            "vacant": null,
-            "other": "0"
+            "dem": 15,
+            "rep": 32,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -982,26 +982,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "132",
+      "legislature_seats": 132,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "99",
+          "seats": 99,
           "composition": {
-            "dem": "34",
-            "rep": "65",
-            "vacant": null,
-            "other": "0"
+            "dem": 34,
+            "rep": 65,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "33",
+          "seats": 33,
           "composition": {
-            "dem": "10",
-            "rep": "23",
-            "vacant": null,
-            "other": "0"
+            "dem": 10,
+            "rep": 23,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1011,26 +1011,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "149",
+      "legislature_seats": 149,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "101",
+          "seats": 101,
           "composition": {
-            "dem": "30",
-            "rep": "71",
-            "vacant": null,
-            "other": "0"
+            "dem": 30,
+            "rep": 71,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "48",
+          "seats": 48,
           "composition": {
-            "dem": "9",
-            "rep": "39",
-            "vacant": null,
-            "other": "0"
+            "dem": 9,
+            "rep": 39,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1040,26 +1040,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "90",
+      "legislature_seats": 90,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "60",
+          "seats": 60,
           "composition": {
-            "dem": "35",
-            "rep": "25",
-            "vacant": null,
-            "other": "0"
+            "dem": 35,
+            "rep": 25,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "30",
+          "seats": 30,
           "composition": {
-            "dem": "18",
-            "rep": "12",
-            "vacant": null,
-            "other": "0"
+            "dem": 18,
+            "rep": 12,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1069,26 +1069,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Rep",
-      "legislature_seats": "253",
+      "legislature_seats": 253,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "203",
+          "seats": 203,
           "composition": {
-            "dem": "84",
-            "rep": "119",
-            "vacant": null,
-            "other": "0"
+            "dem": 84,
+            "rep": 119,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "50",
+          "seats": 50,
           "composition": {
-            "dem": "19",
-            "rep": "30",
-            "vacant": null,
-            "other": "1v"
+            "dem": 19,
+            "rep": 30,
+            "vacant": 1,
+            "other": 0
           }
         }
       ]
@@ -1098,26 +1098,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "113",
+      "legislature_seats": 113,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "75",
+          "seats": 75,
           "composition": {
-            "dem": "63",
-            "rep": "11",
-            "vacant": null,
-            "other": "1"
+            "dem": 63,
+            "rep": 11,
+            "vacant": 0,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "38",
+          "seats": 38,
           "composition": {
-            "dem": "32",
-            "rep": "5",
-            "vacant": null,
-            "other": "1"
+            "dem": 32,
+            "rep": 5,
+            "vacant": 0,
+            "other": 1
           }
         }
       ]
@@ -1127,26 +1127,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "170",
+      "legislature_seats": 170,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "124",
+          "seats": 124,
           "composition": {
-            "dem": "46",
-            "rep": "78",
-            "vacant": null,
-            "other": "0"
+            "dem": 46,
+            "rep": 78,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "46",
+          "seats": 46,
           "composition": {
-            "dem": "18",
-            "rep": "27",
-            "vacant": null,
-            "other": "1v"
+            "dem": 18,
+            "rep": 27,
+            "vacant": 1,
+            "other": 0
           }
         }
       ]
@@ -1156,26 +1156,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "105",
+      "legislature_seats": 105,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "70",
+          "seats": 70,
           "composition": {
-            "dem": "12",
-            "rep": "58",
-            "vacant": null,
-            "other": "0"
+            "dem": 12,
+            "rep": 58,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "35",
+          "seats": 35,
           "composition": {
-            "dem": "8",
-            "rep": "27",
-            "vacant": null,
-            "other": "0"
+            "dem": 8,
+            "rep": 27,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1185,26 +1185,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "132",
+      "legislature_seats": 132,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "99",
+          "seats": 99,
           "composition": {
-            "dem": "26",
-            "rep": "73",
-            "vacant": null,
-            "other": "0"
+            "dem": 26,
+            "rep": 73,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "33",
+          "seats": 33,
           "composition": {
-            "dem": "5",
-            "rep": "28",
-            "vacant": null,
-            "other": "0"
+            "dem": 5,
+            "rep": 28,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1214,26 +1214,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "181",
+      "legislature_seats": 181,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "150",
+          "seats": 150,
           "composition": {
-            "dem": "49",
-            "rep": "98",
-            "vacant": null,
-            "other": "1, 2v"
+            "dem": 49,
+            "rep": 98,
+            "vacant": 2,
+            "other": 1
           }
         },
         {
           "name": "Senate",
-          "seats": "31",
+          "seats": 31,
           "composition": {
-            "dem": "11",
-            "rep": "20",
-            "vacant": null,
-            "other": "0"
+            "dem": 11,
+            "rep": 20,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1243,26 +1243,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "104",
+      "legislature_seats": 104,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "75",
+          "seats": 75,
           "composition": {
-            "dem": "12",
-            "rep": "63",
-            "vacant": null,
-            "other": "0"
+            "dem": 12,
+            "rep": 63,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "29",
+          "seats": 29,
           "composition": {
-            "dem": "5",
-            "rep": "24",
-            "vacant": null,
-            "other": "0"
+            "dem": 5,
+            "rep": 24,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1272,26 +1272,26 @@
       "control": "Dem",
       "governor_party": "Dem",
       "legislature_control": "Dem",
-      "legislature_seats": "180",
+      "legislature_seats": 180,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "150",
+          "seats": 150,
           "composition": {
-            "dem": "85",
-            "rep": "53",
-            "vacant": null,
-            "other": "12"
+            "dem": 85,
+            "rep": 53,
+            "vacant": 0,
+            "other": 12
           }
         },
         {
           "name": "Senate",
-          "seats": "30",
+          "seats": 30,
           "composition": {
-            "dem": "21",
-            "rep": "9",
-            "vacant": null,
-            "other": "0"
+            "dem": 21,
+            "rep": 9,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1301,26 +1301,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Rep",
-      "legislature_seats": "140",
+      "legislature_seats": 140,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "100",
+          "seats": 100,
           "composition": {
-            "dem": "34",
-            "rep": "66",
-            "vacant": null,
-            "other": "0"
+            "dem": 34,
+            "rep": 66,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "40",
+          "seats": 40,
           "composition": {
-            "dem": "19",
-            "rep": "21",
-            "vacant": null,
-            "other": "0"
+            "dem": 19,
+            "rep": 21,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1330,26 +1330,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Split",
-      "legislature_seats": "147",
+      "legislature_seats": 147,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "98",
+          "seats": 98,
           "composition": {
-            "dem": "50",
-            "rep": "48",
-            "vacant": null,
-            "other": "0"
+            "dem": 50,
+            "rep": 48,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "49",
+          "seats": 49,
           "composition": {
-            "dem": "24",
-            "rep": "25",
-            "vacant": null,
-            "other": "0"
+            "dem": 24,
+            "rep": 25,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1359,26 +1359,26 @@
       "control": "Divided",
       "governor_party": "Dem",
       "legislature_control": "Rep",
-      "legislature_seats": "134",
+      "legislature_seats": 134,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "100",
+          "seats": 100,
           "composition": {
-            "dem": "36",
-            "rep": "64",
-            "vacant": null,
-            "other": "0"
+            "dem": 36,
+            "rep": 64,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "34",
+          "seats": 34,
           "composition": {
-            "dem": "16",
-            "rep": "18",
-            "vacant": null,
-            "other": "0"
+            "dem": 16,
+            "rep": 18,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1388,26 +1388,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "132",
+      "legislature_seats": 132,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "99",
+          "seats": 99,
           "composition": {
-            "dem": "36",
-            "rep": "63",
-            "vacant": null,
-            "other": "0"
+            "dem": 36,
+            "rep": 63,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "33",
+          "seats": 33,
           "composition": {
-            "dem": "14",
-            "rep": "19",
-            "vacant": null,
-            "other": "0"
+            "dem": 14,
+            "rep": 19,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1417,26 +1417,26 @@
       "control": "Rep",
       "governor_party": "Rep",
       "legislature_control": "Rep",
-      "legislature_seats": "90",
+      "legislature_seats": 90,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "60",
+          "seats": 60,
           "composition": {
-            "dem": "9",
-            "rep": "51",
-            "vacant": null,
-            "other": "0"
+            "dem": 9,
+            "rep": 51,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "30",
+          "seats": 30,
           "composition": {
-            "dem": "4",
-            "rep": "26",
-            "vacant": null,
-            "other": "0"
+            "dem": 4,
+            "rep": 26,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1446,16 +1446,16 @@
       "control": "N/A",
       "governor_party": "N/A",
       "legislature_control": "Dem",
-      "legislature_seats": "13",
+      "legislature_seats": 13,
       "legislature_chambers": [
         {
           "name": "Unicameral",
-          "seats": "13",
+          "seats": 13,
           "composition": {
-            "dem": "11",
-            "rep": "0",
-            "vacant": null,
-            "other": "2"
+            "dem": 11,
+            "rep": 0,
+            "vacant": 0,
+            "other": 2
           }
         }
       ]
@@ -1465,16 +1465,16 @@
       "control": "Divided",
       "governor_party": "NULL",
       "legislature_control": "Dem",
-      "legislature_seats": "15",
+      "legislature_seats": 15,
       "legislature_chambers": [
         {
           "name": "Unicameral",
-          "seats": "15",
+          "seats": 15,
           "composition": {
-            "dem": "10",
-            "rep": "5",
-            "vacant": null,
-            "other": "0"
+            "dem": 10,
+            "rep": 5,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]
@@ -1484,26 +1484,26 @@
       "control": "Divided",
       "governor_party": "NULL",
       "legislature_control": "Split",
-      "legislature_seats": "29",
+      "legislature_seats": 29,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "20",
+          "seats": 20,
           "composition": {
-            "dem": "0",
-            "rep": "7",
-            "vacant": null,
-            "other": "13"
+            "dem": 0,
+            "rep": 7,
+            "vacant": 0,
+            "other": 13
           }
         },
         {
           "name": "Senate",
-          "seats": "9",
+          "seats": 9,
           "composition": {
-            "dem": "0",
-            "rep": "6",
-            "vacant": null,
-            "other": "3"
+            "dem": 0,
+            "rep": 6,
+            "vacant": 0,
+            "other": 3
           }
         }
       ]
@@ -1513,26 +1513,26 @@
       "control": "PDP",
       "governor_party": "PDP",
       "legislature_control": "PDP",
-      "legislature_seats": "78",
+      "legislature_seats": 78,
       "legislature_chambers": [
         {
           "name": "House",
-          "seats": "51",
+          "seats": 51,
           "composition": {
-            "dem": "28PDP",
-            "rep": "23NPP",
-            "vacant": null,
-            "other": "0"
+            "dem": 28,
+            "rep": 23,
+            "vacant": 0,
+            "other": 0
           }
         },
         {
           "name": "Senate",
-          "seats": "27",
+          "seats": 27,
           "composition": {
-            "dem": "18PDP",
-            "rep": "8NPP",
-            "vacant": null,
-            "other": "1"
+            "dem": 18,
+            "rep": 8,
+            "vacant": 0,
+            "other": 1
           }
         }
       ]
@@ -1542,16 +1542,16 @@
       "control": "N/A",
       "governor_party": "NULL",
       "legislature_control": "N/A",
-      "legislature_seats": "15",
+      "legislature_seats": 15,
       "legislature_chambers": [
         {
           "name": "Unicameral",
-          "seats": "15",
+          "seats": 15,
           "composition": {
-            "dem": "0",
-            "rep": "0",
-            "vacant": null,
-            "other": "0"
+            "dem": 0,
+            "rep": 0,
+            "vacant": 0,
+            "other": 0
           }
         }
       ]

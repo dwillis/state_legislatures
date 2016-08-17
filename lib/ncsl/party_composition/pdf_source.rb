@@ -152,42 +152,58 @@ module Ncsl
         end
       end
 
+      # @example "1, 1v"
+      # @return ["1", "1v"]
+      def others(others_str)
+        others_str.split(",")
+      end
+
+      # @return 2
+      def other_seats(others_str)
+        others(others_str).map{|str| str.gsub("v","").gsub("u","").to_i }.inject(0){|sum,x| sum + x } #> 3 or 2
+      end
+
+      # @return 1
+      def vacant_seats(others_str)
+        vacancies_str = others(others_str).find{|o| o.include?("v") }
+        vacancies_str.nil? ? 0 : vacancies_str.gsub("v","").to_i
+      end
+
+      # @return 1
+      def remaining_other_seats(others_str)
+        other_seats(others_str) - vacant_seats(others_str)
+      end
+
       def senate_composition(row)
         {
-          :dem => row[:senate_dem],
-          :rep => row[:senate_gop],
-          :vacant => nil,
-          :other => row[:senate_other]
+          :dem => row[:senate_dem].to_i,
+          :rep => row[:senate_gop].to_i,
+          :vacant => vacant_seats(row[:senate_other]),
+          :other => remaining_other_seats(row[:senate_other])
         }
       end
 
       def house_composition(row)
         {
-          :dem => row[:house_dem],
-          :rep => row[:house_gop],
-          :vacant => nil,
-          :other => row[:house_other]
+          :dem => row[:house_dem].to_i,
+          :rep => row[:house_gop].to_i,
+          :vacant => vacant_seats(row[:house_other]),
+          :other => remaining_other_seats(row[:house_other])
         }
       end
 
       def parse_chamber(row, chamber_name)
         case chamber_name
-        when "Unicameral"
+        when "Unicameral","Senate"
           {
             :name => chamber_name,
-            :seats => row[:total_senate],
-            :composition => senate_composition(row)
-          }
-        when "Senate"
-          {
-            :name => chamber_name,
-            :seats => row[:total_senate],
+            :seats => row[:total_senate].to_i,
             :composition => senate_composition(row)
           }
         when "House"
           {
             :name => chamber_name,
-            :seats => row[:total_house],
+            :seats => row[:total_house].to_i,
             :composition => house_composition(row)
           }
         end
@@ -216,9 +232,14 @@ module Ncsl
             :control => row[:state_control],
             :governor_party => row[:gov_party],
             :legislature_control => row[:legis_control],
-            :legislature_seats => row[:total_seats],
+            :legislature_seats => row[:total_seats].to_i,
             :legislature_chambers => parse_chambers(row)
           }
+          #binding.pry
+          #raise LegilsatureSeatCountError unless state[:legislature_seats] == state[:legislature_chambers].map{|chamber| chamber[:seats]}
+          #state[:legislature_chambers].each do |chamber|
+          #  raise ChamberSeatCountError unless
+          #end
           obj[:states] << state
         end
         File.write(json_path, JSON.pretty_generate(obj))
@@ -230,6 +251,9 @@ module Ncsl
       class LegislatureControlError < StandardError ; end
       class GovernorPartyError < StandardError ; end
       class StateControlError < StandardError ; end
+
+      class LegislatureSeatCountError < StandardError ; end
+      class ChamberSeatCountError < StandardError ; end
     end
   end
 end
