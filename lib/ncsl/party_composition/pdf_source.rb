@@ -24,11 +24,11 @@ module Ncsl
       STATE_CONTROL_VALUES = ["Divided", "N/A"].concat(PARTY_ABBREVIATIONS)
       GOVERNOR_PARTY_VALUES = ["N/A", "NULL"].concat(PARTY_ABBREVIATIONS)
       LEGISLATURE_CONTROL_VALUES = ["Split", "N/A"].concat(PARTY_ABBREVIATIONS)
+      CONTROL_BY_COALITION_MARKER = "*"
 
       DATA_DIR = File.expand_path("../../../../data/party_composition", __FILE__)
       CELL_DELIMETER = "   "
       DOUBLE_CELL_DELIMETER = "                   "
-      #DOUBLE_CELL_DELIMETER_UNICAMERAL = "               "
 
       def self.all
         Ncsl::PartyComposition::PDF_SOURCES.map{|source| new(source) }
@@ -148,9 +148,18 @@ module Ncsl
               puts "... #{cells.first}"
               cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
               cells[11].gsub!("0", "NULL") if year == 2016 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
-              raise CellCountError.new(line) unless cells.count == 13
+              raise CellCountError unless cells.count == 13
+              raise LegislatureControlError unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
+              raise GovernorPartyError unless GOVERNOR_PARTY_VALUES.include?(cells[11])
+              raise StateControlError unless STATE_CONTROL_VALUES.include?(cells[12].gsub(CONTROL_BY_COALITION_MARKER,""))
               csv << cells
             rescue CellCountError => e
+              binding.pry
+            rescue LegislatureControlError => e
+              binding.pry
+            rescue GovernorPartyError => e
+              binding.pry
+            rescue StateControlError => e
               binding.pry
             end
           end
@@ -161,7 +170,7 @@ module Ncsl
       class CellCountError < StandardError ; end
 
       class LegislatureControlError < StandardError ; end
-      class GovernorControlError < StandardError ; end
+      class GovernorPartyError < StandardError ; end
       class StateControlError < StandardError ; end
     end
   end
