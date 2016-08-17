@@ -1,10 +1,13 @@
 require 'open-uri'
 require 'csv'
 require 'pry'
+require 'json'
 
 module Ncsl
   module PartyComposition
     class PdfSource
+      DATA_DIR = File.expand_path("../../../../data/party_composition", __FILE__)
+
       COLUMN_HEADERS = [
         "state", "total_seats",
         "total_senate", "senate_dem", "senate_gop", "senate_other",
@@ -26,7 +29,6 @@ module Ncsl
       LEGISLATURE_CONTROL_VALUES = ["Split", "N/A"].concat(PARTY_ABBREVIATIONS)
       CONTROL_BY_COALITION_MARKER = "*"
 
-      DATA_DIR = File.expand_path("../../../../data/party_composition", __FILE__)
       CELL_DELIMETER = "   "
       BLANK_CELL_REPLACEMENT_VALUE = "#{CELL_DELIMETER}0#{CELL_DELIMETER}"
       DOUBLE_CELL_DELIMETER = "                   "
@@ -63,10 +65,6 @@ module Ncsl
 
       def csv_path
         File.join(DATA_DIR, "csv", "#{file_name}.csv")
-      end
-
-      def normalized_csv_path
-        File.join(DATA_DIR, "csv", "#{file_name}_normalized.csv")
       end
 
       def json_path
@@ -116,10 +114,6 @@ module Ncsl
 
         if parsed_line.include?("Unicameral") # workaround for unicameral legislature blank values ...
           parsed_line.gsub!( parsed_line.slice(0,24) , "#{parsed_line.slice(0,24).strip}#{CELL_DELIMETER}")
-
-          #binding.pry if year == 2016 && (parsed_line.include?("District of Columbia") || parsed_line.include?("Guam") )
-
-
           if [2015,2016].include?(year) && (parsed_line.include?("District of Columbia") || parsed_line.include?("Guam") )
             parsed_line.gsub!("      Unicameral","UNI")
             parsed_line.gsub!(DOUBLE_CELL_DELIMETER_UNICAMERAL, BLANK_CELL_REPLACEMENT_VALUE )
@@ -143,30 +137,32 @@ module Ncsl
         CSV.open(csv_path, "w") do |csv|
           csv << COLUMN_HEADERS
           txt_lines.each do |txt_line|
-            begin
-              next if txt_line.include?("Non-partisan")
-              line = parse_line(txt_line)
-              cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
-              puts "... #{cells.first}"
-              cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
-              cells[11].gsub!("0", "NULL") #if year == 2016 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
-              raise CellCountError unless cells.count == 13
-              #TODO: add boolean column for unicameral, add proper values, replace "Unicameral" with 0, and raise CellCountError unless cells.count == 14
-              raise LegislatureControlError unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
-              raise GovernorPartyError unless GOVERNOR_PARTY_VALUES.include?(cells[11])
-              raise StateControlError unless STATE_CONTROL_VALUES.include?(cells[12].gsub(CONTROL_BY_COALITION_MARKER,""))
-              csv << cells
-            rescue CellCountError => e
-              binding.pry
-            rescue LegislatureControlError => e
-              binding.pry
-            rescue GovernorPartyError => e
-              binding.pry
-            rescue StateControlError => e
-              binding.pry
-            end
+            next if txt_line.include?("Non-partisan")
+            line = parse_line(txt_line)
+            cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
+            puts "... #{cells.first}"
+            cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
+            cells[11].gsub!("0", "NULL") #if year == 2016 && ["Mariana Islands"].include?(cells.first) # workaround for "0" gov_party values which resulted from the delimeter conversion process
+            raise CellCountError unless cells.count == 13
+            raise LegislatureControlError unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
+            raise GovernorPartyError unless GOVERNOR_PARTY_VALUES.include?(cells[11])
+            raise StateControlError unless STATE_CONTROL_VALUES.include?(cells[12].gsub(CONTROL_BY_COALITION_MARKER,""))
+            csv << cells
           end
         end
+      end
+
+      def convert_csv_to_json
+        puts "Converting to #{json_path}"
+        obj = {:year => year, :states => []}
+
+        CSV.foreach(csv_path, :headers => true, :header_converters => :symbol) do |row|
+          puts "... #{row[:state]}"
+          state = row.to_h
+          obj[:states] << state
+        end
+
+        File.write(json_path, JSON.pretty_generate(obj))
       end
 
       class LineCountError < StandardError ; end
