@@ -105,45 +105,33 @@ module Ncsl
         lines_to_remove = lines.slice(indices_of_lines_to_remove.first, number_of_lines_to_remove)
         lines -= lines_to_remove
         raise LineCountError.new(lines.count) unless lines.count == 56
-
-        # workaround for 2013/2014: Florida, Georgia, Idaho, Indiana, Kansas, Louisiana, Michigan, Wisconsin ...
-        lines.map!{|l| l.gsub(" e ", CELL_DELIMETER)}
-
-        # workaround for 2014 new york and washington coalitions...
-        #lines.map!{|l| l.gsub("Dem*", "Dem ")}
-
-        # workaround for unicameral legislatures ...
-        #lines.map! do |l|
-        #  if l.include?("Unicameral")
-        #    l.gsub("Unicameral", 0)
-        #    l.gsub(DOUBLE_CELL_DELIMETER_UNICAMERAL, "#{CELL_DELIMETER}0#{CELL_DELIMETER}")
-        #  else
-        #    l
-        #  end
-        #end
-
-        # workaround for 2015 and 2016 where blank values should be zeros ...
-        if [2015,2016].include?(year)
-          lines.map!{|l| l.gsub( l.slice(0,25) , "#{l.slice(0,25).strip}#{CELL_DELIMETER}") }
-          lines.map!{|l| l.gsub(DOUBLE_CELL_DELIMETER, "#{CELL_DELIMETER}0#{CELL_DELIMETER}") }
-        end
-
-        # workaround for 2016 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
-        if year == 2016
-          lines.map!{|l| l.include?("Louisiana") ? l.gsub("Rep Rep Dem", "Rep#{CELL_DELIMETER}Dem") : l }
-        end
-
         return lines
+      end
+
+      def parsed_line(line)
+        binding.pry if line.include?("Unicameral")
+
+        line.gsub!(" e ", CELL_DELIMETER) # workaround for 2013/2014: Florida, Georgia, Idaho, Indiana, Kansas, Louisiana, Michigan, Wisconsin ...
+
+        if [2015,2016].include?(year)
+          line.gsub!( line.slice(0,25) , "#{line.slice(0,25).strip}#{CELL_DELIMETER}")
+          line.gsub!(DOUBLE_CELL_DELIMETER, "#{CELL_DELIMETER}0#{CELL_DELIMETER}")
+        end # workaround for 2015 and 2016 where blank values should be zeros ...
+
+        line.gsub!("Rep Rep Dem", "Rep#{CELL_DELIMETER}Dem") if year == 2016 && line.include?("Louisiana") # workaround for 2016 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
+
+        return line
       end
 
       def convert_txt_to_csv
         puts "Converting to #{csv_path}"
         CSV.open(csv_path, "w") do |csv|
           csv << COLUMN_HEADERS
-          txt_lines.each do |line|
+          txt_lines.each do |txt_line|
             begin
-              next if line.include?("Non-partisan")
-              next if line.include?("Unicameral")
+              next if txt_line.include?("Non-partisan")
+              next if txt_line.include?("Unicam")
+              line = parsed_line(txt_line)
               cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
               puts "... #{cells.first}"
               cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
