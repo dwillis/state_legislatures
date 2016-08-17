@@ -144,6 +144,7 @@ module Ncsl
             cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
             cells[11].gsub!("0", "NULL") # workaround for "0" gov_party values which resulted from the delimeter conversion process
             cells[5] = cells[2] if cells.first == "Virgin Islands" || (cells.first == "Nebraska" && year == 2013) # workaround for known missing corresponding "Senate Other" values in nonpartisan legislature
+            cells[3] = (cells[3].to_i + 1).to_s if cells.first == "Minnesota" && year == 2012 # fix known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
             begin
               raise CellCountError.new(cells) unless cells.count == 13
               raise LegislatureControlError.new(cells) unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
@@ -154,7 +155,7 @@ module Ncsl
               raise ChamberSeatCountError.new(cells) unless cells[6].to_i == (cells[7].to_i + cells[8].to_i + other_seats(cells[9]))
             rescue => e
               puts "#{e.class} -- #{year} -- #{e.message}"
-              raise unless cells.first == "Minnesota" && year == 2012 # known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
+              raise
             end
             csv << cells
           end

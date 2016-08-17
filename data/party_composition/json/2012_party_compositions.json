@@ -660,7 +660,7 @@
           "name": "Senate",
           "seats": 67,
           "composition": {
-            "dem": 28,
+            "dem": 29,
             "rep": 37,
             "vacant": 1,
             "other": 0
