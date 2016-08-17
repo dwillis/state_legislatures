@@ -152,16 +152,75 @@ module Ncsl
         end
       end
 
+      def senate_composition(row)
+        {
+          :dem => row[:senate_dem],
+          :rep => row[:senate_gop],
+          :vacant => nil,
+          :other => row[:senate_other]
+        }
+      end
+
+      def house_composition(row)
+        {
+          :dem => row[:house_dem],
+          :rep => row[:house_gop],
+          :vacant => nil,
+          :other => row[:house_other]
+        }
+      end
+
+      def parse_chamber(row, chamber_name)
+        case chamber_name
+        when "Unicameral"
+          {
+            :name => chamber_name,
+            :seats => row[:total_senate],
+            :composition => senate_composition(row)
+          }
+        when "Senate"
+          {
+            :name => chamber_name,
+            :seats => row[:total_senate],
+            :composition => senate_composition(row)
+          }
+        when "House"
+          {
+            :name => chamber_name,
+            :seats => row[:total_house],
+            :composition => house_composition(row)
+          }
+        end
+      end
+
+      def parse_chambers(row)
+        if row.to_s.include?("Unicameral")
+          chambers = [
+            parse_chamber(row, "Unicameral")
+          ]
+        else
+          chambers = [
+            parse_chamber(row, "House"),
+            parse_chamber(row, "Senate")
+          ]
+        end
+      end
+
       def convert_csv_to_json
         puts "Converting to #{json_path}"
         obj = {:year => year, :states => []}
-
         CSV.foreach(csv_path, :headers => true, :header_converters => :symbol) do |row|
           puts "... #{row[:state]}"
-          state = row.to_h
+          state = {
+            :name => row[:state],
+            :control => row[:state_control],
+            :governor_party => row[:gov_party],
+            :legislature_control => row[:legis_control],
+            :legislature_seats => row[:total_seats],
+            :legislature_chambers => parse_chambers(row)
+          }
           obj[:states] << state
         end
-
         File.write(json_path, JSON.pretty_generate(obj))
       end
 

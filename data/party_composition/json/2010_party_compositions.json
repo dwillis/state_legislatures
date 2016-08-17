@@ -2,829 +2,1559 @@
   "year": 2010,
   "states": [
     {
-      "state": "Alabama",
-      "total_seats": "140",
-      "total_senate": "35",
-      "senate_dem": "21",
-      "senate_gop": "14",
-      "senate_other": "0",
-      "total_house": "105",
-      "house_dem": "60",
-      "house_gop": "45",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Alabama",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "140",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "105",
+          "composition": {
+            "dem": "60",
+            "rep": "45",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "35",
+          "composition": {
+            "dem": "21",
+            "rep": "14",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Alaska",
-      "total_seats": "60",
-      "total_senate": "20",
-      "senate_dem": "10",
-      "senate_gop": "10",
-      "senate_other": "0",
-      "total_house": "40",
-      "house_dem": "18",
-      "house_gop": "22",
-      "house_other": "0",
-      "legis_control": "Split",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Alaska",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Split",
+      "legislature_seats": "60",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "40",
+          "composition": {
+            "dem": "18",
+            "rep": "22",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "20",
+          "composition": {
+            "dem": "10",
+            "rep": "10",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Arizona",
-      "total_seats": "90",
-      "total_senate": "30",
-      "senate_dem": "12",
-      "senate_gop": "18",
-      "senate_other": "0",
-      "total_house": "60",
-      "house_dem": "25",
-      "house_gop": "35",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "Arizona",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "90",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "60",
+          "composition": {
+            "dem": "25",
+            "rep": "35",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "30",
+          "composition": {
+            "dem": "12",
+            "rep": "18",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Arkansas",
-      "total_seats": "135",
-      "total_senate": "35",
-      "senate_dem": "27",
-      "senate_gop": "8",
-      "senate_other": "0",
-      "total_house": "100",
-      "house_dem": "71",
-      "house_gop": "28",
-      "house_other": "1",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Arkansas",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "135",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "100",
+          "composition": {
+            "dem": "71",
+            "rep": "28",
+            "vacant": null,
+            "other": "1"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "35",
+          "composition": {
+            "dem": "27",
+            "rep": "8",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "California",
-      "total_seats": "120",
-      "total_senate": "40",
-      "senate_dem": "25",
-      "senate_gop": "14",
-      "senate_other": "1v",
-      "total_house": "80",
-      "house_dem": "49",
-      "house_gop": "29",
-      "house_other": "1, 1v",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "California",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "120",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "80",
+          "composition": {
+            "dem": "49",
+            "rep": "29",
+            "vacant": null,
+            "other": "1, 1v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "40",
+          "composition": {
+            "dem": "25",
+            "rep": "14",
+            "vacant": null,
+            "other": "1v"
+          }
+        }
+      ]
     },
     {
-      "state": "Colorado",
-      "total_seats": "100",
-      "total_senate": "35",
-      "senate_dem": "21",
-      "senate_gop": "14",
-      "senate_other": "0",
-      "total_house": "65",
-      "house_dem": "37",
-      "house_gop": "27",
-      "house_other": "1",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Colorado",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "100",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "65",
+          "composition": {
+            "dem": "37",
+            "rep": "27",
+            "vacant": null,
+            "other": "1"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "35",
+          "composition": {
+            "dem": "21",
+            "rep": "14",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Connecticut",
-      "total_seats": "187",
-      "total_senate": "36",
-      "senate_dem": "24",
-      "senate_gop": "12",
-      "senate_other": "0",
-      "total_house": "151",
-      "house_dem": "114",
-      "house_gop": "36",
-      "house_other": "1v",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Connecticut",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "187",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "151",
+          "composition": {
+            "dem": "114",
+            "rep": "36",
+            "vacant": null,
+            "other": "1v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "36",
+          "composition": {
+            "dem": "24",
+            "rep": "12",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Delaware",
-      "total_seats": "62",
-      "total_senate": "21",
-      "senate_dem": "15",
-      "senate_gop": "6",
-      "senate_other": "0",
-      "total_house": "41",
-      "house_dem": "24",
-      "house_gop": "17",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Delaware",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "62",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "41",
+          "composition": {
+            "dem": "24",
+            "rep": "17",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "21",
+          "composition": {
+            "dem": "15",
+            "rep": "6",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Florida",
-      "total_seats": "160",
-      "total_senate": "40",
-      "senate_dem": "14",
-      "senate_gop": "26",
-      "senate_other": "0",
-      "total_house": "120",
-      "house_dem": "43",
-      "house_gop": "76",
-      "house_other": "1v",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "Florida",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "160",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "120",
+          "composition": {
+            "dem": "43",
+            "rep": "76",
+            "vacant": null,
+            "other": "1v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "40",
+          "composition": {
+            "dem": "14",
+            "rep": "26",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Georgia",
-      "total_seats": "236",
-      "total_senate": "56",
-      "senate_dem": "21",
-      "senate_gop": "34",
-      "senate_other": "1v",
-      "total_house": "180",
-      "house_dem": "74",
-      "house_gop": "105",
-      "house_other": "1",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "Georgia",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "236",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "180",
+          "composition": {
+            "dem": "74",
+            "rep": "105",
+            "vacant": null,
+            "other": "1"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "56",
+          "composition": {
+            "dem": "21",
+            "rep": "34",
+            "vacant": null,
+            "other": "1v"
+          }
+        }
+      ]
     },
     {
-      "state": "Hawaii",
-      "total_seats": "76",
-      "total_senate": "25",
-      "senate_dem": "23",
-      "senate_gop": "2",
-      "senate_other": "0",
-      "total_house": "51",
-      "house_dem": "45",
-      "house_gop": "6",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Hawaii",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "76",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "51",
+          "composition": {
+            "dem": "45",
+            "rep": "6",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "25",
+          "composition": {
+            "dem": "23",
+            "rep": "2",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Idaho",
-      "total_seats": "105",
-      "total_senate": "35",
-      "senate_dem": "7",
-      "senate_gop": "28",
-      "senate_other": "0",
-      "total_house": "70",
-      "house_dem": "18",
-      "house_gop": "52",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "Idaho",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "105",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "70",
+          "composition": {
+            "dem": "18",
+            "rep": "52",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "35",
+          "composition": {
+            "dem": "7",
+            "rep": "28",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Illinois",
-      "total_seats": "177",
-      "total_senate": "59",
-      "senate_dem": "37",
-      "senate_gop": "22",
-      "senate_other": "0",
-      "total_house": "118",
-      "house_dem": "70",
-      "house_gop": "48",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Illinois",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "177",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "118",
+          "composition": {
+            "dem": "70",
+            "rep": "48",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "59",
+          "composition": {
+            "dem": "37",
+            "rep": "22",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Indiana",
-      "total_seats": "150",
-      "total_senate": "50",
-      "senate_dem": "17",
-      "senate_gop": "33",
-      "senate_other": "0",
-      "total_house": "100",
-      "house_dem": "52",
-      "house_gop": "48",
-      "house_other": "0",
-      "legis_control": "Split",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Indiana",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Split",
+      "legislature_seats": "150",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "100",
+          "composition": {
+            "dem": "52",
+            "rep": "48",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "50",
+          "composition": {
+            "dem": "17",
+            "rep": "33",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Iowa",
-      "total_seats": "150",
-      "total_senate": "50",
-      "senate_dem": "32",
-      "senate_gop": "18",
-      "senate_other": "0",
-      "total_house": "100",
-      "house_dem": "56",
-      "house_gop": "44",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Iowa",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "150",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "100",
+          "composition": {
+            "dem": "56",
+            "rep": "44",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "50",
+          "composition": {
+            "dem": "32",
+            "rep": "18",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Kansas",
-      "total_seats": "165",
-      "total_senate": "40",
-      "senate_dem": "9",
-      "senate_gop": "31",
-      "senate_other": "0",
-      "total_house": "125",
-      "house_dem": "49",
-      "house_gop": "76",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Kansas",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Rep",
+      "legislature_seats": "165",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "125",
+          "composition": {
+            "dem": "49",
+            "rep": "76",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "40",
+          "composition": {
+            "dem": "9",
+            "rep": "31",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Kentucky",
-      "total_seats": "138",
-      "total_senate": "38",
-      "senate_dem": "17",
-      "senate_gop": "20",
-      "senate_other": "1",
-      "total_house": "100",
-      "house_dem": "65",
-      "house_gop": "35",
-      "house_other": "0",
-      "legis_control": "Split",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Kentucky",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Split",
+      "legislature_seats": "138",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "100",
+          "composition": {
+            "dem": "65",
+            "rep": "35",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "38",
+          "composition": {
+            "dem": "17",
+            "rep": "20",
+            "vacant": null,
+            "other": "1"
+          }
+        }
+      ]
     },
     {
-      "state": "Louisiana",
-      "total_seats": "144",
-      "total_senate": "39",
-      "senate_dem": "23",
-      "senate_gop": "16",
-      "senate_other": "0",
-      "total_house": "105",
-      "house_dem": "52",
-      "house_gop": "50",
-      "house_other": "3",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Louisiana",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "144",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "105",
+          "composition": {
+            "dem": "52",
+            "rep": "50",
+            "vacant": null,
+            "other": "3"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "39",
+          "composition": {
+            "dem": "23",
+            "rep": "16",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Maine",
-      "total_seats": "186",
-      "total_senate": "35",
-      "senate_dem": "20",
-      "senate_gop": "15",
-      "senate_other": "0",
-      "total_house": "151",
-      "house_dem": "95",
-      "house_gop": "55",
-      "house_other": "1",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Maine",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "186",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "151",
+          "composition": {
+            "dem": "95",
+            "rep": "55",
+            "vacant": null,
+            "other": "1"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "35",
+          "composition": {
+            "dem": "20",
+            "rep": "15",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Maryland",
-      "total_seats": "188",
-      "total_senate": "47",
-      "senate_dem": "33",
-      "senate_gop": "14",
-      "senate_other": "0",
-      "total_house": "141",
-      "house_dem": "104",
-      "house_gop": "36",
-      "house_other": "1v",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Maryland",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "188",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "141",
+          "composition": {
+            "dem": "104",
+            "rep": "36",
+            "vacant": null,
+            "other": "1v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "47",
+          "composition": {
+            "dem": "33",
+            "rep": "14",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Massachusetts",
-      "total_seats": "200",
-      "total_senate": "40",
-      "senate_dem": "34",
-      "senate_gop": "5",
-      "senate_other": "1v",
-      "total_house": "160",
-      "house_dem": "144",
-      "house_gop": "16",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Massachusetts",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "200",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "160",
+          "composition": {
+            "dem": "144",
+            "rep": "16",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "40",
+          "composition": {
+            "dem": "34",
+            "rep": "5",
+            "vacant": null,
+            "other": "1v"
+          }
+        }
+      ]
     },
     {
-      "state": "Michigan",
-      "total_seats": "148",
-      "total_senate": "38",
-      "senate_dem": "16",
-      "senate_gop": "22",
-      "senate_other": "0",
-      "total_house": "110",
-      "house_dem": "66",
-      "house_gop": "43",
-      "house_other": "1v",
-      "legis_control": "Split",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Michigan",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Split",
+      "legislature_seats": "148",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "110",
+          "composition": {
+            "dem": "66",
+            "rep": "43",
+            "vacant": null,
+            "other": "1v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "38",
+          "composition": {
+            "dem": "16",
+            "rep": "22",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Minnesota",
-      "total_seats": "201",
-      "total_senate": "67",
-      "senate_dem": "46",
-      "senate_gop": "21",
-      "senate_other": "0",
-      "total_house": "134",
-      "house_dem": "87",
-      "house_gop": "47",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Minnesota",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "201",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "134",
+          "composition": {
+            "dem": "87",
+            "rep": "47",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "67",
+          "composition": {
+            "dem": "46",
+            "rep": "21",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Mississippi",
-      "total_seats": "174",
-      "total_senate": "52",
-      "senate_dem": "26",
-      "senate_gop": "25",
-      "senate_other": "1v",
-      "total_house": "122",
-      "house_dem": "74",
-      "house_gop": "48",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Mississippi",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "174",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "122",
+          "composition": {
+            "dem": "74",
+            "rep": "48",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "52",
+          "composition": {
+            "dem": "26",
+            "rep": "25",
+            "vacant": null,
+            "other": "1v"
+          }
+        }
+      ]
     },
     {
-      "state": "Missouri",
-      "total_seats": "197",
-      "total_senate": "34",
-      "senate_dem": "11",
-      "senate_gop": "23",
-      "senate_other": "0",
-      "total_house": "163",
-      "house_dem": "73",
-      "house_gop": "89",
-      "house_other": "1v",
-      "legis_control": "Rep",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Missouri",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Rep",
+      "legislature_seats": "197",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "163",
+          "composition": {
+            "dem": "73",
+            "rep": "89",
+            "vacant": null,
+            "other": "1v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "34",
+          "composition": {
+            "dem": "11",
+            "rep": "23",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Montana",
-      "total_seats": "150",
-      "total_senate": "50",
-      "senate_dem": "23",
-      "senate_gop": "27",
-      "senate_other": "0",
-      "total_house": "100",
-      "house_dem": "50",
-      "house_gop": "50",
-      "house_other": "0",
-      "legis_control": "Split",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Montana",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Split",
+      "legislature_seats": "150",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "100",
+          "composition": {
+            "dem": "50",
+            "rep": "50",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "50",
+          "composition": {
+            "dem": "23",
+            "rep": "27",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Nebraska",
-      "total_seats": "49",
-      "total_senate": "49",
-      "senate_dem": "0",
-      "senate_gop": "0",
-      "senate_other": "49",
-      "total_house": "Unicameral",
-      "house_dem": "0",
-      "house_gop": "0",
-      "house_other": "0",
-      "legis_control": "N/A",
-      "gov_party": "Rep",
-      "state_control": "N/A"
+      "name": "Nebraska",
+      "control": "N/A",
+      "governor_party": "Rep",
+      "legislature_control": "N/A",
+      "legislature_seats": "49",
+      "legislature_chambers": [
+        {
+          "name": "Unicameral",
+          "seats": "49",
+          "composition": {
+            "dem": "0",
+            "rep": "0",
+            "vacant": null,
+            "other": "49"
+          }
+        }
+      ]
     },
     {
-      "state": "Nevada",
-      "total_seats": "63",
-      "total_senate": "21",
-      "senate_dem": "12",
-      "senate_gop": "8",
-      "senate_other": "1v",
-      "total_house": "42",
-      "house_dem": "28",
-      "house_gop": "14",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Nevada",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "63",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "42",
+          "composition": {
+            "dem": "28",
+            "rep": "14",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "21",
+          "composition": {
+            "dem": "12",
+            "rep": "8",
+            "vacant": null,
+            "other": "1v"
+          }
+        }
+      ]
     },
     {
-      "state": "New Hampshire",
-      "total_seats": "424",
-      "total_senate": "24",
-      "senate_dem": "14",
-      "senate_gop": "10",
-      "senate_other": "0",
-      "total_house": "400",
-      "house_dem": "222",
-      "house_gop": "175",
-      "house_other": "3v",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "New Hampshire",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "424",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "400",
+          "composition": {
+            "dem": "222",
+            "rep": "175",
+            "vacant": null,
+            "other": "3v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "24",
+          "composition": {
+            "dem": "14",
+            "rep": "10",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "New Jersey",
-      "total_seats": "120",
-      "total_senate": "40",
-      "senate_dem": "23",
-      "senate_gop": "17",
-      "senate_other": "0",
-      "total_house": "80",
-      "house_dem": "47",
-      "house_gop": "33",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "New Jersey",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "120",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "80",
+          "composition": {
+            "dem": "47",
+            "rep": "33",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "40",
+          "composition": {
+            "dem": "23",
+            "rep": "17",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "New Mexico",
-      "total_seats": "112",
-      "total_senate": "42",
-      "senate_dem": "27",
-      "senate_gop": "15",
-      "senate_other": "0",
-      "total_house": "70",
-      "house_dem": "45",
-      "house_gop": "25",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "New Mexico",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "112",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "70",
+          "composition": {
+            "dem": "45",
+            "rep": "25",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "42",
+          "composition": {
+            "dem": "27",
+            "rep": "15",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "New York",
-      "total_seats": "212",
-      "total_senate": "62",
-      "senate_dem": "32",
-      "senate_gop": "30",
-      "senate_other": "0",
-      "total_house": "150",
-      "house_dem": "109",
-      "house_gop": "41",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "New York",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "212",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "150",
+          "composition": {
+            "dem": "109",
+            "rep": "41",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "62",
+          "composition": {
+            "dem": "32",
+            "rep": "30",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "North Carolina",
-      "total_seats": "170",
-      "total_senate": "50",
-      "senate_dem": "30",
-      "senate_gop": "20",
-      "senate_other": "0",
-      "total_house": "120",
-      "house_dem": "68",
-      "house_gop": "52",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "North Carolina",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "170",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "120",
+          "composition": {
+            "dem": "68",
+            "rep": "52",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "50",
+          "composition": {
+            "dem": "30",
+            "rep": "20",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "North Dakota",
-      "total_seats": "141",
-      "total_senate": "47",
-      "senate_dem": "21",
-      "senate_gop": "26",
-      "senate_other": "0",
-      "total_house": "94",
-      "house_dem": "36",
-      "house_gop": "58",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "North Dakota",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "141",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "94",
+          "composition": {
+            "dem": "36",
+            "rep": "58",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "47",
+          "composition": {
+            "dem": "21",
+            "rep": "26",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Ohio",
-      "total_seats": "132",
-      "total_senate": "33",
-      "senate_dem": "12",
-      "senate_gop": "21",
-      "senate_other": "0",
-      "total_house": "99",
-      "house_dem": "53",
-      "house_gop": "46",
-      "house_other": "0",
-      "legis_control": "Split",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Ohio",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Split",
+      "legislature_seats": "132",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "99",
+          "composition": {
+            "dem": "53",
+            "rep": "46",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "33",
+          "composition": {
+            "dem": "12",
+            "rep": "21",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Oklahoma",
-      "total_seats": "149",
-      "total_senate": "48",
-      "senate_dem": "22",
-      "senate_gop": "26",
-      "senate_other": "0",
-      "total_house": "101",
-      "house_dem": "40",
-      "house_gop": "61",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Oklahoma",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Rep",
+      "legislature_seats": "149",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "101",
+          "composition": {
+            "dem": "40",
+            "rep": "61",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "48",
+          "composition": {
+            "dem": "22",
+            "rep": "26",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Oregon",
-      "total_seats": "90",
-      "total_senate": "30",
-      "senate_dem": "18",
-      "senate_gop": "12",
-      "senate_other": "0",
-      "total_house": "60",
-      "house_dem": "36",
-      "house_gop": "24",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Oregon",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "90",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "60",
+          "composition": {
+            "dem": "36",
+            "rep": "24",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "30",
+          "composition": {
+            "dem": "18",
+            "rep": "12",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Pennsylvania",
-      "total_seats": "253",
-      "total_senate": "50",
-      "senate_dem": "20",
-      "senate_gop": "30",
-      "senate_other": "0",
-      "total_house": "203",
-      "house_dem": "103",
-      "house_gop": "97",
-      "house_other": "3v",
-      "legis_control": "Split",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Pennsylvania",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Split",
+      "legislature_seats": "253",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "203",
+          "composition": {
+            "dem": "103",
+            "rep": "97",
+            "vacant": null,
+            "other": "3v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "50",
+          "composition": {
+            "dem": "20",
+            "rep": "30",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Rhode Island",
-      "total_seats": "113",
-      "total_senate": "38",
-      "senate_dem": "33",
-      "senate_gop": "4",
-      "senate_other": "1",
-      "total_house": "75",
-      "house_dem": "69",
-      "house_gop": "6",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Rhode Island",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "113",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "75",
+          "composition": {
+            "dem": "69",
+            "rep": "6",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "38",
+          "composition": {
+            "dem": "33",
+            "rep": "4",
+            "vacant": null,
+            "other": "1"
+          }
+        }
+      ]
     },
     {
-      "state": "South Carolina",
-      "total_seats": "170",
-      "total_senate": "46",
-      "senate_dem": "19",
-      "senate_gop": "27",
-      "senate_other": "0",
-      "total_house": "124",
-      "house_dem": "51",
-      "house_gop": "73",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "South Carolina",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "170",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "124",
+          "composition": {
+            "dem": "51",
+            "rep": "73",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "46",
+          "composition": {
+            "dem": "19",
+            "rep": "27",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "South Dakota",
-      "total_seats": "105",
-      "total_senate": "35",
-      "senate_dem": "14",
-      "senate_gop": "21",
-      "senate_other": "0",
-      "total_house": "70",
-      "house_dem": "24",
-      "house_gop": "46",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "South Dakota",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "105",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "70",
+          "composition": {
+            "dem": "24",
+            "rep": "46",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "35",
+          "composition": {
+            "dem": "14",
+            "rep": "21",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Tennessee",
-      "total_seats": "132",
-      "total_senate": "33",
-      "senate_dem": "14",
-      "senate_gop": "19",
-      "senate_other": "0",
-      "total_house": "99",
-      "house_dem": "47",
-      "house_gop": "50",
-      "house_other": "1, 1v",
-      "legis_control": "Rep",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Tennessee",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Rep",
+      "legislature_seats": "132",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "99",
+          "composition": {
+            "dem": "47",
+            "rep": "50",
+            "vacant": null,
+            "other": "1, 1v"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "33",
+          "composition": {
+            "dem": "14",
+            "rep": "19",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Texas",
-      "total_seats": "181",
-      "total_senate": "31",
-      "senate_dem": "12",
-      "senate_gop": "19",
-      "senate_other": "0",
-      "total_house": "150",
-      "house_dem": "73",
-      "house_gop": "77",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "Texas",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "181",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "150",
+          "composition": {
+            "dem": "73",
+            "rep": "77",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "31",
+          "composition": {
+            "dem": "12",
+            "rep": "19",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Utah",
-      "total_seats": "104",
-      "total_senate": "29",
-      "senate_dem": "8",
-      "senate_gop": "21",
-      "senate_other": "0",
-      "total_house": "75",
-      "house_dem": "22",
-      "house_gop": "53",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Rep",
-      "state_control": "Rep"
+      "name": "Utah",
+      "control": "Rep",
+      "governor_party": "Rep",
+      "legislature_control": "Rep",
+      "legislature_seats": "104",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "75",
+          "composition": {
+            "dem": "22",
+            "rep": "53",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "29",
+          "composition": {
+            "dem": "8",
+            "rep": "21",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Vermont",
-      "total_seats": "180",
-      "total_senate": "30",
-      "senate_dem": "22",
-      "senate_gop": "7",
-      "senate_other": "1",
-      "total_house": "150",
-      "house_dem": "95",
-      "house_gop": "48",
-      "house_other": "7",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Vermont",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "180",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "150",
+          "composition": {
+            "dem": "95",
+            "rep": "48",
+            "vacant": null,
+            "other": "7"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "30",
+          "composition": {
+            "dem": "22",
+            "rep": "7",
+            "vacant": null,
+            "other": "1"
+          }
+        }
+      ]
     },
     {
-      "state": "Virginia",
-      "total_seats": "140",
-      "total_senate": "40",
-      "senate_dem": "22",
-      "senate_gop": "18",
-      "senate_other": "0",
-      "total_house": "100",
-      "house_dem": "39",
-      "house_gop": "59",
-      "house_other": "2",
-      "legis_control": "Split",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Virginia",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Split",
+      "legislature_seats": "140",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "100",
+          "composition": {
+            "dem": "39",
+            "rep": "59",
+            "vacant": null,
+            "other": "2"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "40",
+          "composition": {
+            "dem": "22",
+            "rep": "18",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Washington",
-      "total_seats": "147",
-      "total_senate": "49",
-      "senate_dem": "31",
-      "senate_gop": "18",
-      "senate_other": "0",
-      "total_house": "98",
-      "house_dem": "62",
-      "house_gop": "36",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Washington",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "147",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "98",
+          "composition": {
+            "dem": "62",
+            "rep": "36",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "49",
+          "composition": {
+            "dem": "31",
+            "rep": "18",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "West Virginia",
-      "total_seats": "134",
-      "total_senate": "34",
-      "senate_dem": "26",
-      "senate_gop": "8",
-      "senate_other": "0",
-      "total_house": "100",
-      "house_dem": "71",
-      "house_gop": "29",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "West Virginia",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "134",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "100",
+          "composition": {
+            "dem": "71",
+            "rep": "29",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "34",
+          "composition": {
+            "dem": "26",
+            "rep": "8",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Wisconsin",
-      "total_seats": "132",
-      "total_senate": "33",
-      "senate_dem": "18",
-      "senate_gop": "15",
-      "senate_other": "0",
-      "total_house": "99",
-      "house_dem": "52",
-      "house_gop": "46",
-      "house_other": "1",
-      "legis_control": "Dem",
-      "gov_party": "Dem",
-      "state_control": "Dem"
+      "name": "Wisconsin",
+      "control": "Dem",
+      "governor_party": "Dem",
+      "legislature_control": "Dem",
+      "legislature_seats": "132",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "99",
+          "composition": {
+            "dem": "52",
+            "rep": "46",
+            "vacant": null,
+            "other": "1"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "33",
+          "composition": {
+            "dem": "18",
+            "rep": "15",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Wyoming",
-      "total_seats": "90",
-      "total_senate": "30",
-      "senate_dem": "7",
-      "senate_gop": "23",
-      "senate_other": "0",
-      "total_house": "60",
-      "house_dem": "19",
-      "house_gop": "41",
-      "house_other": "0",
-      "legis_control": "Rep",
-      "gov_party": "Dem",
-      "state_control": "Divided"
+      "name": "Wyoming",
+      "control": "Divided",
+      "governor_party": "Dem",
+      "legislature_control": "Rep",
+      "legislature_seats": "90",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "60",
+          "composition": {
+            "dem": "19",
+            "rep": "41",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "30",
+          "composition": {
+            "dem": "7",
+            "rep": "23",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "District of Columbia",
-      "total_seats": "13",
-      "total_senate": "13",
-      "senate_dem": "11",
-      "senate_gop": "0",
-      "senate_other": "2",
-      "total_house": "Unicameral",
-      "house_dem": "0",
-      "house_gop": "0",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "N/A",
-      "state_control": "N/A"
+      "name": "District of Columbia",
+      "control": "N/A",
+      "governor_party": "N/A",
+      "legislature_control": "Dem",
+      "legislature_seats": "13",
+      "legislature_chambers": [
+        {
+          "name": "Unicameral",
+          "seats": "13",
+          "composition": {
+            "dem": "11",
+            "rep": "0",
+            "vacant": null,
+            "other": "2"
+          }
+        }
+      ]
     },
     {
-      "state": "Guam",
-      "total_seats": "15",
-      "total_senate": "15",
-      "senate_dem": "9",
-      "senate_gop": "6",
-      "senate_other": "0",
-      "total_house": "Unicameral",
-      "house_dem": "0",
-      "house_gop": "0",
-      "house_other": "0",
-      "legis_control": "Dem",
-      "gov_party": "Rep",
-      "state_control": "Divided"
+      "name": "Guam",
+      "control": "Divided",
+      "governor_party": "Rep",
+      "legislature_control": "Dem",
+      "legislature_seats": "15",
+      "legislature_chambers": [
+        {
+          "name": "Unicameral",
+          "seats": "15",
+          "composition": {
+            "dem": "9",
+            "rep": "6",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Mariana Islands",
-      "total_seats": "29",
-      "total_senate": "9",
-      "senate_dem": "5",
-      "senate_gop": "3",
-      "senate_other": "1v",
-      "total_house": "20",
-      "house_dem": "4C",
-      "house_gop": "4",
-      "house_other": "12",
-      "legis_control": "Split",
-      "gov_party": "Cov",
-      "state_control": "Divided"
+      "name": "Mariana Islands",
+      "control": "Divided",
+      "governor_party": "Cov",
+      "legislature_control": "Split",
+      "legislature_seats": "29",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "20",
+          "composition": {
+            "dem": "4C",
+            "rep": "4",
+            "vacant": null,
+            "other": "12"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "9",
+          "composition": {
+            "dem": "5",
+            "rep": "3",
+            "vacant": null,
+            "other": "1v"
+          }
+        }
+      ]
     },
     {
-      "state": "Puerto Rico",
-      "total_seats": "78",
-      "total_senate": "27",
-      "senate_dem": "5PDP",
-      "senate_gop": "22NPP",
-      "senate_other": "0",
-      "total_house": "51",
-      "house_dem": "14PDP",
-      "house_gop": "37NPP",
-      "house_other": "0",
-      "legis_control": "NPP",
-      "gov_party": "NPP",
-      "state_control": "NPP"
+      "name": "Puerto Rico",
+      "control": "NPP",
+      "governor_party": "NPP",
+      "legislature_control": "NPP",
+      "legislature_seats": "78",
+      "legislature_chambers": [
+        {
+          "name": "House",
+          "seats": "51",
+          "composition": {
+            "dem": "14PDP",
+            "rep": "37NPP",
+            "vacant": null,
+            "other": "0"
+          }
+        },
+        {
+          "name": "Senate",
+          "seats": "27",
+          "composition": {
+            "dem": "5PDP",
+            "rep": "22NPP",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     },
     {
-      "state": "Virgin Islands",
-      "total_seats": "15",
-      "total_senate": "15",
-      "senate_dem": "0",
-      "senate_gop": "0",
-      "senate_other": "0",
-      "total_house": "Unicameral",
-      "house_dem": "0",
-      "house_gop": "0",
-      "house_other": "0",
-      "legis_control": "N/A",
-      "gov_party": "Dem",
-      "state_control": "N/A"
+      "name": "Virgin Islands",
+      "control": "N/A",
+      "governor_party": "Dem",
+      "legislature_control": "N/A",
+      "legislature_seats": "15",
+      "legislature_chambers": [
+        {
+          "name": "Unicameral",
+          "seats": "15",
+          "composition": {
+            "dem": "0",
+            "rep": "0",
+            "vacant": null,
+            "other": "0"
+          }
+        }
+      ]
     }
   ]
 }
