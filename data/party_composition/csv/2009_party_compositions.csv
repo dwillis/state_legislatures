@@ -48,6 +48,5 @@ Washington,147,49,31,18,0,98,64,34,0,Dem,Dem,Dem
 West Virginia,134,34,28,6,0,100,79,21,0,Dem,Dem,Dem
 Wisconsin,132,33,18,15,0,99,52,46,1,Dem,Dem,Dem
 Wyoming,90,30,7,23,0,60,19,41,0,Rep,Dem,Divided
-American Samoa,39,1,"",n-part,"",21,"",Non-pa,isan,N/A,Ind,N/A
-Mariana Islands,29,"",5,3,"",20,4C,"",12,Split,Cov,Divided
-Puerto Rico,78,2,5PD,22NP,"",51,14PD,37N,0,NPP,NPP,NPP
+Mariana Islands,29,9,5,3,1v,20,4C,4,12,Split,Cov,Divided
+Puerto Rico,78,27,5PDP,22NPP,0,51,14PDP,37NPP,0,NPP,NPP,NPP

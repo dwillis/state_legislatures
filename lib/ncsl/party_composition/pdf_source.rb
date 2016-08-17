@@ -5,8 +5,6 @@ require 'pry'
 module Ncsl
   module PartyComposition
     class PdfSource
-      DATA_DIR = File.expand_path("../../../../data/party_composition", __FILE__)
-
       COLUMN_HEADERS = [
         "state", "total_seats",
         "total_senate", "senate_dem", "senate_gop", "senate_other",
@@ -22,11 +20,15 @@ module Ncsl
         {:abbrevs => ["PDP"], :name => "Popular Democratic"},
         {:abbrevs => ["NPP"], :name => "New Progressive"}
       ]
-
       PARTY_ABBREVIATIONS = PARTIES.map{ |party| party[:abbrevs] }.flatten
       STATE_CONTROL_VALUES = ["Divided", "N/A"].concat(PARTY_ABBREVIATIONS)
       GOVERNOR_PARTY_VALUES = ["N/A", "NULL"].concat(PARTY_ABBREVIATIONS)
       LEGISLATURE_CONTROL_VALUES = ["Split", "N/A"].concat(PARTY_ABBREVIATIONS)
+
+      DATA_DIR = File.expand_path("../../../../data/party_composition", __FILE__)
+      CELL_DELIMETER = "   "
+      DOUBLE_CELL_DELIMETER = "                   "
+      #DOUBLE_CELL_DELIMETER_UNICAMERAL = "               "
 
       def self.all
         Ncsl::PartyComposition::PDF_SOURCES.map{|source| new(source) }
@@ -105,19 +107,32 @@ module Ncsl
         raise LineCountError.new(lines.count) unless lines.count == 56
 
         # workaround for 2013/2014: Florida, Georgia, Idaho, Indiana, Kansas, Louisiana, Michigan, Wisconsin ...
-        lines.map!{|l| l.gsub(" e ", "   ")}
+        lines.map!{|l| l.gsub(" e ", CELL_DELIMETER)}
 
         # workaround for 2014 new york and washington coalitions...
-        lines.map!{|l| l.gsub("Dem*", "Dem ")}
+        #lines.map!{|l| l.gsub("Dem*", "Dem ")}
 
-        # workaround for 2016 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
-        lines.map!{|line| line.include?("Louisiana") && line.include?("Rep Rep Dem") ? line.gsub("Rep Rep Dem", "Rep     Dem") : line }
-
-        #if year == 2016
-        #  lines.map!{|line| line.include?("Louisiana") ? line.gsub("Rep Rep Dem", "Rep     Dem") : line }
+        # workaround for unicameral legislatures ...
+        #lines.map! do |l|
+        #  if l.include?("Unicameral")
+        #    l.gsub("Unicameral", 0)
+        #    l.gsub(DOUBLE_CELL_DELIMETER_UNICAMERAL, "#{CELL_DELIMETER}0#{CELL_DELIMETER}")
+        #  else
+        #    l
+        #  end
         #end
 
-        lines.map!{|line| "  " + line + "  " } # give first and last cells some padding to pass subsequent whitespace validations
+        # workaround for 2015 and 2016 where blank values should be zeros ...
+        if [2015,2016].include?(year)
+          lines.map!{|l| l.gsub( l.slice(0,25) , "#{l.slice(0,25).strip}#{CELL_DELIMETER}") }
+          lines.map!{|l| l.gsub(DOUBLE_CELL_DELIMETER, "#{CELL_DELIMETER}0#{CELL_DELIMETER}") }
+        end
+
+        # workaround for 2016 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
+        if year == 2016
+          lines.map!{|l| l.include?("Louisiana") ? l.gsub("Rep Rep Dem", "Rep#{CELL_DELIMETER}Dem") : l }
+        end
+
         return lines
       end
 
@@ -126,82 +141,24 @@ module Ncsl
         CSV.open(csv_path, "w") do |csv|
           csv << COLUMN_HEADERS
           txt_lines.each do |line|
-            state = line.slice(0,24)
-            puts "  + #{state.strip}"
-
-            unicameral = line.include?("Unicameral")
-            nonpartisan = line.include?("Non Partisan")
-            next if unicameral == true || nonpartisan == true # skip for now
-
-            total_seats = line.slice(23,7)
-
-            case year
-            when 2009,2010,2011,2012,2013
-              legis_control = line.slice(121,14)
-              gov_party = line.slice(135,11)
-              state_control = line.slice(148,20)
-            when 2014
-              legis_control = line.slice(121,14)
-              legis_control = line.slice(125,15) if state.strip == "Mariana Islands"
-              gov_party = line.slice(135,11)
-              gov_party = line.slice(136,11) if state.strip == "Mariana Islands"
-              state_control = line.slice(148,20)
-            when 2015
-              legis_control = line.slice(123,17) # line.slice(121,17)
-              gov_party = line.slice(137,11)
-              gov_party = line.slice(138,11) if state.strip == "Mariana Islands"
-              gov_party = "NULL" if ["Guam","Mariana Islands", "Virgin Islands"].include?(state.strip) # workaround for null values
-              state_control = line.slice(148,20)
-            when 2016
-              legis_control = line.slice(123,14) # line.slice(121,14)
-              legis_control = line.slice(128,14) if state.strip == "Mariana Islands"
-              gov_party = line.slice(135,8) # line.slice(135,5)
-              gov_party = line.slice(142,8) if ["American Samoa", "Puerto Rico"].include?(state.strip)
-              gov_party = "NULL" if ["Guam","Mariana Islands", "Virgin Islands"].include?(state.strip) # workaround for null values
-              state_control = line.slice(142,20)
-              state_control = line.slice(142,30) if state.strip == "Mariana Islands"
+            begin
+              next if line.include?("Non-partisan")
+              next if line.include?("Unicameral")
+              cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
+              puts "... #{cells.first}"
+              cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
+              cells[11].gsub!("0", "NULL") if year == 2016 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
+              raise CellCountError.new(line) unless cells.count == 13
+              csv << cells
+            rescue CellCountError => e
+              binding.pry
             end
-
-            #raise LegislatureControlError.new("#{legis_control} -- #{line}") unless LEGISLATURE_CONTROL_VALUES.include?(legis_control.strip)
-            binding.pry unless LEGISLATURE_CONTROL_VALUES.include?(legis_control.strip)
-            #raise GovernorControlError.new("#{gov_party} -- #{line}") unless GOVERNOR_PARTY_VALUES.include?(gov_party.strip)
-            binding.pry unless GOVERNOR_PARTY_VALUES.include?(gov_party.strip)
-            #raise StateControlError.new("#{state_control} -- #{line}") unless STATE_CONTROL_VALUES.include?(state_control.strip)
-            binding.pry unless STATE_CONTROL_VALUES.include?(state_control.strip)
-
-
-
-            total_senate = line.slice(33,7)
-            senate_dem = line.slice(45,6)
-            senate_rep = line.slice(56,6)
-            senate_other = line.slice(66,6)
-
-            total_house = line.slice(76,9)
-            house_dem = line.slice(88,8)
-            house_rep = line.slice(98,7)
-            house_other = line.slice(107,10)
-
-            cells = [
-              state, total_seats,
-              total_senate, senate_dem, senate_rep, senate_other,
-              total_house, house_dem, house_rep, house_other,
-              legis_control, gov_party, state_control
-            ] # order matters
-            cells.each do |cell|
-              leading_spaces , trailing_spaces = cell.split(cell.strip).map(&:size)
-              #raise CellPaddingError.new(cell) unless !leading_spaces.nil? && !trailing_spaces.nil?
-              #raise CellPaddingError.new(cell) unless leading_spaces > 1 && trailing_spaces > 1
-              #binding.pry unless !leading_spaces.nil? && !trailing_spaces.nil?
-              #binding.pry unless leading_spaces > 1 && trailing_spaces > 1
-            end
-            cells.map!{|cell| cell.to_s.strip } # remove white-space before writing to file
-            csv << cells
           end
         end
       end
 
       class LineCountError < StandardError ; end
-      class CellPaddingError < StandardError ; end
+      class CellCountError < StandardError ; end
 
       class LegislatureControlError < StandardError ; end
       class GovernorControlError < StandardError ; end
