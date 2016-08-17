@@ -160,7 +160,7 @@ module Ncsl
 
       # @return 2
       def other_seats(others_str)
-        others(others_str).map{|str| str.gsub("v","").gsub("u","").to_i }.inject(0){|sum,x| sum + x } #> 3 or 2
+        others(others_str).map{|str| str.gsub("v","").gsub("u","").to_i }.inject(0){|sum,x| sum + x }
       end
 
       # @return 1
@@ -226,7 +226,7 @@ module Ncsl
         puts "Converting to #{json_path}"
         obj = {:year => year, :states => []}
         CSV.foreach(csv_path, :headers => true, :header_converters => :symbol) do |row|
-          puts "... #{row[:state]}"
+          #puts "... #{row[:state]}"
           state = {
             :name => row[:state],
             :control => row[:state_control],
@@ -235,11 +235,16 @@ module Ncsl
             :legislature_seats => row[:total_seats].to_i,
             :legislature_chambers => parse_chambers(row)
           }
-          #binding.pry
-          #raise LegilsatureSeatCountError unless state[:legislature_seats] == state[:legislature_chambers].map{|chamber| chamber[:seats]}
-          #state[:legislature_chambers].each do |chamber|
-          #  raise ChamberSeatCountError unless
-          #end
+
+          begin
+            raise LegislatureSeatCountError.new("#{year} -- #{state[:name]}") unless state[:legislature_seats] == state[:legislature_chambers].map{|chamber| chamber[:seats]}.inject(0){|sum,x| sum + x }
+            state[:legislature_chambers].each do |chamber|
+              raise ChamberSeatCountError.new("#{year} -- #{state[:name]} -- #{chamber}") unless chamber[:seats] == (chamber[:composition][:dem] + chamber[:composition][:rep] + chamber[:composition][:vacant] + chamber[:composition][:other])
+            end
+          rescue => e
+            puts "#{e.class} -- #{e.message}"
+          end
+
           obj[:states] << state
         end
         File.write(json_path, JSON.pretty_generate(obj))
