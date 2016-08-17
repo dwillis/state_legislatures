@@ -137,17 +137,26 @@ module Ncsl
         CSV.open(csv_path, "w") do |csv|
           csv << COLUMN_HEADERS
           txt_lines.each do |txt_line|
-            next if txt_line.include?("Non-partisan")
-            line = parse_line(txt_line)
-            cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
-            puts "... #{cells.first}"
-            cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
-            cells[11].gsub!("0", "NULL") #if year == 2016 && ["Mariana Islands"].include?(cells.first) # workaround for "0" gov_party values which resulted from the delimeter conversion process
-            raise CellCountError unless cells.count == 13
-            raise LegislatureControlError unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
-            raise GovernorPartyError unless GOVERNOR_PARTY_VALUES.include?(cells[11])
-            raise StateControlError unless STATE_CONTROL_VALUES.include?(cells[12].gsub(CONTROL_BY_COALITION_MARKER,""))
-            csv << cells
+            begin
+              next if txt_line.include?("Non-partisan")
+              line = parse_line(txt_line)
+              cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
+              puts "... #{cells.first}"
+              cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
+              cells[11].gsub!("0", "NULL") # workaround for "0" gov_party values which resulted from the delimeter conversion process
+              cells[5] = cells[2] if cells.first == "Virgin Islands" || (cells.first == "Nebraska" && year == 2013) # workaround for known missing corresponding "Senate Other" values in nonpartisan legislature
+              raise CellCountError unless cells.count == 13
+              raise LegislatureControlError unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
+              raise GovernorPartyError unless GOVERNOR_PARTY_VALUES.include?(cells[11])
+              raise StateControlError unless STATE_CONTROL_VALUES.include?(cells[12].gsub(CONTROL_BY_COALITION_MARKER,""))
+              raise LegislatureSeatCountError unless cells[1].to_i == (cells[2].to_i + cells[6].to_i)
+              raise ChamberSeatCountError unless cells[2].to_i == (cells[3].to_i + cells[4].to_i + other_seats(cells[5])) unless cells.first == "Minnesota" && year == 2012 # known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
+              raise ChamberSeatCountError unless cells[6].to_i == (cells[7].to_i + cells[8].to_i + other_seats(cells[9]))
+              csv << cells
+            rescue => e
+              puts "#{e.class} -- #{e.message}"
+              raise
+            end
           end
         end
       end
@@ -175,77 +184,48 @@ module Ncsl
       end
 
       def senate_composition(row)
-        {
-          :dem => row[:senate_dem].to_i,
-          :rep => row[:senate_gop].to_i,
-          :vacant => vacant_seats(row[:senate_other]),
-          :other => remaining_other_seats(row[:senate_other])
-        }
+        {:dem => row[:senate_dem].to_i, :rep => row[:senate_gop].to_i, :vacant => vacant_seats(row[:senate_other]), :other => remaining_other_seats(row[:senate_other])}
       end
 
       def house_composition(row)
-        {
-          :dem => row[:house_dem].to_i,
-          :rep => row[:house_gop].to_i,
-          :vacant => vacant_seats(row[:house_other]),
-          :other => remaining_other_seats(row[:house_other])
-        }
+        {:dem => row[:house_dem].to_i, :rep => row[:house_gop].to_i, :vacant => vacant_seats(row[:house_other]), :other => remaining_other_seats(row[:house_other])}
       end
 
       def parse_chamber(row, chamber_name)
         case chamber_name
         when "Unicameral","Senate"
-          {
-            :name => chamber_name,
-            :seats => row[:total_senate].to_i,
-            :composition => senate_composition(row)
-          }
+          {:name => chamber_name, :seats => row[:total_senate].to_i, :composition => senate_composition(row)}
         when "House"
-          {
-            :name => chamber_name,
-            :seats => row[:total_house].to_i,
-            :composition => house_composition(row)
-          }
+          {:name => chamber_name, :seats => row[:total_house].to_i, :composition => house_composition(row)}
         end
       end
 
       def parse_chambers(row)
-        if row.to_s.include?("Unicameral")
-          chambers = [
-            parse_chamber(row, "Unicameral")
-          ]
-        else
-          chambers = [
-            parse_chamber(row, "House"),
-            parse_chamber(row, "Senate")
-          ]
-        end
+        row.to_s.include?("Unicameral") ? [parse_chamber(row, "Unicameral")] : [parse_chamber(row, "House"), parse_chamber(row, "Senate")]
       end
 
       def convert_csv_to_json
         puts "Converting to #{json_path}"
         obj = {:year => year, :states => []}
         CSV.foreach(csv_path, :headers => true, :header_converters => :symbol) do |row|
-          #puts "... #{row[:state]}"
-          state = {
-            :name => row[:state],
-            :control => row[:state_control],
-            :governor_party => row[:gov_party],
-            :legislature_control => row[:legis_control],
-            :legislature_seats => row[:total_seats].to_i,
-            :legislature_chambers => parse_chambers(row)
-          }
-
           begin
+            puts "... #{row[:state]}"
+            state = {
+              :name => row[:state],
+              :control => row[:state_control],
+              :governor_party => row[:gov_party],
+              :legislature_control => row[:legis_control],
+              :legislature_seats => row[:total_seats].to_i,
+              :legislature_chambers => parse_chambers(row)
+            }
             raise LegislatureSeatCountError.new("#{year} -- #{state[:name]}") unless state[:legislature_seats] == state[:legislature_chambers].map{|chamber| chamber[:seats]}.inject(0){|sum,x| sum + x }
             state[:legislature_chambers].each do |chamber|
               raise ChamberSeatCountError.new("#{year} -- #{state[:name]} -- #{chamber}") unless chamber[:seats] == (chamber[:composition][:dem] + chamber[:composition][:rep] + chamber[:composition][:vacant] + chamber[:composition][:other])
             end
+            obj[:states] << state
           rescue => e
             puts "#{e.class} -- #{e.message}"
           end
-
-          obj[:states] << state
         end
         File.write(json_path, JSON.pretty_generate(obj))
       end
