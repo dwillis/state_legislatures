@@ -1,0 +1,53 @@
+state,total_seats,total_senate,senate_dem,senate_gop,senate_other,total_house,house_dem,house_gop,house_other,legis_control,gov_party,state_control
+Alabama,140,35,"","","","","",3,72,Rep,Rep,Rep
+Alaska,60,20,"","","","","",6,23,Rep,Ind,Divided
+Arizona,90,30,1,"","","","",4,36,Rep,Rep,Rep
+Arkansas,135,35,1,"","","","",6,64,Rep,Rep,Rep
+California,120,40,2,"","","","",2,28,Dem,Dem,Dem
+Colorado,100,35,1,"","","","",4,31,Split,Dem,Divided
+Connecticut,187,36,2,"","","","",6,64,Dem,Dem,Dem
+Delaware,62,21,1,"","","","",5,16,Dem,Dem,Dem
+Florida,160,40,1,"","","","",9,81,Rep,Rep,Rep
+Georgia,236,56,1,"","","","",1,118,Rep,Rep,Rep
+Hawaii,76,25,2,"","","","",4,7,Dem,Dem,Dem
+Idaho,105,35,"","","","","",4,56,Rep,Rep,Rep
+Illinois,177,59,3,"","","","",1,47,Dem,Rep,Divided
+Indiana,150,50,1,"","","","",9,71,Rep,Rep,Rep
+Iowa,150,50,2,"","","","",3,57,Split,Rep,Divided
+Kansas,165,40,"","","","","",8,97,Rep,Rep,Rep
+Kentucky,138,38,1,"","","","",3,47,Split,Rep,Divided
+Louisiana,144,39,1,"","","","",2,61,Rep,Dem,Divided
+Maine,186,35,1,"","","","",9,69,Split,Rep,Divided
+Maryland,188,47,3,"","","","",0,51,Dem,Rep,Divided
+Massachusetts,200,40,3,"","","","",25,34,Dem,Rep,Divided
+Michigan,148,38,1,"","","","",6,63,Rep,Rep,Rep
+Minnesota,201,67,3,"","","","",1,73,Split,Dem,Divided
+Mississippi,174,52,2,"","","","",8,74,Rep,Rep,Rep
+Missouri,197,34,"","","","","",5,116,Rep,Dem,Divided
+Montana,150,50,2,"","","","",1,59,Rep,Dem,Divided
+Nevada,63,21,1,"","","","",7,25,Rep,Rep,Rep
+New Hampshire,424,24,1,"","","","",60,239,Rep,Dem,Divided
+New Jersey,120,40,2,"","","","",2,28,Dem,Rep,Divided
+New Mexico,112,42,2,"","","","",3,37,Split,Rep,Divided
+New York,213,63,3,"","","","",06,42,Dem,Dem,Dem
+North Carolina,170,50,1,"","","","",5,74,Rep,Rep,Rep
+North Dakota,141,47,1,"","","","",3,71,Rep,Rep,Rep
+Ohio,132,33,1,"","","","",4,65,Rep,Rep,Rep
+Oklahoma,149,48,"","","","","",0,71,Rep,Rep,Rep
+Oregon,90,30,1,"","","","",5,25,Dem,Dem,Dem
+Pennsylvania,253,50,1,"","","","",4,119,Rep,Dem,Divided
+Rhode Island,113,38,3,"","","","",3,11,Dem,Dem,Dem
+South Carolina,170,46,1,"","","","",6,78,Rep,Rep,Rep
+South Dakota,105,35,"","","","","",2,58,Rep,Rep,Rep
+Tennessee,132,33,"","","","","",6,73,Rep,Rep,Rep
+Texas,181,31,1,"","","","",9,98,Rep,Rep,Rep
+Utah,104,29,"","","","","",2,63,Rep,Rep,Rep
+Vermont,180,30,2,"","","","",5,53,Dem,Dem,Dem
+Virginia,140,40,1,"","","","",4,66,Rep,Dem,Divided
+Washington,147,49,2,"","","","",0,48,Split,Dem,Divided
+West Virginia,134,34,1,"","","","",6,64,Rep,Dem,Divided
+Wisconsin,132,33,1,"","","","",6,63,Rep,Rep,Rep
+Wyoming,90,30,"","","","","",9,51,Rep,Rep,Rep
+American Samoa,3,"","",n-part,"","",21,"",n-partisan,N/A,Ind,Ind
+Mariana Islands,2,"","",6,3,"",20,0,7,Split,NULL,Divided
+Puerto Rico,7,"",18P,8NPP,1,5,"",8PDP,23NPP,PDP,PDP,PDP

@@ -24,32 +24,8 @@ bundle install
 
 #### Conversion Process
 
-Download PDF files:
+Download party composition pdf files and convert them to machine-readable formats.
 
 ```` sh
-ruby script/download_pdf.rb
-````
-
-Convert PDF files to TXT:
-
-```` sh
-ruby script/convert_pdf_to_txt.rb
-````
-
-Convert TXT files to CSV:
-
-```` sh
-ruby script/convert_txt_to_csv.rb
-````
-
-Convert TXT files to JSON:
-
-```` sh
-ruby script/convert_txt_to_json.rb
-````
-
-Normalize CSV files:
-
-```` sh
-ruby script/normalize_csv.rb
+ruby script/etl_party_compositions.rb
 ````

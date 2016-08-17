@@ -1,0 +1,53 @@
+state,total_seats,total_senate,senate_dem,senate_gop,senate_other,total_house,house_dem,house_gop,house_other,legis_control,gov_party,state_control
+Alabama,14,"","","","",10,"",7,66       1,Rep,Rep,Rep
+Alaska,60,"","","","",4,"",4,26,Rep,Rep,Rep
+Arizona,90,"","","","",6,"",4,36,Rep,Rep,Rep
+Arkansas,13,"","","","",10,"",8,51,Rep,Dem,Divided
+California,12,"","","","",8,"",5,25,Dem,Dem,Dem
+Colorado,10,"","","","",6,"",7,28,Dem,Dem,Dem
+Connecticut,18,"","","","",15,"",8,53,Dem,Dem,Dem
+Delaware,6,"","","","",4,"",7,14,Dem,Dem,Dem
+Florida,16,"","","","",12,"",5,74,Rep,Rep,Rep
+Georgia,23,"","","","",18,"",0,119,Rep,Rep,Rep
+Hawaii,76,"","","","",5,"",4,7,Dem,Dem,Dem
+Idaho,10,"","","","",7,"",3,57,Rep,Rep,Rep
+Illinois,17,"","","","",11,"",1,47,Dem,Dem,Dem
+Indiana,15,"","","","",10,"",1,69,Rep,Rep,Rep
+Iowa,15,"","","","",10,"",7,53,Split,Rep,Divided
+Kansas,16,"","","","",12,"",3,92,Rep,Rep,Rep
+Kentucky,13,"","","","",10,"",4,46,Split,Dem,Divided
+Louisiana,14,"","","","",10,"",4,59,Rep,Rep,Rep
+Maine,18,"","","","",15,"",9,58,Dem,Rep,Divided
+Maryland,18,"","","","",14,"",8,43,Dem,Dem,Dem
+Massachusetts,20,"","","","",16,"",1,29,Dem,Dem,Dem
+Michigan,14,"","","","",11,"",1,59,Rep,Rep,Rep
+Minnesota,20,"","","","",13,"",3,61,Dem,Dem,Dem
+Mississippi,17,"","","","",12,"",7,65,Rep,Rep,Rep
+Missouri,19,"","","","",16,"",2,108,Rep,Dem,Divided
+Montana,15,"","","","",10,"",8,61,Rep,Dem,Divided
+Nevada,63,"","","","",4,"",7,15,Dem,Rep,Divided
+New Hampshire,42,"","","","",40,"",0,179,Split,Dem,Divided
+New Jersey,12,"","","","",8,"",8,32,Dem,Rep,Divided
+New Mexico,11,"","","","",7,"",7,33,Dem,Rep,Divided
+New York,21,"","","","",1,"",0,40,Dem,Dem,Dem
+North Carolina,17,"","","","",1,"",3,77,Rep,Rep,Rep
+North Dakota,14,"","","","",9,"",3,71,Rep,Rep,Rep
+Ohio,13,"","","","",9,"",9,60,Rep,Rep,Rep
+Oklahoma,14,"","","","",1,"",9,72,Rep,Rep,Rep
+Oregon,90,"","","","",6,"",4,26,Dem,Dem,Dem
+Pennsylvania,25,"","","","",2,"",2,111,Rep,Rep,Rep
+Rhode Island,11,"","","","",7,"",9,6,Dem,Dem,Dem
+South Carolina,17,"","","","",1,"",6,78,Rep,Rep,Rep
+South Dakota,10,"","","","",7,"",7,53,Rep,Rep,Rep
+Tennessee,13,"","","","","","",7,71,Rep,Rep,Rep
+Texas,18,"","","","",1,"",5,95,Rep,Rep,Rep
+Utah,10,"","","","",7,"",4,61,Rep,Rep,Rep
+Vermont,18,"","","","",1,"",3,47,Dem,Dem,Dem
+Virginia,14,"","","","",1,"",3,67,Rep,Dem,Divided
+Washington,14,"","","","",9,"",5,43,Dem,Dem,Dem
+West Virginia,13,"","","","",1,"",3,47,Dem,Dem,Dem
+Wisconsin,13,"","","","",9,"",9,60,Rep,Rep,Rep
+Wyoming,90,"","","","",6,"","",52,Rep,Rep,Rep
+American Samoa,3,"","",Non-p,san,"","",No,partisan,N/A,Ind,N/A
+Mariana Islands,2,"","","","","","",4C,4,Split,Cov,Divided
+Puerto Rico,7,"",18,8,"",51,"",PDP,23NPP,PDP,PDP,PDP
