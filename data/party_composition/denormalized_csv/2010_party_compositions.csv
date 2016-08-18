@@ -1,0 +1,56 @@
+year,state,control,governor_party,legislature_control,legislature_seats,house_seats,house_dem,house_rep,house_vacant,house_other,senate_seats,senate_dem,senate_rep,senate_vacant,senate_other,unicameral_seats,unicameral_dem,unicameral_rep,unicameral_vacant,unicameral_other
+2010,Alabama,Divided,Rep,Dem,140,105,60,45,0,0,35,21,14,0,0,0,0,0,0,0
+2010,Alaska,Divided,Rep,Split,60,40,18,22,0,0,20,10,10,0,0,0,0,0,0,0
+2010,Arizona,Rep,Rep,Rep,90,60,25,35,0,0,30,12,18,0,0,0,0,0,0,0
+2010,Arkansas,Dem,Dem,Dem,135,100,71,28,0,1,35,27,8,0,0,0,0,0,0,0
+2010,California,Divided,Rep,Dem,120,80,49,29,1,1,40,25,14,1,0,0,0,0,0,0
+2010,Colorado,Dem,Dem,Dem,100,65,37,27,0,1,35,21,14,0,0,0,0,0,0,0
+2010,Connecticut,Divided,Rep,Dem,187,151,114,36,1,0,36,24,12,0,0,0,0,0,0,0
+2010,Delaware,Dem,Dem,Dem,62,41,24,17,0,0,21,15,6,0,0,0,0,0,0,0
+2010,Florida,Rep,Rep,Rep,160,120,43,76,1,0,40,14,26,0,0,0,0,0,0,0
+2010,Georgia,Rep,Rep,Rep,236,180,74,105,0,1,56,21,34,1,0,0,0,0,0,0
+2010,Hawaii,Divided,Rep,Dem,76,51,45,6,0,0,25,23,2,0,0,0,0,0,0,0
+2010,Idaho,Rep,Rep,Rep,105,70,18,52,0,0,35,7,28,0,0,0,0,0,0,0
+2010,Illinois,Dem,Dem,Dem,177,118,70,48,0,0,59,37,22,0,0,0,0,0,0,0
+2010,Indiana,Divided,Rep,Split,150,100,52,48,0,0,50,17,33,0,0,0,0,0,0,0
+2010,Iowa,Dem,Dem,Dem,150,100,56,44,0,0,50,32,18,0,0,0,0,0,0,0
+2010,Kansas,Divided,Dem,Rep,165,125,49,76,0,0,40,9,31,0,0,0,0,0,0,0
+2010,Kentucky,Divided,Dem,Split,138,100,65,35,0,0,38,17,20,0,1,0,0,0,0,0
+2010,Louisiana,Divided,Rep,Dem,144,105,52,50,0,3,39,23,16,0,0,0,0,0,0,0
+2010,Maine,Dem,Dem,Dem,186,151,95,55,0,1,35,20,15,0,0,0,0,0,0,0
+2010,Maryland,Dem,Dem,Dem,188,141,104,36,1,0,47,33,14,0,0,0,0,0,0,0
+2010,Massachusetts,Dem,Dem,Dem,200,160,144,16,0,0,40,34,5,1,0,0,0,0,0,0
+2010,Michigan,Divided,Dem,Split,148,110,66,43,1,0,38,16,22,0,0,0,0,0,0,0
+2010,Minnesota,Divided,Rep,Dem,201,134,87,47,0,0,67,46,21,0,0,0,0,0,0,0
+2010,Mississippi,Divided,Rep,Dem,174,122,74,48,0,0,52,26,25,1,0,0,0,0,0,0
+2010,Missouri,Divided,Dem,Rep,197,163,73,89,1,0,34,11,23,0,0,0,0,0,0,0
+2010,Montana,Divided,Dem,Split,150,100,50,50,0,0,50,23,27,0,0,0,0,0,0,0
+2010,Nebraska,N/A,Rep,N/A,49,0,0,0,0,0,0,0,0,0,0,49,0,0,0,49
+2010,Nevada,Divided,Rep,Dem,63,42,28,14,0,0,21,12,8,1,0,0,0,0,0,0
+2010,New Hampshire,Dem,Dem,Dem,424,400,222,175,3,0,24,14,10,0,0,0,0,0,0,0
+2010,New Jersey,Divided,Rep,Dem,120,80,47,33,0,0,40,23,17,0,0,0,0,0,0,0
+2010,New Mexico,Dem,Dem,Dem,112,70,45,25,0,0,42,27,15,0,0,0,0,0,0,0
+2010,New York,Dem,Dem,Dem,212,150,109,41,0,0,62,32,30,0,0,0,0,0,0,0
+2010,North Carolina,Dem,Dem,Dem,170,120,68,52,0,0,50,30,20,0,0,0,0,0,0,0
+2010,North Dakota,Rep,Rep,Rep,141,94,36,58,0,0,47,21,26,0,0,0,0,0,0,0
+2010,Ohio,Divided,Dem,Split,132,99,53,46,0,0,33,12,21,0,0,0,0,0,0,0
+2010,Oklahoma,Divided,Dem,Rep,149,101,40,61,0,0,48,22,26,0,0,0,0,0,0,0
+2010,Oregon,Dem,Dem,Dem,90,60,36,24,0,0,30,18,12,0,0,0,0,0,0,0
+2010,Pennsylvania,Divided,Dem,Split,253,203,103,97,3,0,50,20,30,0,0,0,0,0,0,0
+2010,Rhode Island,Divided,Rep,Dem,113,75,69,6,0,0,38,33,4,0,1,0,0,0,0,0
+2010,South Carolina,Rep,Rep,Rep,170,124,51,73,0,0,46,19,27,0,0,0,0,0,0,0
+2010,South Dakota,Rep,Rep,Rep,105,70,24,46,0,0,35,14,21,0,0,0,0,0,0,0
+2010,Tennessee,Divided,Dem,Rep,132,99,47,50,1,1,33,14,19,0,0,0,0,0,0,0
+2010,Texas,Rep,Rep,Rep,181,150,73,77,0,0,31,12,19,0,0,0,0,0,0,0
+2010,Utah,Rep,Rep,Rep,104,75,22,53,0,0,29,8,21,0,0,0,0,0,0,0
+2010,Vermont,Divided,Rep,Dem,180,150,95,48,0,7,30,22,7,0,1,0,0,0,0,0
+2010,Virginia,Divided,Rep,Split,140,100,39,59,0,2,40,22,18,0,0,0,0,0,0,0
+2010,Washington,Dem,Dem,Dem,147,98,62,36,0,0,49,31,18,0,0,0,0,0,0,0
+2010,West Virginia,Dem,Dem,Dem,134,100,71,29,0,0,34,26,8,0,0,0,0,0,0,0
+2010,Wisconsin,Dem,Dem,Dem,132,99,52,46,0,1,33,18,15,0,0,0,0,0,0,0
+2010,Wyoming,Divided,Dem,Rep,90,60,19,41,0,0,30,7,23,0,0,0,0,0,0,0
+2010,District of Columbia,N/A,N/A,Dem,13,0,0,0,0,0,0,0,0,0,0,13,11,0,0,2
+2010,Guam,Divided,Rep,Dem,15,0,0,0,0,0,0,0,0,0,0,15,9,6,0,0
+2010,Mariana Islands,Divided,Cov,Split,29,20,4,4,0,12,9,5,3,1,0,0,0,0,0,0
+2010,Puerto Rico,NPP,NPP,NPP,78,51,14,37,0,0,27,5,22,0,0,0,0,0,0,0
+2010,Virgin Islands,N/A,Dem,N/A,15,0,0,0,0,0,0,0,0,0,0,15,0,0,0,15

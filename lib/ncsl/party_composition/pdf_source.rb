@@ -15,6 +15,13 @@ module Ncsl
         "legis_control","gov_party", "state_control"
       ] # order matters
 
+      DENORMALIZED_COLUMN_HEADERS = [
+        "year", "state", "control", "governor_party", "legislature_control", "legislature_seats",
+        "house_seats", "house_dem", "house_rep", "house_vacant", "house_other",
+        "senate_seats", "senate_dem", "senate_rep", "senate_vacant", "senate_other",
+        "unicameral_seats", "unicameral_dem", "unicameral_rep", "unicameral_vacant", "unicameral_other"
+      ] # order matters
+
       PARTIES = [
         {:abbrevs => ["Dem"], :name => "Democrat"},
         {:abbrevs => ["Rep"], :name => "Republican"},
@@ -69,6 +76,10 @@ module Ncsl
 
       def json_path
         File.join(DATA_DIR, "json", "#{file_name}.json")
+      end
+
+      def denormalized_csv_path
+        File.join(DATA_DIR, "denormalized_csv", "#{file_name}.csv")
       end
 
       def download
@@ -229,6 +240,38 @@ module Ncsl
           obj[:states] << state
         end
         File.write(json_path, JSON.pretty_generate(obj))
+      end
+
+      def denormalized_chamber_cells(state_obj, chamber_name)
+        chamber = state_obj["legislature_chambers"].find{|chamber| chamber["name"] == chamber_name}
+        chamber.nil? ? [0,0,0,0,0] : [chamber["seats"], chamber["composition"]["dem"], chamber["composition"]["rep"], chamber["composition"]["vacant"], chamber["composition"]["other"]]
+      end
+
+      def convert_json_to_denormalized_csv
+        puts "Converting to #{denormalized_csv_path}"
+        json = File.read(json_path)
+        states = JSON.parse(json)["states"]
+
+        CSV.open(denormalized_csv_path, "w") do |csv|
+          csv << DENORMALIZED_COLUMN_HEADERS
+          states.each do |state|
+            cells = [
+              year,
+              state["name"],
+              state["control"],
+              state["governor_party"],
+              state["legislature_control"],
+              state["legislature_seats"]
+            ].concat(
+              denormalized_chamber_cells(state, "House")
+            ).concat(
+              denormalized_chamber_cells(state, "Senate")
+            ).concat(
+              denormalized_chamber_cells(state, "Unicameral")
+            )
+            csv << cells
+          end
+        end
       end
 
       class LineCountError < StandardError ; end

@@ -15,3 +15,7 @@ end
 Ncsl::PartyComposition::PdfSource.all.each do |pdf_source|
   pdf_source.convert_csv_to_json
 end
+
+Ncsl::PartyComposition::PdfSource.all.each do |pdf_source|
+  pdf_source.convert_json_to_denormalized_csv
+end
