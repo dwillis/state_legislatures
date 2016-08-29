@@ -28,7 +28,7 @@ module Ncsl
       def download
         unless File.exists?(html_path)
           puts "Extracting #{@year} data from #{@url}"
-          response = HTTParty.get(@url) # need to use HTTParty due to redirects
+          response = HTTParty.get(@url) # HTTParty handles redirects
           puts "Writing to #{html_path}"
           File.open(html_path, "wb") do |file|
             file.write(response.body)
@@ -52,6 +52,7 @@ module Ncsl
           csv << COLUMN_HEADERS
           rows.each_with_index do |row, i|
             tds = row.children.select{|child| child.name == "td" } # get rid of erroneous Nokogiri::XML::Text elements
+            next if tds.empty? # skip random blank row before header row (2015 and 2016)
             td_child_counts = tds.map{|td| td.children.count}
             puts "#{@year} -- #{i} -- #{td_child_counts}"
             csv << td_child_counts
