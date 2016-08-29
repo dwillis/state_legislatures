@@ -126,6 +126,7 @@ module Ncsl
         obj = {:year => @year, :states => []}
         CSV.foreach(csv_path, :headers => true, :header_converters => :symbol) do |row|
           state = {
+            :state => row[:state],
             :house_women => row[:house_women].to_i,
             :senate_women => row[:senate_women].to_i,
             :total_women => row[:total_women].to_i,
