@@ -1,0 +1,56 @@
+year,state,control,governor_party,legislature_control,legislature_seats,house_seats,house_dem,house_rep,house_vacant,house_other,senate_seats,senate_dem,senate_rep,senate_vacant,senate_other,unicameral_seats,unicameral_dem,unicameral_rep,unicameral_vacant,unicameral_other
+2012,Alabama,Rep,Rep,Rep,140,105,40,65,0,0,35,12,22,0,1,0,0,0,0,0
+2012,Alaska,Divided,Rep,Split,60,40,18,22,0,0,20,10,10,0,0,0,0,0,0,0
+2012,Arizona,Rep,Rep,Rep,90,60,20,40,0,0,30,9,21,0,0,0,0,0,0,0
+2012,Arkansas,Dem,Dem,Dem,135,100,55,45,0,0,35,20,15,0,0,0,0,0,0,0
+2012,California,Dem,Dem,Dem,120,80,52,28,0,0,40,25,15,0,0,0,0,0,0,0
+2012,Colorado,Divided,Dem,Split,100,65,32,33,0,0,35,20,15,0,0,0,0,0,0,0
+2012,Connecticut,Dem,Dem,Dem,187,151,100,51,0,0,36,22,14,0,0,0,0,0,0,0
+2012,Delaware,Dem,Dem,Dem,62,41,26,15,0,0,21,14,7,0,0,0,0,0,0,0
+2012,Florida,Rep,Rep,Rep,160,120,39,81,0,0,40,12,28,0,0,0,0,0,0,0
+2012,Georgia,Rep,Rep,Rep,236,180,63,115,1,1,56,20,36,0,0,0,0,0,0,0
+2012,Hawaii,Dem,Dem,Dem,76,51,43,8,0,0,25,24,1,0,0,0,0,0,0,0
+2012,Idaho,Rep,Rep,Rep,105,70,13,57,0,0,35,7,28,0,0,0,0,0,0,0
+2012,Illinois,Dem,Dem,Dem,177,118,64,54,0,0,59,35,24,0,0,0,0,0,0,0
+2012,Indiana,Rep,Rep,Rep,150,100,40,60,0,0,50,13,37,0,0,0,0,0,0,0
+2012,Iowa,Divided,Rep,Split,150,100,40,60,0,0,50,26,24,0,0,0,0,0,0,0
+2012,Kansas,Rep,Rep,Rep,165,125,33,92,0,0,40,8,32,0,0,0,0,0,0,0
+2012,Kentucky,Divided,Dem,Split,138,100,59,41,0,0,38,15,22,0,1,0,0,0,0,0
+2012,Louisiana,Rep,Rep,Rep,144,105,45,58,0,2,39,15,24,0,0,0,0,0,0,0
+2012,Maine,Rep,Rep,Rep,186,151,72,78,0,1,35,14,20,0,1,0,0,0,0,0
+2012,Maryland,Dem,Dem,Dem,188,141,98,43,0,0,47,35,12,0,0,0,0,0,0,0
+2012,Massachusetts,Dem,Dem,Dem,200,160,126,32,2,0,40,35,4,1,0,0,0,0,0,0
+2012,Michigan,Rep,Rep,Rep,148,110,46,62,2,0,38,12,26,0,0,0,0,0,0,0
+2012,Minnesota,Divided,Dem,Rep,201,134,61,72,1,0,67,29,37,1,0,0,0,0,0,0
+2012,Mississippi,Rep,Rep,Rep,174,122,58,64,0,0,52,21,31,0,0,0,0,0,0,0
+2012,Missouri,Divided,Dem,Rep,197,163,56,106,0,1,34,8,26,0,0,0,0,0,0,0
+2012,Montana,Divided,Dem,Rep,150,100,32,68,0,0,50,22,28,0,0,0,0,0,0,0
+2012,Nebraska,N/A,Rep,N/A,49,0,0,0,0,0,0,0,0,0,0,49,0,0,0,49
+2012,Nevada,Divided,Rep,Dem,63,42,26,16,0,0,21,11,10,0,0,0,0,0,0,0
+2012,New Hampshire,Divided,Dem,Rep,424,400,104,294,2,0,24,5,19,0,0,0,0,0,0,0
+2012,New Jersey,Divided,Rep,Dem,120,80,48,30,2,0,40,24,16,0,0,0,0,0,0,0
+2012,New Mexico,Divided,Rep,Dem,112,70,36,33,0,1,42,27,15,0,0,0,0,0,0,0
+2012,New York,Divided,Dem,Split,212,150,99,51,0,0,62,30,32,0,0,0,0,0,0,0
+2012,North Carolina,Divided,Dem,Rep,170,120,52,67,0,1,50,19,31,0,0,0,0,0,0,0
+2012,North Dakota,Rep,Rep,Rep,141,94,25,69,0,0,47,12,35,0,0,0,0,0,0,0
+2012,Ohio,Rep,Rep,Rep,132,99,40,59,0,0,33,10,23,0,0,0,0,0,0,0
+2012,Oklahoma,Rep,Rep,Rep,149,101,31,69,1,0,48,15,31,2,0,0,0,0,0,0
+2012,Oregon,Divided,Dem,Split,90,60,30,30,0,0,30,16,14,0,0,0,0,0,0,0
+2012,Pennsylvania,Rep,Rep,Rep,253,203,91,112,0,0,50,20,30,0,0,0,0,0,0,0
+2012,Rhode Island,Divided,Ind,Dem,113,75,65,10,0,0,38,29,8,0,1,0,0,0,0,0
+2012,South Carolina,Rep,Rep,Rep,170,124,48,75,1,0,46,19,27,0,0,0,0,0,0,0
+2012,South Dakota,Rep,Rep,Rep,105,70,19,50,0,1,35,5,30,0,0,0,0,0,0,0
+2012,Tennessee,Rep,Rep,Rep,132,99,34,64,0,1,33,13,20,0,0,0,0,0,0,0
+2012,Texas,Rep,Rep,Rep,181,150,49,101,0,0,31,12,19,0,0,0,0,0,0,0
+2012,Utah,Rep,Rep,Rep,104,75,17,58,0,0,29,7,22,0,0,0,0,0,0,0
+2012,Vermont,Dem,Dem,Dem,180,150,94,48,0,8,30,22,8,0,0,0,0,0,0,0
+2012,Virginia,Divided,Rep,Split,140,100,32,67,0,1,40,20,20,0,0,0,0,0,0,0
+2012,Washington,Dem,Dem,Dem,147,98,56,42,0,0,49,27,22,0,0,0,0,0,0,0
+2012,West Virginia,Dem,Dem,Dem,134,100,65,35,0,0,34,28,6,0,0,0,0,0,0,0
+2012,Wisconsin,Rep,Rep,Rep,132,99,39,59,0,1,33,16,17,0,0,0,0,0,0,0
+2012,Wyoming,Rep,Rep,Rep,90,60,10,50,0,0,30,4,26,0,0,0,0,0,0,0
+2012,District of Columbia,N/A,N/A,Dem,13,0,0,0,0,0,0,0,0,0,0,13,11,0,0,2
+2012,Guam,Divided,Rep,Dem,15,0,0,0,0,0,0,0,0,0,0,15,9,6,0,0
+2012,Mariana Islands,Divided,Rep,Split,29,20,4,4,0,12,9,6,1,0,2,0,0,0,0,0
+2012,Puerto Rico,NPP,NPP,NPP,78,51,14,37,0,0,27,5,22,0,0,0,0,0,0,0
+2012,Virgin Islands,N/A,Dem,N/A,15,0,0,0,0,0,0,0,0,0,0,15,0,0,0,15

@@ -1,0 +1,56 @@
+state,total_seats,total_senate,senate_dem,senate_gop,senate_other,total_house,house_dem,house_gop,house_other,legis_control,gov_party,state_control
+Alabama,140,35,12,22,1,105,39,66,0,Rep,Rep,Rep
+Alaska,60,20,10,10,0,40,16,24,0,Split,Rep,Divided
+Arizona,90,30,9,21,0,60,20,40,0,Rep,Rep,Rep
+Arkansas,135,35,20,15,0,100,55,44,1v,Dem,Dem,Dem
+California,120,40,25,15,0,80,52,28,0,Dem,Dem,Dem
+Colorado,100,35,20,15,0,65,32,33,0,Split,Dem,Divided
+Connecticut,187,36,23,13,0,151,100,51,0,Dem,Dem,Dem
+Delaware,62,21,14,7,0,41,26,15,0,Dem,Dem,Dem
+Florida,160,40,12,28,0,120,39,81,0,Rep,Rep,Rep
+Georgia,236,56,20,36,0,180,66,113,1,Rep,Rep,Rep
+Hawaii,76,25,24,1,0,51,43,8,0,Dem,Dem,Dem
+Idaho,105,35,7,28,0,70,13,57,0,Rep,Rep,Rep
+Illinois,177,59,35,24,0,118,64,54,0,Dem,Dem,Dem
+Indiana,150,50,13,37,0,100,40,59,1u,Rep,Rep,Rep
+Iowa,150,50,26,24,0,100,40,60,0,Split,Rep,Divided
+Kansas,165,40,8,32,0,125,33,92,0,Rep,Rep,Rep
+Kentucky,138,38,15,22,1,100,58,42,0,Split,Dem,Divided
+Louisiana,144,39,20,18,1,105,49,52,4,Split,Rep,Divided
+Maine,186,35,14,20,1,151,72,78,1,Rep,Rep,Rep
+Maryland,188,47,35,12,0,141,98,43,0,Dem,Dem,Dem
+Massachusetts,200,40,36,4,0,160,128,31,1u,Dem,Dem,Dem
+Michigan,148,38,12,26,0,110,47,63,0,Rep,Rep,Rep
+Minnesota,201,67,30,37,0,134,62,72,0,Rep,Dem,Divided
+Mississippi,174,52,26,25,1v,122,72,50,0,Dem,Rep,Divided
+Missouri,197,34,8,26,0,163,57,106,0,Rep,Dem,Divided
+Montana,150,50,22,28,0,100,32,68,0,Rep,Dem,Divided
+Nebraska,49,49,0,0,49,Unicameral,0,0,0,N/A,Rep,N/A
+Nevada,63,21,11,10,0,42,26,16,0,Dem,Rep,Divided
+New Hampshire,424,24,5,19,0,400,102,298,0,Rep,Dem,Divided
+New Jersey,120,40,24,16,0,80,47,33,0,Dem,Rep,Divided
+New Mexico,112,42,27,15,0,70,37,33,0,Dem,Rep,Divided
+New York,212,62,30,32,0,150,100,48,2u,Split,Dem,Divided
+North Carolina,170,50,19,31,0,120,52,67,1,Rep,Dem,Divided
+North Dakota,141,47,12,35,0,94,25,69,0,Rep,Rep,Rep
+Ohio,132,33,10,23,0,99,40,59,0,Rep,Rep,Rep
+Oklahoma,149,48,16,32,0,101,31,70,0,Rep,Rep,Rep
+Oregon,90,30,16,14,0,60,30,30,0,Split,Dem,Divided
+Pennsylvania,253,50,20,30,0,203,91,112,0,Rep,Rep,Rep
+Rhode Island,113,38,29,8,1,75,65,10,0,Dem,Ind,Divided
+South Carolina,170,46,19,27,0,124,48,75,1v,Rep,Rep,Rep
+South Dakota,105,35,5,30,0,70,19,50,1,Rep,Rep,Rep
+Tennessee,132,33,13,19,1v,99,33,64,"1,1v",Rep,Rep,Rep
+Texas,181,31,12,19,0,150,49,101,0,Rep,Rep,Rep
+Utah,104,29,7,22,0,75,17,58,0,Rep,Rep,Rep
+Vermont,180,30,22,8,0,150,95,48,7,Dem,Dem,Dem
+Virginia,140,40,22,18,0,100,39,59,2,Split,Rep,Divided
+Washington,147,49,27,22,0,98,56,42,0,Dem,Dem,Dem
+West Virginia,134,34,28,6,0,100,65,35,0,Dem,Dem,Dem
+Wisconsin,132,33,14,19,0,99,38,60,1,Rep,Rep,Rep
+Wyoming,90,30,4,26,0,60,10,50,0,Rep,Rep,Rep
+District of Columbia,13,13,11,0,2,Unicameral,0,0,0,Dem,N/A,N/A
+Guam,15,15,9,6,0,Unicameral,0,0,0,Dem,Rep,Divided
+Mariana Islands,29,9,5,3,1v,20,4C,4,12,Split,Rep,Divided
+Puerto Rico,78,27,5PDP,22NPP,0,51,14PDP,37NPP,0,NPP,NPP,NPP
+Virgin Islands,15,15,0,0,15,Unicameral,0,0,0,N/A,Dem,N/A

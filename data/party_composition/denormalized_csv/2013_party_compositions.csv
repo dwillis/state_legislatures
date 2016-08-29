@@ -1,0 +1,56 @@
+year,state,control,governor_party,legislature_control,legislature_seats,house_seats,house_dem,house_rep,house_vacant,house_other,senate_seats,senate_dem,senate_rep,senate_vacant,senate_other,unicameral_seats,unicameral_dem,unicameral_rep,unicameral_vacant,unicameral_other
+2013,Alabama,Rep,Rep,Rep,140,105,39,64,2,0,35,11,23,0,1,0,0,0,0,0
+2013,Alaska,Rep,Rep,Rep,60,40,15,25,0,0,20,7,13,0,0,0,0,0,0,0
+2013,Arizona,Rep,Rep,Rep,90,60,24,36,0,0,30,13,17,0,0,0,0,0,0,0
+2013,Arkansas,Divided,Dem,Rep,135,100,48,51,0,1,35,14,21,0,0,0,0,0,0,0
+2013,California,Dem,Dem,Dem,120,80,54,26,0,0,40,26,12,2,0,0,0,0,0,0
+2013,Colorado,Dem,Dem,Dem,100,65,36,29,0,0,35,19,16,0,0,0,0,0,0,0
+2013,Connecticut,Dem,Dem,Dem,187,151,99,52,0,0,36,22,14,0,0,0,0,0,0,0
+2013,Delaware,Dem,Dem,Dem,62,41,27,14,0,0,21,13,8,0,0,0,0,0,0,0
+2013,Florida,Rep,Rep,Rep,160,120,46,74,0,0,40,14,26,0,0,0,0,0,0,0
+2013,Georgia,Rep,Rep,Rep,236,180,60,119,0,1,56,18,38,0,0,0,0,0,0,0
+2013,Hawaii,Dem,Dem,Dem,76,51,44,7,0,0,25,24,1,0,0,0,0,0,0,0
+2013,Idaho,Rep,Rep,Rep,105,70,13,57,0,0,35,7,28,0,0,0,0,0,0,0
+2013,Illinois,Dem,Dem,Dem,177,118,71,47,0,0,59,40,19,0,0,0,0,0,0,0
+2013,Indiana,Rep,Rep,Rep,150,100,31,69,0,0,50,13,37,0,0,0,0,0,0,0
+2013,Iowa,Divided,Rep,Split,150,100,47,53,0,0,50,26,23,1,0,0,0,0,0,0
+2013,Kansas,Rep,Rep,Rep,165,125,35,90,0,0,40,9,31,0,0,0,0,0,0,0
+2013,Kentucky,Divided,Dem,Split,138,100,55,45,0,0,38,14,22,1,1,0,0,0,0,0
+2013,Louisiana,Rep,Rep,Rep,144,105,45,58,0,2,39,15,24,0,0,0,0,0,0,0
+2013,Maine,Divided,Rep,Dem,186,151,87,60,0,4,35,19,15,0,1,0,0,0,0,0
+2013,Maryland,Dem,Dem,Dem,188,141,98,43,0,0,47,35,12,0,0,0,0,0,0,0
+2013,Massachusetts,Dem,Dem,Dem,200,160,131,29,0,0,40,36,4,0,0,0,0,0,0,0
+2013,Michigan,Rep,Rep,Rep,148,110,51,59,0,0,38,12,26,0,0,0,0,0,0,0
+2013,Minnesota,Dem,Dem,Dem,201,134,73,61,0,0,67,39,28,0,0,0,0,0,0,0
+2013,Mississippi,Rep,Rep,Rep,174,122,58,63,1,0,52,21,30,1,0,0,0,0,0,0
+2013,Missouri,Divided,Dem,Rep,197,163,53,110,0,0,34,10,24,0,0,0,0,0,0,0
+2013,Montana,Divided,Dem,Rep,150,100,37,63,0,0,50,23,27,0,0,0,0,0,0,0
+2013,Nebraska,N/A,Rep,N/A,49,0,0,0,0,0,0,0,0,0,0,49,0,0,0,49
+2013,Nevada,Divided,Rep,Dem,63,42,27,15,0,0,21,11,10,0,0,0,0,0,0,0
+2013,New Hampshire,Divided,Dem,Split,424,400,222,178,0,0,24,11,13,0,0,0,0,0,0,0
+2013,New Jersey,Divided,Rep,Dem,120,80,48,32,0,0,40,24,16,0,0,0,0,0,0,0
+2013,New Mexico,Divided,Rep,Dem,112,70,38,32,0,0,42,25,17,0,0,0,0,0,0,0
+2013,New York,Dem,Dem,Dem,213,150,107,43,0,0,63,33,30,0,0,0,0,0,0,0
+2013,North Carolina,Rep,Rep,Rep,170,120,43,77,0,0,50,18,32,0,0,0,0,0,0,0
+2013,North Dakota,Rep,Rep,Rep,141,94,23,71,0,0,47,13,33,1,0,0,0,0,0,0
+2013,Ohio,Rep,Rep,Rep,132,99,39,60,0,0,33,10,23,0,0,0,0,0,0,0
+2013,Oklahoma,Rep,Rep,Rep,149,101,29,72,0,0,48,12,36,0,0,0,0,0,0,0
+2013,Oregon,Dem,Dem,Dem,90,60,34,26,0,0,30,16,14,0,0,0,0,0,0,0
+2013,Pennsylvania,Rep,Rep,Rep,253,203,93,110,0,0,50,23,27,0,0,0,0,0,0,0
+2013,Rhode Island,Divided,Ind,Dem,113,75,69,6,0,0,38,32,5,0,1,0,0,0,0,0
+2013,South Carolina,Rep,Rep,Rep,170,124,46,73,0,5,46,18,28,0,0,0,0,0,0,0
+2013,South Dakota,Rep,Rep,Rep,105,70,17,53,0,0,35,7,28,0,0,0,0,0,0,0
+2013,Tennessee,Rep,Rep,Rep,132,99,28,70,0,1,33,7,26,0,0,0,0,0,0,0
+2013,Texas,Rep,Rep,Rep,181,150,55,95,0,0,31,12,19,0,0,0,0,0,0,0
+2013,Utah,Rep,Rep,Rep,104,75,14,61,0,0,29,5,24,0,0,0,0,0,0,0
+2013,Vermont,Dem,Dem,Dem,180,150,96,45,0,9,30,22,6,0,2,0,0,0,0,0
+2013,Virginia,Divided,Rep,Split,140,100,31,67,0,2,40,20,20,0,0,0,0,0,0,0
+2013,Washington,Dem,Dem,Dem,147,98,55,43,0,0,49,26,23,0,0,0,0,0,0,0
+2013,West Virginia,Dem,Dem,Dem,134,100,54,46,0,0,34,25,9,0,0,0,0,0,0,0
+2013,Wisconsin,Rep,Rep,Rep,132,99,39,60,0,0,33,15,18,0,0,0,0,0,0,0
+2013,Wyoming,Rep,Rep,Rep,90,60,8,52,0,0,30,4,26,0,0,0,0,0,0,0
+2013,District of Columbia,N/A,N/A,Dem,13,0,0,0,0,0,0,0,0,0,0,13,11,0,0,2
+2013,Guam,Divided,Rep,Dem,15,0,0,0,0,0,0,0,0,0,0,15,9,6,0,0
+2013,Mariana Islands,Divided,Cov,Split,29,20,4,4,0,12,9,5,3,1,0,0,0,0,0,0
+2013,Puerto Rico,PDP,PDP,PDP,78,51,28,23,0,0,27,18,8,0,1,0,0,0,0,0
+2013,Virgin Islands,N/A,Dem,N/A,15,0,0,0,0,0,0,0,0,0,0,15,0,0,0,15
