@@ -1,0 +1,355 @@
+{
+  "year": 2012,
+  "states": [
+    {
+      "house_women": 14,
+      "senate_women": 5,
+      "total_women": 19,
+      "total_seats": 140,
+      "percentage_women": "13.6%"
+    },
+    {
+      "house_women": 11,
+      "senate_women": 4,
+      "total_women": 15,
+      "total_seats": 60,
+      "percentage_women": "25.0%"
+    },
+    {
+      "house_women": 19,
+      "senate_women": 11,
+      "total_women": 30,
+      "total_seats": 90,
+      "percentage_women": "33.3%"
+    },
+    {
+      "house_women": 22,
+      "senate_women": 8,
+      "total_women": 30,
+      "total_seats": 135,
+      "percentage_women": "22.2%"
+    },
+    {
+      "house_women": 22,
+      "senate_women": 12,
+      "total_women": 34,
+      "total_seats": 120,
+      "percentage_women": "28.3%"
+    },
+    {
+      "house_women": 23,
+      "senate_women": 17,
+      "total_women": 40,
+      "total_seats": 100,
+      "percentage_women": "40.0%"
+    },
+    {
+      "house_women": 47,
+      "senate_women": 9,
+      "total_women": 56,
+      "total_seats": 187,
+      "percentage_women": "29.9%"
+    },
+    {
+      "house_women": 9,
+      "senate_women": 7,
+      "total_women": 16,
+      "total_seats": 62,
+      "percentage_women": "25.8%"
+    },
+    {
+      "house_women": 27,
+      "senate_women": 14,
+      "total_women": 41,
+      "total_seats": 160,
+      "percentage_women": "25.6%"
+    },
+    {
+      "house_women": 47,
+      "senate_women": 9,
+      "total_women": 56,
+      "total_seats": 236,
+      "percentage_women": "23.7%"
+    },
+    {
+      "house_women": 18,
+      "senate_women": 9,
+      "total_women": 27,
+      "total_seats": 76,
+      "percentage_women": "35.5%"
+    },
+    {
+      "house_women": 20,
+      "senate_women": 9,
+      "total_women": 29,
+      "total_seats": 105,
+      "percentage_women": "27.6%"
+    },
+    {
+      "house_women": 38,
+      "senate_women": 16,
+      "total_women": 54,
+      "total_seats": 177,
+      "percentage_women": "30.5%"
+    },
+    {
+      "house_women": 21,
+      "senate_women": 10,
+      "total_women": 31,
+      "total_seats": 150,
+      "percentage_women": "20.7%"
+    },
+    {
+      "house_women": 24,
+      "senate_women": 8,
+      "total_women": 32,
+      "total_seats": 150,
+      "percentage_women": "21.3%"
+    },
+    {
+      "house_women": 33,
+      "senate_women": 12,
+      "total_women": 45,
+      "total_seats": 165,
+      "percentage_women": "27.3%"
+    },
+    {
+      "house_women": 20,
+      "senate_women": 6,
+      "total_women": 26,
+      "total_seats": 138,
+      "percentage_women": "18.8%"
+    },
+    {
+      "house_women": 12,
+      "senate_women": 4,
+      "total_women": 16,
+      "total_seats": 144,
+      "percentage_women": "11.1%"
+    },
+    {
+      "house_women": 47,
+      "senate_women": 8,
+      "total_women": 55,
+      "total_seats": 186,
+      "percentage_women": "29.6%"
+    },
+    {
+      "house_women": 47,
+      "senate_women": 11,
+      "total_women": 58,
+      "total_seats": 188,
+      "percentage_women": "30.9%"
+    },
+    {
+      "house_women": 38,
+      "senate_women": 11,
+      "total_women": 49,
+      "total_seats": 200,
+      "percentage_women": "24.5%"
+    },
+    {
+      "house_women": 27,
+      "senate_women": 4,
+      "total_women": 31,
+      "total_seats": 148,
+      "percentage_women": "20.9%"
+    },
+    {
+      "house_women": 45,
+      "senate_women": 21,
+      "total_women": 66,
+      "total_seats": 201,
+      "percentage_women": "32.8%"
+    },
+    {
+      "house_women": 21,
+      "senate_women": 8,
+      "total_women": 29,
+      "total_seats": 174,
+      "percentage_women": "16.7%"
+    },
+    {
+      "house_women": 41,
+      "senate_women": 6,
+      "total_women": 47,
+      "total_seats": 197,
+      "percentage_women": "23.9%"
+    },
+    {
+      "house_women": 28,
+      "senate_women": 8,
+      "total_women": 36,
+      "total_seats": 150,
+      "percentage_women": "24.0%"
+    },
+    {
+      "house_women": 0,
+      "senate_women": 11,
+      "total_women": 11,
+      "total_seats": 49,
+      "percentage_women": "22.4%"
+    },
+    {
+      "house_women": 12,
+      "senate_women": 4,
+      "total_women": 16,
+      "total_seats": 63,
+      "percentage_women": "25.4%"
+    },
+    {
+      "house_women": 97,
+      "senate_women": 6,
+      "total_women": 103,
+      "total_seats": 424,
+      "percentage_women": "24.3%"
+    },
+    {
+      "house_women": 24,
+      "senate_women": 11,
+      "total_women": 35,
+      "total_seats": 120,
+      "percentage_women": "29.2%"
+    },
+    {
+      "house_women": 20,
+      "senate_women": 11,
+      "total_women": 31,
+      "total_seats": 112,
+      "percentage_women": "27.7%"
+    },
+    {
+      "house_women": 36,
+      "senate_women": 11,
+      "total_women": 47,
+      "total_seats": 212,
+      "percentage_women": "22.2%"
+    },
+    {
+      "house_women": 35,
+      "senate_women": 5,
+      "total_women": 40,
+      "total_seats": 170,
+      "percentage_women": "23.5%"
+    },
+    {
+      "house_women": 15,
+      "senate_women": 6,
+      "total_women": 21,
+      "total_seats": 141,
+      "percentage_women": "14.9%"
+    },
+    {
+      "house_women": 23,
+      "senate_women": 8,
+      "total_women": 31,
+      "total_seats": 132,
+      "percentage_women": "23.5%"
+    },
+    {
+      "house_women": 14,
+      "senate_women": 5,
+      "total_women": 19,
+      "total_seats": 149,
+      "percentage_women": "12.8%"
+    },
+    {
+      "house_women": 17,
+      "senate_women": 9,
+      "total_women": 26,
+      "total_seats": 90,
+      "percentage_women": "28.9%"
+    },
+    {
+      "house_women": 33,
+      "senate_women": 10,
+      "total_women": 43,
+      "total_seats": 253,
+      "percentage_women": "17.0%"
+    },
+    {
+      "house_women": 19,
+      "senate_women": 10,
+      "total_women": 29,
+      "total_seats": 113,
+      "percentage_women": "25.7%"
+    },
+    {
+      "house_women": 17,
+      "senate_women": 0,
+      "total_women": 17,
+      "total_seats": 170,
+      "percentage_women": "10.0%"
+    },
+    {
+      "house_women": 14,
+      "senate_women": 7,
+      "total_women": 21,
+      "total_seats": 105,
+      "percentage_women": "20.0%"
+    },
+    {
+      "house_women": 17,
+      "senate_women": 7,
+      "total_women": 24,
+      "total_seats": 132,
+      "percentage_women": "18.2%"
+    },
+    {
+      "house_women": 31,
+      "senate_women": 6,
+      "total_women": 37,
+      "total_seats": 181,
+      "percentage_women": "20.4%"
+    },
+    {
+      "house_women": 12,
+      "senate_women": 5,
+      "total_women": 17,
+      "total_seats": 104,
+      "percentage_women": "16.3%"
+    },
+    {
+      "house_women": 59,
+      "senate_women": 11,
+      "total_women": 70,
+      "total_seats": 180,
+      "percentage_women": "38.9%"
+    },
+    {
+      "house_women": 18,
+      "senate_women": 6,
+      "total_women": 24,
+      "total_seats": 140,
+      "percentage_women": "17.1%"
+    },
+    {
+      "house_women": 29,
+      "senate_women": 18,
+      "total_women": 47,
+      "total_seats": 147,
+      "percentage_women": "32.0%"
+    },
+    {
+      "house_women": 22,
+      "senate_women": 2,
+      "total_women": 24,
+      "total_seats": 134,
+      "percentage_women": "17.9%"
+    },
+    {
+      "house_women": 23,
+      "senate_women": 9,
+      "total_women": 32,
+      "total_seats": 132,
+      "percentage_women": "24.2%"
+    },
+    {
+      "house_women": 12,
+      "senate_women": 1,
+      "total_women": 13,
+      "total_seats": 90,
+      "percentage_women": "14.4%"
+    }
+  ]
+}

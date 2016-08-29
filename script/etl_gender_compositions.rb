@@ -7,3 +7,7 @@ end
 Ncsl::GenderComposition::HtmlSource.all.each do |html_source|
   html_source.convert_to_csv
 end
+
+Ncsl::GenderComposition::HtmlSource.all.each do |html_source|
+  html_source.convert_csv_to_json
+end

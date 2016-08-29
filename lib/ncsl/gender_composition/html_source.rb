@@ -35,6 +35,10 @@ module Ncsl
         File.join(DATA_DIR, "csv", "#{@year}.csv")
       end
 
+      def json_path
+        File.join(DATA_DIR, "json", "#{@year}.json")
+      end
+
       def download
         unless File.exists?(html_path)
           puts "Extracting #{@year} data from #{@url}"
@@ -49,14 +53,13 @@ module Ncsl
       end
 
       def convert_to_csv
-        puts "Parsing html"
+        puts "Converting #{@year} html to csv"
         doc = File.open(html_path){|file| Nokogiri::HTML(file)}
         tables = doc.xpath("//table")
         table = tables.find{|table| table.attribute("summary").try(:value) == "State-by-state data about women in legislatures." } # thanks for this table identifier!
         raise UnknownTableError unless table.present?
 
         rows = table.css("tr")
-        puts "Found table with #{rows.count} rows"
         rows = rows.reject{|row| row.children.count == 1 } # exclude pre-header row ... #(Element:0x3fede1e81c8c { name = "tr", children = [ #(Text "\n\t\t")] })
 
         CSV.open(csv_path, "w") do |csv|
@@ -96,28 +99,42 @@ module Ncsl
               end
             end # remove characters with bad encoding that look like blank strings but aren't
 
-            puts "#{@year} -- #{i} -- #{values}"
+            # puts "#{@year} -- #{i} -- #{values}"
             next if values == HTML_COLUMN_HEADERS # skip header row
             next if values.include?("TOTAL") # skip totals row
             next if values.map{|v| v.blank?}.include?(true) # skip blank rows like [" ", " ", " ", " ", " ", " "]
             next unless values.any?
             next unless values.count == 6
-
             begin
               raise UnexpectedStateName unless values[0].to_i == 0 # should be a string
               raise TotalWomenCountError unless values[1].to_i + values[2].to_i == values[3].to_i
-
               pct_women = values[5].gsub("%","").to_f
               calc_pct_women = (values[3].to_f / values[4].to_f * 100).round(1)
               raise TotalWomenPercentageError.new("#{pct_women} does not equal #{calc_pct_women}") unless pct_women == calc_pct_women
             rescue TotalWomenPercentageError => e
-              puts "#{e.class} -- #{e.message}" # see known issue with source data:
-              values[5] = calc_pct_women.to_s + "%"
+              puts " -- #{e.class} -- #{e.message}"
+              values[5] = calc_pct_women.to_s + "%" # fix known issue with source data: https://github.com/AdvancedEnergyEconomy/state_legislatures/pull/8
             ensure
               csv << values
             end
           end
         end
+      end
+
+      def convert_csv_to_json
+        puts "Converting #{@year} csv to json"
+        obj = {:year => @year, :states => []}
+        CSV.foreach(csv_path, :headers => true, :header_converters => :symbol) do |row|
+          state = {
+            :house_women => row[:house_women].to_i,
+            :senate_women => row[:senate_women].to_i,
+            :total_women => row[:total_women].to_i,
+            :total_seats => row[:total_seats].to_i,
+            :percentage_women => row[:percentage_women]
+          }
+          obj[:states] << state
+        end
+        File.write(json_path, JSON.pretty_generate(obj))
       end
 
       class UnknownTableError < StandardError ; end
