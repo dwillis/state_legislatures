@@ -44,20 +44,20 @@ module Ncsl
             file.write(response.body)
           end
         else
-          puts "Detected local #{@year} data"
+          puts "Detected local data for #{@year} at #{html_path}"
         end
       end
 
       def convert_to_csv
         puts "Parsing html"
-        doc = File.open(html_path){|f| Nokogiri::HTML(f)}
+        doc = File.open(html_path){|file| Nokogiri::HTML(file)}
         tables = doc.xpath("//table")
-        table = tables.find{|table| table.attribute("summary").try(:value) == "State-by-state data about women in legislatures." }
+        table = tables.find{|table| table.attribute("summary").try(:value) == "State-by-state data about women in legislatures." } # thanks for this table identifier!
         raise UnknownTableError unless table.present?
 
         rows = table.css("tr")
         puts "Found table with #{rows.count} rows"
-        rows = rows.reject{|row| row.children.count == 1 } # exclude weird pre-header row ... #(Element:0x3fede1e81c8c { name = "tr", children = [ #(Text "\n\t\t")] })
+        rows = rows.reject{|row| row.children.count == 1 } # exclude pre-header row ... #(Element:0x3fede1e81c8c { name = "tr", children = [ #(Text "\n\t\t")] })
 
         CSV.open(csv_path, "w") do |csv|
           csv << CSV_COLUMN_HEADERS
@@ -71,28 +71,27 @@ module Ncsl
               if td.children.map{|child| child.name}.include?("div")
                 div = td.children.find{|child| child.name == "div"}
                 div_child_names = div.children.map{|child| child.name}
-                if div_child_names.include?("b")
+                if div_child_names.include?("b") # headers are bold
                   b = div.children.find{|child| child.name == "b"}
-                  if b.children.count == 1
-                    values << b.text.strip
-                  else
-                    raise UnexpectedCell.new(td)
-                  end
+                  raise UnexpectedCell unless b.children.count == 1
+                  values << b.text.strip
                 elsif div_child_names.include?("text")
-                  if div.children.count == 1
-                    values << div.text.strip
-                  else
-                    raise UnexpectedCell.new(td)
-                  end
+                  raise UnexpectedCell unless div.children.count == 1
+                  values << div.text.strip
                 end
               elsif td.children.count == 1
                 values << td.text.strip
               else
-                raise UnexpectedCell.new(td)
+                raise UnexpectedCell
               end
             end
+
             puts "#{@year} -- #{i} -- #{values}"
-            next if values == HTML_COLUMN_HEADERS # skip header row (2009 - 2014)
+            next if values == HTML_COLUMN_HEADERS # skip header row
+            next if values.include?("TOTAL") # skip totals row
+            next if values.map{|v| v.blank?}.include?(true) # skip blank rows like [" ", " ", " ", " ", " ", " "]
+            next unless values.any?
+            next unless values.count == 6
             csv << values
           end
         end
