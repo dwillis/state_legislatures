@@ -58,10 +58,8 @@ module Ncsl
         tables = doc.xpath("//table")
         table = tables.find{|table| table.attribute("summary").try(:value) == "State-by-state data about women in legislatures." } # thanks for this table identifier!
         raise UnknownTableError unless table.present?
-
         rows = table.css("tr")
         rows = rows.reject{|row| row.children.count == 1 } # exclude pre-header row ... #(Element:0x3fede1e81c8c { name = "tr", children = [ #(Text "\n\t\t")] })
-
         CSV.open(csv_path, "w") do |csv|
           csv << CSV_COLUMN_HEADERS
           rows.each_with_index do |row, i|
@@ -69,42 +67,13 @@ module Ncsl
             next if tds.empty? # skip empty pre-header row
             raise UnexpectedCellCount unless tds.count == 6
 
-            values = []
-            tds.each do |td|
-              if td.children.map{|child| child.name}.include?("div")
-                div = td.children.find{|child| child.name == "div"}
-                div_child_names = div.children.map{|child| child.name}
-                if div_child_names.include?("b") # headers are bold
-                  b = div.children.find{|child| child.name == "b"}
-                  raise UnexpectedCell unless b.children.count == 1
-                  values << b.text.strip
-                elsif div_child_names.include?("text")
-                  raise UnexpectedCell unless div.children.count == 1
-                  values << div.text.strip
-                end
-              elsif td.children.count == 1
-                values << td.text.strip
-              else
-                raise UnexpectedCell
-              end
-            end
-
-            values.each do |val|
-              invalid_character_indices = []
-              val.each_char.with_index do |char, i|
-                invalid_character_indices << i unless char == char.encode(Encoding::UTF_8, Encoding::ISO_8859_1,:invalid => :replace, :undef => :replace, :replace => "")
-              end
-              invalid_character_indices.each do |i|
-                val.delete!(val[i])
-              end
-            end # remove characters with bad encoding that look like blank strings but aren't
-
-            # puts "#{@year} -- #{i} -- #{values}"
+            values = transform_table_row_data(tds)
             next if values == HTML_COLUMN_HEADERS # skip header row
             next if values.include?("TOTAL") # skip totals row
             next if values.map{|v| v.blank?}.include?(true) # skip blank rows like [" ", " ", " ", " ", " ", " "]
             next unless values.any?
             next unless values.count == 6
+
             begin
               raise UnexpectedStateName unless values[0].to_i == 0 # should be a string
               raise TotalWomenCountError unless values[1].to_i + values[2].to_i == values[3].to_i
@@ -113,12 +82,50 @@ module Ncsl
               raise TotalWomenPercentageError.new("#{pct_women} does not equal #{calc_pct_women}") unless pct_women == calc_pct_women
             rescue TotalWomenPercentageError => e
               puts " -- #{e.class} -- #{e.message}"
-              values[5] = calc_pct_women.to_s + "%" # fix known issue with source data: https://github.com/AdvancedEnergyEconomy/state_legislatures/pull/8
+              values[5] = calc_pct_women.to_s + "%" # fix known issue with source data: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/9
             ensure
               csv << values
             end
           end
         end
+      end
+
+      def transform_table_row_data(tds)
+        values = []
+        tds.each do |td|
+          if td.children.map{|child| child.name}.include?("div")
+            div = td.children.find{|child| child.name == "div"}
+            div_child_names = div.children.map{|child| child.name}
+            if div_child_names.include?("b") # headers are bold
+              b = div.children.find{|child| child.name == "b"}
+              raise UnexpectedCell unless b.children.count == 1
+              values << b.text.strip
+            elsif div_child_names.include?("text")
+              raise UnexpectedCell unless div.children.count == 1
+              values << div.text.strip
+            end
+          elsif td.children.count == 1
+            values << td.text.strip
+          else
+            raise UnexpectedCell
+          end
+        end
+
+        return remove_malencoded_characters_from(values)
+      end
+
+      def remove_malencoded_characters_from(values)
+        values.each do |val|
+          invalid_character_indices = []
+          val.each_char.with_index do |char, i|
+            invalid_character_indices << i unless char == char.encode(Encoding::UTF_8, Encoding::ISO_8859_1,:invalid => :replace, :undef => :replace, :replace => "")
+          end
+          invalid_character_indices.each do |i|
+            val.delete!(val[i]) # remove characters with bad encoding that look like blank strings but aren't
+          end
+        end
+
+        return values
       end
 
       def convert_csv_to_json
@@ -135,6 +142,7 @@ module Ncsl
           }
           obj[:states] << state
         end
+
         File.write(json_path, JSON.pretty_generate(obj))
       end
 
