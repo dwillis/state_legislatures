@@ -5,8 +5,18 @@ require 'active_support/core_ext/object' # enable .try method
 module Ncsl
   module GenderComposition
     class HtmlSource
+      COLUMN_HEADERS = [
+        {:html_header=> "State", :csv_header => "state"},
+        {:html_header => "Number of Women Legislators in the House / Assembly", :csv_header => "house_women"},
+        {:html_header => "Number of Women Legislators in the Senate", :csv_header => "senate_women"},
+        {:html_header => "Total Number of Women Legislators", :csv_header => "total_women"},
+        {:html_header => "Total Seats in the Legislature", :csv_header => "total_seats"},
+        {:html_header => "Percentage of Women in the Legislature", :csv_header => "percentage_women"},
+      ]
+      HTML_COLUMN_HEADERS = COLUMN_HEADERS.map{|h| h[:html_header]}
+      CSV_COLUMN_HEADERS = COLUMN_HEADERS.map{|h| h[:csv_header]}
+
       DATA_DIR = File.expand_path("../../../../data/gender_composition", __FILE__)
-      COLUMN_HEADERS = ["house_women","senate_women","total_women","total_seats","percentage_women"]
 
       def self.all
         Ncsl::GenderComposition::URL_SOURCES.map{|source| new(source) }
@@ -47,77 +57,49 @@ module Ncsl
 
         rows = table.css("tr")
         puts "Found table with #{rows.count} rows"
-        rows = rows.reject{|row| row.children.count == 1 } # reject! wasn't available
+        rows = rows.reject{|row| row.children.count == 1 } # exclude weird pre-header row ... #(Element:0x3fede1e81c8c { name = "tr", children = [ #(Text "\n\t\t")] })
+
         CSV.open(csv_path, "w") do |csv|
-          csv << COLUMN_HEADERS
+          csv << CSV_COLUMN_HEADERS
           rows.each_with_index do |row, i|
-            tds = row.children.select{|child| child.name == "td" } # get rid of erroneous Nokogiri::XML::Text elements
-            next if tds.empty? # skip random blank row before header row (2015 and 2016)
-            td_child_counts = tds.map{|td| td.children.count}
-            puts "#{@year} -- #{i} -- #{td_child_counts}"
-            csv << td_child_counts
+            tds = row.children.select{|child| child.name == "td" } # exclude erroneous Nokogiri::XML::Text elements
+            next if tds.empty? # skip empty pre-header row
+            raise UnexpectedCellCount unless tds.count == 6
+
+            values = []
+            tds.each do |td|
+              if td.children.map{|child| child.name}.include?("div")
+                div = td.children.find{|child| child.name == "div"}
+                div_child_names = div.children.map{|child| child.name}
+                if div_child_names.include?("b")
+                  b = div.children.find{|child| child.name == "b"}
+                  if b.children.count == 1
+                    values << b.text.strip
+                  else
+                    binding.pry
+                  end
+                elsif div_child_names.include?("text")
+                  if div.children.count == 1
+                    values << div.text.strip
+                  else
+                    binding.pry
+                  end
+                end
+              elsif td.children.count == 1
+                values << td.text.strip
+              else
+                binding.pry
+              end
+            end
+            puts "#{@year} -- #{i} -- #{values}"
+            puts "... found header row" if values == HTML_COLUMN_HEADERS
+            csv << values
           end
         end
       end
 
       class UnknownTableError < StandardError ; end
       class UnexpectedCellCount < StandardError ; end
-
-=begin
-      def select_valid_rows(table_rows)
-        binding.pry if @year == 2015
-        table_ # reject random blank row before 2015 column header row ... #(Element:0x3fede1e81c8c { name = "tr", children = [ #(Text "\n\t\t")] })
-        #next if values.include?("TOTAL") # skip totals row
-        #next if values.uniq == [nil] # skip blank row
-        #next if values.map{|str| str.blank?}.uniq == [true] # skip row containing all blank values
-      end
-
-      def transform_table_row(row, i)
-
-
-
-        raise UnexpectedCellCount unless tds.count == 6
-        binding.pry unless tds.count == 6
-        # #(Element:0x3ff5fe5c6a8c { name = "tr", children = [ #(Text "\n\t\t")] })
-
-
-
-        #binding.pry unless td_child_counts.uniq == [3]
-        # some rows have three children, including a div element which contains a nested text element. others just have one child, sometimes another nested td which contains the text element.
-
-        divs = []
-        tds.each do |td|
-          case td.children.count
-          when 1
-            divs << td.children.first
-          when 3
-            divs << td.children.find{|child| child.name == "div"}
-          else
-            binding.pry
-          end
-        end # get the div nested inside the td
-
-        texts = []
-        if i == 0 # handle header rows
-          bs = divs.map{|div| div.children.find{|child| child.name == "b"} }
-          texts = bs.map{|b| b.children.find{|child| child.name == "text"} }
-        else
-          divs.each do |div|
-            if div.children.any?
-              texts << div
-            else
-              texts << div.children.find{|child| child.name == "text"}
-            end
-          end
-        end
-
-        values = texts.map{|text| text.try(:text).try(:strip) }
-
-
-        puts "... #{values}"
-        binding.pry if values.include?(nil)
-      end
-=end
     end
   end
 end
