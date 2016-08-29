@@ -76,23 +76,23 @@ module Ncsl
                   if b.children.count == 1
                     values << b.text.strip
                   else
-                    binding.pry
+                    raise UnexpectedCell.new(td)
                   end
                 elsif div_child_names.include?("text")
                   if div.children.count == 1
                     values << div.text.strip
                   else
-                    binding.pry
+                    raise UnexpectedCell.new(td)
                   end
                 end
               elsif td.children.count == 1
                 values << td.text.strip
               else
-                binding.pry
+                raise UnexpectedCell.new(td)
               end
             end
             puts "#{@year} -- #{i} -- #{values}"
-            puts "... found header row" if values == HTML_COLUMN_HEADERS
+            next if values == HTML_COLUMN_HEADERS # skip header row (2009 - 2014)
             csv << values
           end
         end
@@ -100,6 +100,7 @@ module Ncsl
 
       class UnknownTableError < StandardError ; end
       class UnexpectedCellCount < StandardError ; end
+      class UnexpectedCell < StandardError ; end
     end
   end
 end
