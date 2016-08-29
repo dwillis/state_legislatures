@@ -102,7 +102,20 @@ module Ncsl
             next if values.map{|v| v.blank?}.include?(true) # skip blank rows like [" ", " ", " ", " ", " ", " "]
             next unless values.any?
             next unless values.count == 6
-            csv << values
+
+            begin
+              raise UnexpectedStateName unless values[0].to_i == 0 # should be a string
+              raise TotalWomenCountError unless values[1].to_i + values[2].to_i == values[3].to_i
+
+              pct_women = values[5].gsub("%","").to_f
+              calc_pct_women = (values[3].to_f / values[4].to_f * 100).round(1)
+              raise TotalWomenPercentageError.new("#{pct_women} does not equal #{calc_pct_women}") unless pct_women == calc_pct_women
+            rescue TotalWomenPercentageError => e
+              puts "#{e.class} -- #{e.message}" # see known issue with source data:
+              values[5] = calc_pct_women.to_s + "%"
+            ensure
+              csv << values
+            end
           end
         end
       end
@@ -110,6 +123,10 @@ module Ncsl
       class UnknownTableError < StandardError ; end
       class UnexpectedCellCount < StandardError ; end
       class UnexpectedCell < StandardError ; end
+
+      class UnexpectedStateName < StandardError ; end
+      class TotalWomenCountError < StandardError ; end
+      class TotalWomenPercentageError < StandardError ; end
     end
   end
 end
