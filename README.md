@@ -1,12 +1,12 @@
 ## State Legislatures
 
-This repository contains summary data about state legislative bodies, beginning with [partisan composition](http://www.ncsl.org/research/about-state-legislatures/partisan-composition.aspx) and [women in state legislatures](http://www.ncsl.org/legislators-staff/legislators/womens-legislative-network/women-in-state-legislatures-for-2013.aspx) as compiled by the National Conference of State Legislatures covering 2009-2016.
+This repository contains summary data about state legislative bodies, beginning with [partisan composition](http://www.ncsl.org/research/about-state-legislatures/partisan-composition.aspx) and [women in state legislatures](http://www.ncsl.org/legislators-staff/legislators/womens-legislative-network/women-in-state-legislatures-for-2013.aspx) as compiled by the [National Conference of State Legislatures (NCSL)](http://www.ncsl.org/) covering 2009-2016.
 
-Data in this repository has been transformed and validated using automated, repeatable processes.
+[Data](/data) in this repository has been transformed and validated using automated, repeatable processes.
 
 ### Contributing
 
-When new data is posted by ncsl.org, add the source url to [lib/ncsl/gender_composition.rb](/lib/ncsl/gender_composition.rb) or [lib/ncsl/party_composition.rb](/lib/ncsl/party_composition.rb), then run the appropriate conversion process.
+When new data is posted by NCSL, add the source url to [lib/ncsl/gender_composition.rb](/lib/ncsl/gender_composition.rb) or [lib/ncsl/party_composition.rb](/lib/ncsl/party_composition.rb), then run the appropriate conversion process.
 
 #### Prerequisites
 
