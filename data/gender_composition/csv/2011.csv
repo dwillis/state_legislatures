@@ -1,8 +1,8 @@
 state,house_women,senate_women,total_women,total_seats,percentage_women
 Alabama,14,5,19,140,13.6%
 Alaska,10,4,14,60,23.3%
-Arizona,20,11,31 ,90,34.4%
-Arkansas,22,8,30 ,135,22.2%
+Arizona,20,11,31,90,34.4%
+Arkansas,22,8,30,135,22.2%
 California,22,12,34,120,28.3%
 Colorado,24,17,41,100,41.0%
 Connecticut,47,9,56,187,29.9%
@@ -12,7 +12,7 @@ Georgia,47,9,56,236,23.7%
 Hawaii,17,9,26,76,34.2%
 Idaho,19,9,28,105,26.7%
 Illinois,39,16,55,177,31.1%
-Indiana,21,11 ,32,150,21.3%
+Indiana,21,11,32,150,21.3%
 Iowa,24,7,31,150,20.7%
 Kansas,33,12,45,165,27.3%
 Kentucky,19,6,25,138,18.1%
@@ -26,26 +26,26 @@ Mississippi,21,5,26,174,14.9%
 Missouri,39,6,45,197,22.8%
 Montana,28,8,36,150,24.0%
 Nebraska,Unicameral,11,11,49,22.4%
-Nevada,12,6,18,63,28.6% 
+Nevada,12,6,18,63,28.6%
 New Hampshire,98,6,104,424,24.5%
 New Jersey,24,10,34,120,28.3%
 New Mexico,20,10,30,112,26.8%
 New York,34,11,45,212,21.2%
-North Carolina,32 , 6,38 ,170,22.4%
-North Dakota,15, 6,21,141,14.9%
-Ohio,22, 8,30 ,132,22.7%
-Oklahoma,15, 4,19,149,12.8%
-Oregon,17, 8,25,90,27.8%
+North Carolina,32,6,38,170,22.4%
+North Dakota,15,6,21,141,14.9%
+Ohio,22,8,30,132,22.7%
+Oklahoma,15,4,19,149,12.8%
+Oregon,17,8,25,90,27.8%
 Pennsylvania,33,11,44,253,17.4%
-Rhode Island,19 ,10 ,29,113,25.7%
-South Carolina,16 ,0 ,16,170,9.4%
-South Dakota,14,7 ,21,105,20.0%
-Tennessee,17,7 ,24,132,18.2%
-Texas,32,6 ,38 ,181,21.0% 
-Utah,13,5 ,18 ,104,17.3% 
-Vermont,58,11 ,69,180,38.3% 
+Rhode Island,19,10,29,113,25.7%
+South Carolina,16,0,16,170,9.4%
+South Dakota,14,7,21,105,20.0%
+Tennessee,17,7,24,132,18.2%
+Texas,32,6,38,181,21.0%
+Utah,13,5,18,104,17.3%
+Vermont,58,11,69,180,38.3%
 Virginia,19,8,27,140,19.3%
 Washington,29,18,47,147,32.0%
-West Virginia,22,2 ,24,134,17.9%
-Wisconsin,23,10,33,132,25.0% 
-Wyoming,12,1 ,13,90,14.4% 
+West Virginia,22,2,24,134,17.9%
+Wisconsin,23,10,33,132,25.0%
+Wyoming,12,1,13,90,14.4%

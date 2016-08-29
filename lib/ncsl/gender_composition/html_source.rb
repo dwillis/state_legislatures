@@ -86,6 +86,16 @@ module Ncsl
               end
             end
 
+            values.each do |val|
+              invalid_character_indices = []
+              val.each_char.with_index do |char, i|
+                invalid_character_indices << i unless char == char.encode(Encoding::UTF_8, Encoding::ISO_8859_1,:invalid => :replace, :undef => :replace, :replace => "")
+              end
+              invalid_character_indices.each do |i|
+                val.delete!(val[i])
+              end
+            end # remove characters with bad encoding that look like blank strings but aren't
+
             puts "#{@year} -- #{i} -- #{values}"
             next if values == HTML_COLUMN_HEADERS # skip header row
             next if values.include?("TOTAL") # skip totals row
