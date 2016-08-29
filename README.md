@@ -24,8 +24,14 @@ bundle install
 
 #### Conversion Process
 
-Download party composition pdf files and convert them to machine-readable formats.
+Download party composition pdf files and convert to machine-readable formats:
 
 ```` sh
 ruby script/etl_party_compositions.rb
+````
+
+Scrape gender composition html tables and convert to machine-readable formats:
+
+```` sh
+ruby script/etl_gender_compositions.rb
 ````

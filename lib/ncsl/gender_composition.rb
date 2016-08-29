@@ -4,7 +4,7 @@ module Ncsl
   module GenderComposition
     URL_BASE = "http://www.ncsl.org/legislators-staff/legislators/womens-legislative-network/women-in-state-legislatures"
     URL_SOURCES = [
-      {:year => 2009, :url => "#{URL_SOURCES}-2009.aspx"},
+      {:year => 2009, :url => "#{URL_BASE}-2009.aspx"},
       {:year => 2010, :url => "#{URL_BASE}-2010.aspx"},
       {:year => 2011, :url => "#{URL_BASE}-2011.aspx"},
       {:year => 2012, :url => "#{URL_BASE}-2012.aspx"},
