@@ -50,49 +50,43 @@ module Ncsl
         @year = source[:year]
       end
 
-      def url
-        @url
-      end
-
-      def year
-        @year
-      end
-
-      def file_name
-        "#{year}_party_compositions"
-      end
-
       def pdf_path
-        File.join(DATA_DIR, "pdf", "#{file_name}.pdf")
+        File.join(DATA_DIR, "pdf", "#{@year}.pdf")
       end
 
       def txt_path
-        File.join(DATA_DIR, "txt", "#{file_name}.txt")
+        File.join(DATA_DIR, "txt", "#{@year}.txt")
       end
 
       def csv_path
-        File.join(DATA_DIR, "csv", "#{file_name}.csv")
+        File.join(DATA_DIR, "csv", "#{@year}.csv")
       end
 
       def json_path
-        File.join(DATA_DIR, "json", "#{file_name}.json")
+        File.join(DATA_DIR, "json", "#{@year}.json")
       end
 
       def denormalized_csv_path
-        File.join(DATA_DIR, "denormalized_csv", "#{file_name}.csv")
+        File.join(DATA_DIR, "denormalized_csv", "#{@year}.csv")
       end
 
       def download
-        puts "Downloading to #{pdf_path}"
-        File.open(pdf_path, "wb") do |file|
-          open(url, "rb") do |source_file|
-            file.write(source_file.read)
+        unless File.exists?(pdf_path)
+          puts "Downloading to #{pdf_path}"
+          File.open(pdf_path, "wb") do |file|
+            open(@url, "rb") do |source_file|
+              file.write(source_file.read)
+            end
           end
+        else
+          puts "Detected local pdf file for #{@year} at #{pdf_path}"
         end
       end
 
       def convert_to_txt
         puts "Converting to #{txt_path}"
+        cli_installed = system "which pdftotext"
+        raise "Please install the 'pdftotext' command line utility (see README.md)." unless cli_installed == true
         system "pdftotext #{pdf_path} #{txt_path} -layout"
       end
 
@@ -101,7 +95,7 @@ module Ncsl
         lines -= ["\f"]
         lines -= [""]
         lines.reject!{|line| line.include?("Total") }
-        lines.reject!{|line| line.include?(year.to_s) }
+        lines.reject!{|line| line.include?(@year.to_s) }
         lines.reject!{|line| line.include?("Control") }
         lines.reject!{|line| line.include?("Total") }
         lines.reject!{|line| line.include?("Territories") }
@@ -125,7 +119,7 @@ module Ncsl
 
         if parsed_line.include?("Unicameral") # workaround for unicameral legislature blank values ...
           parsed_line.gsub!( parsed_line.slice(0,24) , "#{parsed_line.slice(0,24).strip}#{CELL_DELIMETER}")
-          if [2015,2016].include?(year) && (parsed_line.include?("District of Columbia") || parsed_line.include?("Guam") )
+          if [2015,2016].include?(@year) && (parsed_line.include?("District of Columbia") || parsed_line.include?("Guam") )
             parsed_line.gsub!("      Unicameral","UNI")
             parsed_line.gsub!(DOUBLE_CELL_DELIMETER_UNICAMERAL, BLANK_CELL_REPLACEMENT_VALUE )
             parsed_line.gsub!("UNI","Unicameral")
@@ -133,12 +127,12 @@ module Ncsl
             parsed_line.gsub!(DOUBLE_CELL_DELIMETER_UNICAMERAL, BLANK_CELL_REPLACEMENT_VALUE)
           end
           parsed_line.gsub!(parsed_line[-15,15], parsed_line[-15,15].gsub("0","")) # remove erroneously-added 0 between last two control values if necessary (for huge space in District of Columbia lines)
-        elsif [2015,2016].include?(year) # workaround for 2015 and 2016 where blank values should be zeros ...
+        elsif [2015,2016].include?(@year) # workaround for 2015 and 2016 where blank values should be zeros ...
           parsed_line.gsub!( parsed_line.slice(0,25) , "#{parsed_line.slice(0,25).strip}#{CELL_DELIMETER}")
           parsed_line.gsub!(DOUBLE_CELL_DELIMETER, BLANK_CELL_REPLACEMENT_VALUE)
         end
 
-        parsed_line.gsub!("Rep Rep Dem", "Rep#{CELL_DELIMETER}Dem") if year == 2016 && parsed_line.include?("Louisiana") # workaround for 2016 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
+        parsed_line.gsub!("Rep Rep Dem", "Rep#{CELL_DELIMETER}Dem") if @year == 2016 && parsed_line.include?("Louisiana") # workaround for 2016 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
 
         return parsed_line
       end
@@ -152,10 +146,10 @@ module Ncsl
             line = parse_line(txt_line)
             cells = line.split(CELL_DELIMETER).map{|l| l.strip } - [""]
             #puts "... #{cells.first}"
-            cells = cells.insert(-2, "NULL") if year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
+            cells = cells.insert(-2, "NULL") if @year == 2015 && ["Mariana Islands"].include?(cells.first) # workaround for null gov_party values
             cells[11].gsub!("0", "NULL") # workaround for "0" gov_party values which resulted from the delimeter conversion process
-            cells[5] = cells[2] if cells.first == "Virgin Islands" || (cells.first == "Nebraska" && year == 2013) # workaround for known missing corresponding "Senate Other" values in nonpartisan legislature
-            cells[3] = (cells[3].to_i + 1).to_s if cells.first == "Minnesota" && year == 2012 # fix known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
+            cells[5] = cells[2] if cells.first == "Virgin Islands" || (cells.first == "Nebraska" && @year == 2013) # workaround for known missing corresponding "Senate Other" values in nonpartisan legislature
+            cells[3] = (cells[3].to_i + 1).to_s if cells.first == "Minnesota" && @year == 2012 # fix known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
             begin
               raise CellCountError.new(cells) unless cells.count == 13
               raise LegislatureControlError.new(cells) unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
@@ -165,7 +159,7 @@ module Ncsl
               raise ChamberSeatCountError.new(cells) unless cells[2].to_i == (cells[3].to_i + cells[4].to_i + other_seats(cells[5]))
               raise ChamberSeatCountError.new(cells) unless cells[6].to_i == (cells[7].to_i + cells[8].to_i + other_seats(cells[9]))
             rescue => e
-              puts "#{e.class} -- #{year} -- #{e.message}"
+              puts "#{e.class} -- #{@year} -- #{e.message}"
               raise
             end
             csv << cells
@@ -218,7 +212,7 @@ module Ncsl
 
       def convert_csv_to_json
         puts "Converting to #{json_path}"
-        obj = {:year => year, :states => []}
+        obj = {:year => @year, :states => []}
         CSV.foreach(csv_path, :headers => true, :header_converters => :symbol) do |row|
           #puts "... #{row[:state]}"
           state = {
@@ -230,9 +224,9 @@ module Ncsl
             :legislature_chambers => parse_chambers(row)
           }
           begin
-            raise LegislatureSeatCountError.new("#{year} -- #{state[:name]}") unless state[:legislature_seats] == state[:legislature_chambers].map{|chamber| chamber[:seats]}.inject(0){|sum,x| sum + x }
+            raise LegislatureSeatCountError.new("#{@year} -- #{state[:name]}") unless state[:legislature_seats] == state[:legislature_chambers].map{|chamber| chamber[:seats]}.inject(0){|sum,x| sum + x }
             state[:legislature_chambers].each do |chamber|
-              raise ChamberSeatCountError.new("#{year} -- #{state[:name]} -- #{chamber}") unless chamber[:seats] == (chamber[:composition][:dem] + chamber[:composition][:rep] + chamber[:composition][:vacant] + chamber[:composition][:other])
+              raise ChamberSeatCountError.new("#{@year} -- #{state[:name]} -- #{chamber}") unless chamber[:seats] == (chamber[:composition][:dem] + chamber[:composition][:rep] + chamber[:composition][:vacant] + chamber[:composition][:other])
             end
           rescue => e
             puts "#{e.class} -- #{e.message}"
@@ -256,7 +250,7 @@ module Ncsl
           csv << DENORMALIZED_COLUMN_HEADERS
           states.each do |state|
             cells = [
-              year,
+              @year,
               state["name"],
               state["control"],
               state["governor_party"],

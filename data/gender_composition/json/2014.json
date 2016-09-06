@@ -2,7 +2,7 @@
   "year": 2014,
   "states": [
     {
-      "state": "Alabama",
+      "name": "Alabama",
       "house_women": 15,
       "senate_women": 5,
       "total_women": 20,
@@ -10,7 +10,7 @@
       "percentage_women": "14.3%"
     },
     {
-      "state": "Alaska",
+      "name": "Alaska",
       "house_women": 12,
       "senate_women": 4,
       "total_women": 16,
@@ -18,7 +18,7 @@
       "percentage_women": "26.7%"
     },
     {
-      "state": "Arizona",
+      "name": "Arizona",
       "house_women": 19,
       "senate_women": 13,
       "total_women": 32,
@@ -26,7 +26,7 @@
       "percentage_women": "35.6%"
     },
     {
-      "state": "Arkansas",
+      "name": "Arkansas",
       "house_women": 17,
       "senate_women": 6,
       "total_women": 23,
@@ -34,7 +34,7 @@
       "percentage_women": "17.0%"
     },
     {
-      "state": "California",
+      "name": "California",
       "house_women": 20,
       "senate_women": 12,
       "total_women": 32,
@@ -42,7 +42,7 @@
       "percentage_women": "26.7%"
     },
     {
-      "state": "Colorado",
+      "name": "Colorado",
       "house_women": 28,
       "senate_women": 13,
       "total_women": 41,
@@ -50,7 +50,7 @@
       "percentage_women": "41.0%"
     },
     {
-      "state": "Connecticut",
+      "name": "Connecticut",
       "house_women": 45,
       "senate_women": 8,
       "total_women": 53,
@@ -58,7 +58,7 @@
       "percentage_women": "28.3%"
     },
     {
-      "state": "Delaware",
+      "name": "Delaware",
       "house_women": 10,
       "senate_women": 6,
       "total_women": 16,
@@ -66,7 +66,7 @@
       "percentage_women": "25.8%"
     },
     {
-      "state": "Florida",
+      "name": "Florida",
       "house_women": 29,
       "senate_women": 12,
       "total_women": 41,
@@ -74,7 +74,7 @@
       "percentage_women": "25.6%"
     },
     {
-      "state": "Georgia",
+      "name": "Georgia",
       "house_women": 45,
       "senate_women": 8,
       "total_women": 53,
@@ -82,7 +82,7 @@
       "percentage_women": "22.5%"
     },
     {
-      "state": "Hawaii",
+      "name": "Hawaii",
       "house_women": 16,
       "senate_women": 8,
       "total_women": 24,
@@ -90,7 +90,7 @@
       "percentage_women": "31.6%"
     },
     {
-      "state": "Idaho",
+      "name": "Idaho",
       "house_women": 22,
       "senate_women": 6,
       "total_women": 28,
@@ -98,7 +98,7 @@
       "percentage_women": "26.7%"
     },
     {
-      "state": "Illinois",
+      "name": "Illinois",
       "house_women": 40,
       "senate_women": 15,
       "total_women": 55,
@@ -106,7 +106,7 @@
       "percentage_women": "31.1%"
     },
     {
-      "state": "Indiana",
+      "name": "Indiana",
       "house_women": 22,
       "senate_women": 8,
       "total_women": 30,
@@ -114,7 +114,7 @@
       "percentage_women": "20.0%"
     },
     {
-      "state": "Iowa",
+      "name": "Iowa",
       "house_women": 25,
       "senate_women": 10,
       "total_women": 35,
@@ -122,7 +122,7 @@
       "percentage_women": "23.3%"
     },
     {
-      "state": "Kansas",
+      "name": "Kansas",
       "house_women": 29,
       "senate_women": 12,
       "total_women": 41,
@@ -130,7 +130,7 @@
       "percentage_women": "24.8%"
     },
     {
-      "state": "Kentucky",
+      "name": "Kentucky",
       "house_women": 19,
       "senate_women": 6,
       "total_women": 25,
@@ -138,7 +138,7 @@
       "percentage_women": "18.1%"
     },
     {
-      "state": "Louisiana",
+      "name": "Louisiana",
       "house_women": 14,
       "senate_women": 4,
       "total_women": 18,
@@ -146,7 +146,7 @@
       "percentage_women": "12.5%"
     },
     {
-      "state": "Maine",
+      "name": "Maine",
       "house_women": 47,
       "senate_women": 8,
       "total_women": 55,
@@ -154,7 +154,7 @@
       "percentage_women": "29.6%"
     },
     {
-      "state": "Maryland",
+      "name": "Maryland",
       "house_women": 46,
       "senate_women": 11,
       "total_women": 57,
@@ -162,7 +162,7 @@
       "percentage_women": "30.3%"
     },
     {
-      "state": "Massachusetts",
+      "name": "Massachusetts",
       "house_women": 37,
       "senate_women": 12,
       "total_women": 49,
@@ -170,7 +170,7 @@
       "percentage_women": "24.5%"
     },
     {
-      "state": "Michigan",
+      "name": "Michigan",
       "house_women": 24,
       "senate_women": 4,
       "total_women": 28,
@@ -178,7 +178,7 @@
       "percentage_women": "18.9%"
     },
     {
-      "state": "Minnesota",
+      "name": "Minnesota",
       "house_women": 45,
       "senate_women": 23,
       "total_women": 68,
@@ -186,7 +186,7 @@
       "percentage_women": "33.8%"
     },
     {
-      "state": "Mississippi",
+      "name": "Mississippi",
       "house_women": 22,
       "senate_women": 8,
       "total_women": 30,
@@ -194,7 +194,7 @@
       "percentage_women": "17.2%"
     },
     {
-      "state": "Missouri",
+      "name": "Missouri",
       "house_women": 38,
       "senate_women": 5,
       "total_women": 43,
@@ -202,7 +202,7 @@
       "percentage_women": "21.8%"
     },
     {
-      "state": "Montana",
+      "name": "Montana",
       "house_women": 30,
       "senate_women": 10,
       "total_women": 40,
@@ -210,7 +210,7 @@
       "percentage_women": "26.7%"
     },
     {
-      "state": "Nebraska",
+      "name": "Nebraska",
       "house_women": 0,
       "senate_women": 10,
       "total_women": 10,
@@ -218,7 +218,7 @@
       "percentage_women": "20.4%"
     },
     {
-      "state": "Nevada",
+      "name": "Nevada",
       "house_women": 13,
       "senate_women": 4,
       "total_women": 17,
@@ -226,7 +226,7 @@
       "percentage_women": "27.0%"
     },
     {
-      "state": "New Hampshire",
+      "name": "New Hampshire",
       "house_women": 128,
       "senate_women": 9,
       "total_women": 137,
@@ -234,7 +234,7 @@
       "percentage_women": "32.3%"
     },
     {
-      "state": "New Jersey",
+      "name": "New Jersey",
       "house_women": 26,
       "senate_women": 10,
       "total_women": 36,
@@ -242,7 +242,7 @@
       "percentage_women": "30.0%"
     },
     {
-      "state": "New Mexico",
+      "name": "New Mexico",
       "house_women": 26,
       "senate_women": 6,
       "total_women": 32,
@@ -250,7 +250,7 @@
       "percentage_women": "28.6%"
     },
     {
-      "state": "New York",
+      "name": "New York",
       "house_women": 34,
       "senate_women": 11,
       "total_women": 45,
@@ -258,7 +258,7 @@
       "percentage_women": "21.1%"
     },
     {
-      "state": "North Carolina",
+      "name": "North Carolina",
       "house_women": 28,
       "senate_women": 9,
       "total_women": 37,
@@ -266,7 +266,7 @@
       "percentage_women": "21.8%"
     },
     {
-      "state": "North Dakota",
+      "name": "North Dakota",
       "house_women": 16,
       "senate_women": 8,
       "total_women": 24,
@@ -274,7 +274,7 @@
       "percentage_women": "17.0%"
     },
     {
-      "state": "Ohio",
+      "name": "Ohio",
       "house_women": 23,
       "senate_women": 8,
       "total_women": 31,
@@ -282,7 +282,7 @@
       "percentage_women": "23.5%"
     },
     {
-      "state": "Oklahoma",
+      "name": "Oklahoma",
       "house_women": 16,
       "senate_women": 4,
       "total_women": 20,
@@ -290,7 +290,7 @@
       "percentage_women": "13.4%"
     },
     {
-      "state": "Oregon",
+      "name": "Oregon",
       "house_women": 20,
       "senate_women": 7,
       "total_women": 27,
@@ -298,7 +298,7 @@
       "percentage_women": "30.0%"
     },
     {
-      "state": "Pennsylvania",
+      "name": "Pennsylvania",
       "house_women": 37,
       "senate_women": 8,
       "total_women": 45,
@@ -306,7 +306,7 @@
       "percentage_women": "17.8%"
     },
     {
-      "state": "Rhode Island",
+      "name": "Rhode Island",
       "house_women": 21,
       "senate_women": 9,
       "total_women": 30,
@@ -314,7 +314,7 @@
       "percentage_women": "26.5%"
     },
     {
-      "state": "South Carolina",
+      "name": "South Carolina",
       "house_women": 21,
       "senate_women": 1,
       "total_women": 22,
@@ -322,7 +322,7 @@
       "percentage_women": "12.9%"
     },
     {
-      "state": "South Dakota",
+      "name": "South Dakota",
       "house_women": 18,
       "senate_women": 6,
       "total_women": 24,
@@ -330,7 +330,7 @@
       "percentage_women": "22.9%"
     },
     {
-      "state": "Tennessee",
+      "name": "Tennessee",
       "house_women": 16,
       "senate_women": 7,
       "total_women": 23,
@@ -338,7 +338,7 @@
       "percentage_women": "17.4%"
     },
     {
-      "state": "Texas",
+      "name": "Texas",
       "house_women": 32,
       "senate_women": 7,
       "total_women": 39,
@@ -346,7 +346,7 @@
       "percentage_women": "21.5%"
     },
     {
-      "state": "Utah",
+      "name": "Utah",
       "house_women": 12,
       "senate_women": 5,
       "total_women": 17,
@@ -354,7 +354,7 @@
       "percentage_women": "16.3%"
     },
     {
-      "state": "Vermont",
+      "name": "Vermont",
       "house_women": 65,
       "senate_women": 8,
       "total_women": 73,
@@ -362,7 +362,7 @@
       "percentage_women": "40.6%"
     },
     {
-      "state": "Virginia",
+      "name": "Virginia",
       "house_women": 17,
       "senate_women": 7,
       "total_women": 24,
@@ -370,7 +370,7 @@
       "percentage_women": "17.1%"
     },
     {
-      "state": "Washington",
+      "name": "Washington",
       "house_women": 30,
       "senate_women": 18,
       "total_women": 48,
@@ -378,7 +378,7 @@
       "percentage_women": "32.7%"
     },
     {
-      "state": "West Virginia",
+      "name": "West Virginia",
       "house_women": 21,
       "senate_women": 1,
       "total_women": 22,
@@ -386,7 +386,7 @@
       "percentage_women": "16.4%"
     },
     {
-      "state": "Wisconsin",
+      "name": "Wisconsin",
       "house_women": 25,
       "senate_women": 9,
       "total_women": 34,
@@ -394,7 +394,7 @@
       "percentage_women": "25.8%"
     },
     {
-      "state": "Wyoming",
+      "name": "Wyoming",
       "house_women": 12,
       "senate_women": 2,
       "total_women": 14,
