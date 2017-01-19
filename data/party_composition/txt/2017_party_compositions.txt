@@ -1,0 +1,69 @@
+                      State & Legislative Partisan Composition (2016 Election)                                                         (Dec. 15, 2016; 10am)
+                       Total       Total     Senate      Senate      Senate       Total       House      House      House       Legis.       Gov.         State
+STATE                  Seats      Senate      Dem.        Rep.        other       House       Dem.        Rep.      other      Control       Party       Control
+Alabama                  140        35           8          26           1         105         32         72          1v          Rep     Rep              Rep
+Alaska *                  60        20           6          14                      40         17         21          2          Rep*     Ind             Divided
+Arizona                   90        30          13          17                      60         25         35                      Rep     Rep              Rep
+Arkansas                 135        35           9          26                     100         24         76                      Rep     Rep              Rep
+California               120        40          27          13                      80         55         25                     Dem      Dem              Dem
+Colorado                 100        35          17          18                      65         37         28                     Split    Dem             Divided
+Connecticut *            187        36          18          18                     151         79         72                     Split*   Dem             Divided
+Delaware                  62        21          11          10                      41         25         16                     Dem      Dem              Dem
+Florida                  160        40          15          25                     120         41         79                      Rep     Rep              Rep
+Georgia                  236        56          18          38                     180         62        118                      Rep     Rep              Rep
+Hawaii                    76        25          25          0                       51         45         6                      Dem      Dem              Dem
+Idaho                    105        35           6          29                      70         11         59                      Rep     Rep              Rep
+Illinois                 177        59          37          22                     118         67         51                     Dem      Rep             Divided
+Indiana                  150        50           9          41                     100         30         70                      Rep     Rep              Rep
+Iowa                     150        50          19          29         1,1v        100         41         59                      Rep     Rep              Rep
+Kansas                   165        40           9          31                     125         40         85                      Rep     Rep              Rep
+Kentucky                 138        38          11          27                     100         36         64                      Rep     Rep              Rep
+Louisiana                144        39          14          25                     105         42         60           3          Rep Rep Dem             Divided
+Maine                    186        35          17          18                     151         76         73           2         Split    Rep             Divided
+Maryland                 188        47          33          14                     141         90         51                     Dem      Rep             Divided
+Massachusetts            200        40          34          6                      160        125         35                     Dem      Rep             Divided
+Michigan                 148        38          11          27                     110         47         63                      Rep     Rep              Rep
+Minnesota                201        67          33          34                     134         57         76          1v          Rep     Dem             Divided
+Mississippi              174        52          20          32                     122         48         72          2v          Rep     Rep              Rep
+Missouri                 197        34           9          25                     163         46        117                      Rep     Rep              Rep
+Montana                  150        50          18          32                     100         41         59                      Rep     Dem             Divided
+Nebraska                  49        49                                  49       Unicameral - nonpartisan                         N/A     Rep               N/A
+Nevada                    63        21          11          9           1           42         27         15                     Dem      Rep             Divided
+New Hampshire            424        24          10          14                     400        175        225                      Rep     Rep              Rep
+New Jersey               120        40          24          16                      80         52         28                     Dem      Rep             Divided
+New Mexico               112        42          26          16                      70         38         32                     Dem      Rep             Divided
+New York *               213        63          32          31                      150         107         43                   Dem*         Dem          Dem
+North Carolina           170        50          15          35                      120          46         74                    Rep         Dem         Divided
+North Dakota             141        47           9          38                       94          13         81                    Rep         Rep          Rep
+Ohio                     132        33           9          24                       99          33         66                    Rep         Rep          Rep
+Oklahoma                 149        48           6          42                      101          26         75                    Rep         Rep          Rep
+Oregon                    90        30          17          13                       60          35         25                   Dem          Dem          Dem
+Pennsylvania             253        50          16          34                      203          81        122                    Rep         Dem         Divided
+Rhode Island             113        38          33          5                        75          64         10         1         Dem          Dem          Dem
+South Carolina           170        46          18          28                      124          44         80                    Rep         Rep          Rep
+South Dakota             105        35           6          29                       70          10         60                    Rep         Rep          Rep
+Tennessee                132        33           5          28                       99          25         74                    Rep         Rep          Rep
+Texas                    181        31          11          20                      150          56         94                    Rep         Rep          Rep
+Utah                     104        29           5          24                       75          13         62                    Rep         Rep          Rep
+Vermont                  180        30          23          7                       150          91         53         6         Dem          Rep         Divided
+Virginia                 140        40          19          21                      100          34         66                    Rep         Dem         Divided
+Washington *             147        49          25          24                       98          50         48                   Dem*         Dem          Dem
+West Virginia            134        34          12          22                      100          37         63                    Rep         Dem         Divided
+Wisconsin                132        33          13          20                       99          35         64                    Rep         Rep          Rep
+Wyoming                   90        30           3          27                       60          9          51                    Rep         Rep          Rep
+                                                                                                                              32R, 14D,      33R         24R, 7D,
+                                                                                                                                3Sp         16D,1I        18Div
+Total States            7383       1972        795         1124       52,1v        5411         2340       3053      14,4v
+                         Total       Total   Senate      Senate     Senate          Total      House      House House             Legis.      Gov.       Territory
+U.S. Territories         Seats      Senate    Dem.         Rep.      other         House        Dem.       Rep.      other       Control     Party        Control
+American Samoa             39          18              Non-partisan                   21               Non-partisan                N/A                      N/A
+District of Columbia       13          13       12          0          1          Unicameral - nonpartisan                         Dem        N/A           N/A
+Guam                       15          15       10          5                     Unicameral - nonpartisan                         Dem                    Divided
+Mariana Islands            29          9         0          6          3              20           0         7         13          Split                  Divided
+Puerto Rico                78          27      7PDP       21NPP        2          51           16PDP      34NPP         1          NPP        NPP          NPP
+Virgin Islands             15          15                                         Unicameral - nonpartisan                         N/A                      N/A
+National Conference of State Legislatures    (Abbreviations: vacancy, undecided, recall, Covenant Party,New Progressive Party, Popular Democratic Party)
+Notes: Alaska House is controlled by a coalition that gives Democrats functional control of the chamber; Lt. Gov. Nancy Wyman (D) will cast tie-breaking votes in the
+Connecticut Senate; New York Senate is controlled by a coalition that gives Republicans functional control of the chamber; Washington Senate is controlled by a coalition
+that gives Republicans functional control of the chamber
+
