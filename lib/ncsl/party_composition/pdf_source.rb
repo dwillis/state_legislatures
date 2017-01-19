@@ -107,6 +107,7 @@ module Ncsl
         lines.reject!{|line| line.include?("Territories") }
         lines.reject!{|line| line.include?("Abbreviations") }
         lines.reject!{|line| line.include?("Notes:") }
+        lines.reject!{|line| line.include?("Legislative Partisan Composition") }
         # remove line(s) between wyoming and american samoa ...
         wyoming_line = lines.find{|line| line.include?("Wyoming") }
         samoa_line = lines.find{|line| line.include?("American Samoa") }
@@ -114,18 +115,20 @@ module Ncsl
         number_of_lines_to_remove = indices_of_lines_to_remove.count
         lines_to_remove = lines.slice(indices_of_lines_to_remove.first, number_of_lines_to_remove)
         lines -= lines_to_remove
-
+        chop_after_index = lines.index(lines.find{|line| line.include?("Virgin Islands") }).to_i + 1
+        lines.pop(lines.length - chop_after_index) if chop_after_index > 1     
         raise LineCountError.new(lines.count) unless lines.count == 56
         return lines
       end
 
       def parse_line(line)
         parsed_line = line
+        parsed_line.gsub!("                  ", DOUBLE_CELL_DELIMETER) if [2017].include?(year) && parsed_line.include?("Mariana Islands") # workaround for 2017 and Mariana Islands spacing issue
+        parsed_line.gsub!("Unicameral - nonpartisan", "Unicameral                 ")
         parsed_line.gsub!(" e ", CELL_DELIMETER) # workaround for erroneous letter in 2013/2014: Florida, Georgia, Idaho, Indiana, Kansas, Louisiana, Michigan, Wisconsin ...
-
         if parsed_line.include?("Unicameral") # workaround for unicameral legislature blank values ...
           parsed_line.gsub!( parsed_line.slice(0,24) , "#{parsed_line.slice(0,24).strip}#{CELL_DELIMETER}")
-          if [2015,2016].include?(year) && (parsed_line.include?("District of Columbia") || parsed_line.include?("Guam") )
+          if [2015,2016,2017].include?(year) && (parsed_line.include?("District of Columbia") || parsed_line.include?("Guam") )
             parsed_line.gsub!("      Unicameral","UNI")
             parsed_line.gsub!(DOUBLE_CELL_DELIMETER_UNICAMERAL, BLANK_CELL_REPLACEMENT_VALUE )
             parsed_line.gsub!("UNI","Unicameral")
@@ -133,12 +136,12 @@ module Ncsl
             parsed_line.gsub!(DOUBLE_CELL_DELIMETER_UNICAMERAL, BLANK_CELL_REPLACEMENT_VALUE)
           end
           parsed_line.gsub!(parsed_line[-15,15], parsed_line[-15,15].gsub("0","")) # remove erroneously-added 0 between last two control values if necessary (for huge space in District of Columbia lines)
-        elsif [2015,2016].include?(year) # workaround for 2015 and 2016 where blank values should be zeros ...
+        elsif [2015,2016,2017].include?(year) # workaround for 2015 and 2016 where blank values should be zeros ...
           parsed_line.gsub!( parsed_line.slice(0,25) , "#{parsed_line.slice(0,25).strip}#{CELL_DELIMETER}")
           parsed_line.gsub!(DOUBLE_CELL_DELIMETER, BLANK_CELL_REPLACEMENT_VALUE)
         end
 
-        parsed_line.gsub!("Rep Rep Dem", "Rep#{CELL_DELIMETER}Dem") if year == 2016 && parsed_line.include?("Louisiana") # workaround for 2016 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
+        parsed_line.gsub!("Rep Rep Dem", "Rep#{CELL_DELIMETER}Dem") if [2016,2017].include?(year) && parsed_line.include?("Louisiana") # workaround for 2016 and 2017 Louisiana where "Rep Rep Dem" should be "Rep    Dem" ...
 
         return parsed_line
       end
@@ -156,6 +159,8 @@ module Ncsl
             cells[11].gsub!("0", "NULL") # workaround for "0" gov_party values which resulted from the delimeter conversion process
             cells[5] = cells[2] if cells.first == "Virgin Islands" || (cells.first == "Nebraska" && year == 2013) # workaround for known missing corresponding "Senate Other" values in nonpartisan legislature
             cells[3] = (cells[3].to_i + 1).to_s if cells.first == "Minnesota" && year == 2012 # fix known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
+            cells[2] = (cells[2].to_i + 3).to_s if cells.first == "Puerto Rico" && year == 2017 # fix known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
+            cells[1] = (cells[1].to_i + 3).to_s if cells.first == "Puerto Rico" && year == 2017 # fix known bug in source data. see: https://github.com/AdvancedEnergyEconomy/state_legislatures/issues/3
             begin
               raise CellCountError.new(cells) unless cells.count == 13
               raise LegislatureControlError.new(cells) unless LEGISLATURE_CONTROL_VALUES.include?(cells[10].gsub(CONTROL_BY_COALITION_MARKER,""))
