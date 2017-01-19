@@ -892,9 +892,9 @@
     },
     {
       "name": "New York",
-      "control": "Dem*",
+      "control": "Dem",
       "governor_party": "Dem",
-      "legislature_control": "Dem*",
+      "legislature_control": "Dem",
       "legislature_seats": 213,
       "legislature_chambers": [
         {
@@ -1327,9 +1327,9 @@
     },
     {
       "name": "Washington",
-      "control": "Dem*",
+      "control": "Dem",
       "governor_party": "Dem",
-      "legislature_control": "Dem*",
+      "legislature_control": "Dem",
       "legislature_seats": 147,
       "legislature_chambers": [
         {

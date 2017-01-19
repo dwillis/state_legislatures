@@ -31,10 +31,10 @@
       ]
     },
     {
-      "name": "Alaska *",
+      "name": "Alaska",
       "control": "Divided",
       "governor_party": "Ind",
-      "legislature_control": "Rep*",
+      "legislature_control": "Rep",
       "legislature_seats": 60,
       "legislature_chambers": [
         {
@@ -176,10 +176,10 @@
       ]
     },
     {
-      "name": "Connecticut *",
+      "name": "Connecticut",
       "control": "Divided",
       "governor_party": "Dem",
-      "legislature_control": "Split*",
+      "legislature_control": "Split",
       "legislature_seats": 187,
       "legislature_chambers": [
         {
@@ -891,10 +891,10 @@
       ]
     },
     {
-      "name": "New York *",
+      "name": "New York",
       "control": "Dem",
       "governor_party": "Dem",
-      "legislature_control": "Dem*",
+      "legislature_control": "Dem",
       "legislature_seats": 213,
       "legislature_chambers": [
         {
@@ -1326,10 +1326,10 @@
       ]
     },
     {
-      "name": "Washington *",
+      "name": "Washington",
       "control": "Dem",
       "governor_party": "Dem",
-      "legislature_control": "Dem*",
+      "legislature_control": "Dem",
       "legislature_seats": 147,
       "legislature_chambers": [
         {

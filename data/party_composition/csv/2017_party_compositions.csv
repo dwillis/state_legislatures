@@ -1,11 +1,11 @@
 state,total_seats,total_senate,senate_dem,senate_gop,senate_other,total_house,house_dem,house_gop,house_other,legis_control,gov_party,state_control
 Alabama,140,35,8,26,1,105,32,72,1v,Rep,Rep,Rep
-Alaska *,60,20,6,14,0,40,17,21,2,Rep*,Ind,Divided
+Alaska,60,20,6,14,0,40,17,21,2,Rep,Ind,Divided
 Arizona,90,30,13,17,0,60,25,35,0,Rep,Rep,Rep
 Arkansas,135,35,9,26,0,100,24,76,0,Rep,Rep,Rep
 California,120,40,27,13,0,80,55,25,0,Dem,Dem,Dem
 Colorado,100,35,17,18,0,65,37,28,0,Split,Dem,Divided
-Connecticut *,187,36,18,18,0,151,79,72,0,Split*,Dem,Divided
+Connecticut,187,36,18,18,0,151,79,72,0,Split,Dem,Divided
 Delaware,62,21,11,10,0,41,25,16,0,Dem,Dem,Dem
 Florida,160,40,15,25,0,120,41,79,0,Rep,Rep,Rep
 Georgia,236,56,18,38,0,180,62,118,0,Rep,Rep,Rep
@@ -30,7 +30,7 @@ Nevada,63,21,11,9,1,42,27,15,0,Dem,Rep,Divided
 New Hampshire,424,24,10,14,0,400,175,225,0,Rep,Rep,Rep
 New Jersey,120,40,24,16,0,80,52,28,0,Dem,Rep,Divided
 New Mexico,112,42,26,16,0,70,38,32,0,Dem,Rep,Divided
-New York *,213,63,32,31,0,150,107,43,0,Dem*,Dem,Dem
+New York,213,63,32,31,0,150,107,43,0,Dem,Dem,Dem
 North Carolina,170,50,15,35,0,120,46,74,0,Rep,Dem,Divided
 North Dakota,141,47,9,38,0,94,13,81,0,Rep,Rep,Rep
 Ohio,132,33,9,24,0,99,33,66,0,Rep,Rep,Rep
@@ -45,7 +45,7 @@ Texas,181,31,11,20,0,150,56,94,0,Rep,Rep,Rep
 Utah,104,29,5,24,0,75,13,62,0,Rep,Rep,Rep
 Vermont,180,30,23,7,0,150,91,53,6,Dem,Rep,Divided
 Virginia,140,40,19,21,0,100,34,66,0,Rep,Dem,Divided
-Washington *,147,49,25,24,0,98,50,48,0,Dem*,Dem,Dem
+Washington,147,49,25,24,0,98,50,48,0,Dem,Dem,Dem
 West Virginia,134,34,12,22,0,100,37,63,0,Rep,Dem,Divided
 Wisconsin,132,33,13,20,0,99,35,64,0,Rep,Rep,Rep
 Wyoming,90,30,3,27,0,60,9,51,0,Rep,Rep,Rep

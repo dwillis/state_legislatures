@@ -123,6 +123,7 @@ module Ncsl
 
       def parse_line(line)
         parsed_line = line
+        parsed_line.gsub!("*"," ")
         parsed_line.gsub!("                  ", DOUBLE_CELL_DELIMETER) if [2017].include?(year) && parsed_line.include?("Mariana Islands") # workaround for 2017 and Mariana Islands spacing issue
         parsed_line.gsub!("Unicameral - nonpartisan", "Unicameral                 ")
         parsed_line.gsub!(" e ", CELL_DELIMETER) # workaround for erroneous letter in 2013/2014: Florida, Georgia, Idaho, Indiana, Kansas, Louisiana, Michigan, Wisconsin ...

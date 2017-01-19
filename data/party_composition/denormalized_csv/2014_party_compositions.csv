@@ -30,7 +30,7 @@ year,state,control,governor_party,legislature_control,legislature_seats,house_se
 2014,New Hampshire,Divided,Dem,Split,424,400,220,179,1,0,24,11,13,0,0,0,0,0,0,0
 2014,New Jersey,Divided,Rep,Dem,120,80,48,32,0,0,40,24,16,0,0,0,0,0,0,0
 2014,New Mexico,Divided,Rep,Dem,112,70,37,33,0,0,42,25,17,0,0,0,0,0,0,0
-2014,New York,Dem*,Dem,Dem*,213,150,100,40,10,0,63,32,29,2,0,0,0,0,0,0
+2014,New York,Dem,Dem,Dem,213,150,100,40,10,0,63,32,29,2,0,0,0,0,0,0
 2014,North Carolina,Rep,Rep,Rep,170,120,43,77,0,0,50,17,33,0,0,0,0,0,0,0
 2014,North Dakota,Rep,Rep,Rep,141,94,23,71,0,0,47,14,33,0,0,0,0,0,0,0
 2014,Ohio,Rep,Rep,Rep,132,99,39,60,0,0,33,10,23,0,0,0,0,0,0,0
@@ -45,7 +45,7 @@ year,state,control,governor_party,legislature_control,legislature_seats,house_se
 2014,Utah,Rep,Rep,Rep,104,75,14,61,0,0,29,5,24,0,0,0,0,0,0,0
 2014,Vermont,Dem,Dem,Dem,180,150,93,47,0,10,30,21,7,0,2,0,0,0,0,0
 2014,Virginia,Divided,Dem,Rep,140,100,33,67,0,0,40,19,20,1,0,0,0,0,0,0
-2014,Washington,Dem*,Dem,Dem*,147,98,55,43,0,0,49,25,24,0,0,0,0,0,0,0
+2014,Washington,Dem,Dem,Dem,147,98,55,43,0,0,49,25,24,0,0,0,0,0,0,0
 2014,West Virginia,Dem,Dem,Dem,134,100,53,47,0,0,34,24,10,0,0,0,0,0,0,0
 2014,Wisconsin,Rep,Rep,Rep,132,99,39,60,0,0,33,15,18,0,0,0,0,0,0,0
 2014,Wyoming,Rep,Rep,Rep,90,60,8,52,0,0,30,4,26,0,0,0,0,0,0,0
